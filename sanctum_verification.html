@@ -301,7 +301,7 @@ select.field-input option { background: #0C0A18; color: var(--text); }
 .upload-zone:hover::before, .upload-zone.drag::before { opacity: 1; }
 .upload-zone.drag { border-color: rgba(201,168,76,.6); box-shadow: 0 0 24px rgba(201,168,76,.1); }
 .upload-zone.has-file { border-style: solid; border-color: rgba(201,168,76,.45); }
-.upload-zone input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+.upload-zone input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; z-index: 10; width: 100%; height: 100%; }
 
 .upload-icon {
   width: 42px; height: 42px; border-radius: 50%;
@@ -425,6 +425,7 @@ select.field-input option { background: #0C0A18; color: var(--text); }
       <div class="role-strip">
         <span class="role-badge">Bitget</span>
         <span class="role-badge">BingX</span>
+        <span class="role-badge">Bitunix</span>
 
       </div>
     </div>
@@ -452,6 +453,7 @@ select.field-input option { background: #0C0A18; color: var(--text); }
             <option value="">Select your exchange</option>
             <option value="Bitget">Bitget</option>
             <option value="BingX">BingX</option>
+            <option value="Bitunix">Bitunix</option>
 
           </select>
         </div>
@@ -505,6 +507,7 @@ select.field-input option { background: #0C0A18; color: var(--text); }
       <div class="cf-tags">
         <span class="cf-tag">Bitget</span>
         <span class="cf-tag">BingX</span>
+        <span class="cf-tag">Bitunix</span>
 
       </div>
     </div>
@@ -513,7 +516,7 @@ select.field-input option { background: #0C0A18; color: var(--text); }
 
 <script>
   var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbycm_3_dHyrlQrSmpu5jAlGP4-IM9wgjDAhSbDo4zjSJslBTzJEWyQWHxBTaT12QK_UBA/exec";
-  var referrers  = { "Bitget": "KazzyBTG", "BingX": "KazzyBX" };
+  var referrers  = { "Bitget": "KazzyBTG", "BingX": "KazzyBX", "Bitunix": "TBA" };
 
   // canvas starfield
   (function() {
