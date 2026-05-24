@@ -335,14 +335,18 @@ nav.sc{background:rgba(5,3,13,.92);backdrop-filter:blur(28px);
 .pcard-logo{background:var(--surf);border:.5px solid var(--bdr);border-radius:2px;
   padding:30px 36px;display:flex;flex-direction:column;
   align-items:center;justify-content:center;gap:14px;min-width:200px;
-  position:relative;overflow:hidden;
-  transition:all .4s cubic-bezier(.22,1,.36,1)}
+  position:relative;overflow:hidden;text-decoration:none;
+  transition:all .4s cubic-bezier(.22,1,.36,1);cursor:pointer}
 .pcard-logo::before{content:'';position:absolute;bottom:0;left:0;right:0;height:1.5px;
   background:linear-gradient(90deg,transparent,var(--gd),transparent);
   opacity:0;transition:opacity .4s}
+.pcard-logo::after{content:'↗';position:absolute;top:12px;right:14px;
+  font-size:12px;color:var(--gold);opacity:0;
+  transition:opacity .3s,transform .3s;transform:translate(-3px,3px)}
 .pcard-logo:hover{border-color:rgba(201,168,76,.3);transform:translateY(-5px);
   box-shadow:0 16px 52px rgba(0,0,0,.48)}
 .pcard-logo:hover::before{opacity:1}
+.pcard-logo:hover::after{opacity:.7;transform:translate(0,0)}
 .pcard-logo img{height:60px;width:auto;object-fit:contain;
   transition:filter .4s,transform .4s cubic-bezier(.22,1,.36,1)}
 .pcard-logo:hover img{transform:scale(1.06);filter:brightness(1.1)}
@@ -733,21 +737,21 @@ footer{padding:28px 0;border-top:.5px solid var(--bdr);position:relative;z-index
     <div class="pblock rev d1">
       <div class="pbtitle">Exchange Partners</div>
       <div class="prow">
-        <div class="pcard-logo">
+        <a href="https://bonus.bitgetapp.com/SANCTUM" target="_blank" rel="noopener noreferrer" class="pcard-logo">
           <img src="ASBitget.png" alt="Bitget" onerror="this.style.display='none'">
           <div class="pcard-logo-name">Bitget</div>
-          <div class="pcard-logo-type">Crypto Exchange</div>
-        </div>
-        <div class="pcard-logo">
+          <div class="pcard-logo-type">Register with code SANCTUM</div>
+        </a>
+        <a href="https://bingx.com/partner/SANCTUM/2clR7t" target="_blank" rel="noopener noreferrer" class="pcard-logo">
           <img src="ASBingX.png" alt="BingX" onerror="this.style.display='none'">
           <div class="pcard-logo-name">BingX</div>
-          <div class="pcard-logo-type">Crypto Exchange</div>
-        </div>
-        <div class="pcard-logo">
+          <div class="pcard-logo-type">Register with code SANCTUM</div>
+        </a>
+        <a href="https://www.bitunix.com/register?inviteCode=mIsZwq" target="_blank" rel="noopener noreferrer" class="pcard-logo">
           <img src="ASBitunix.png" alt="Bitunix" onerror="this.style.display='none'">
           <div class="pcard-logo-name">Bitunix</div>
-          <div class="pcard-logo-type">Crypto Exchange</div>
-        </div>
+          <div class="pcard-logo-type">Register with code mIsZwq</div>
+        </a>
 
       </div>
     </div>
