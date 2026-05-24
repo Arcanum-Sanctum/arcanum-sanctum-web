@@ -325,6 +325,68 @@ select.field-input option { background: #0C0A18; color: var(--text); }
 .upload-filename { font-size: 11px; color: var(--gold); font-weight: 600; letter-spacing: .06em; margin-top: 10px; display: none; animation: fadeUp .3s ease both; }
 
 /* hint */
+/* ---- Referral Block ---- */
+.ref-block {
+  background: rgba(201,168,76,.04);
+  border: .5px solid rgba(201,168,76,.2);
+  border-radius: 2px;
+  padding: 18px 20px;
+  margin-bottom: 26px;
+  position: relative;
+  overflow: hidden;
+}
+.ref-block::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold-dim), transparent);
+}
+.ref-label {
+  font-size: 10px; font-weight: 600;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--gold-dim); margin-bottom: 8px;
+}
+.ref-hint {
+  font-size: 13px; color: var(--muted);
+  line-height: 1.55; margin-bottom: 14px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+}
+.ref-links {
+  display: flex; gap: 10px; flex-wrap: wrap;
+}
+.ref-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 9px 16px;
+  background: var(--surface2);
+  border: .5px solid rgba(201,168,76,.2);
+  border-radius: 2px; text-decoration: none;
+  transition: all .25s cubic-bezier(.22,1,.36,1);
+  position: relative; overflow: hidden;
+}
+.ref-btn::before {
+  content: '';
+  position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,.08), transparent);
+  transition: left .5s;
+}
+.ref-btn:hover { border-color: rgba(201,168,76,.5); transform: translateY(-2px); }
+.ref-btn:hover::before { left: 100%; }
+.ref-btn-name {
+  font-family: 'Cinzel', serif;
+  font-size: 11px; font-weight: 600;
+  color: var(--text); letter-spacing: .05em;
+}
+.ref-btn-code {
+  font-size: 10px; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--gold); background: rgba(201,168,76,.1);
+  border: .5px solid rgba(201,168,76,.25);
+  padding: 2px 7px; border-radius: 2px;
+}
+.ref-btn svg { stroke: var(--gold); opacity: .7; transition: opacity .2s; flex-shrink: 0; }
+.ref-btn:hover svg { opacity: 1; }
+
+/* ---- Hint Box ---- */
 .hint-box {
   display: flex; gap: 12px;
   background: rgba(201,168,76,.04);
@@ -436,6 +498,29 @@ select.field-input option { background: #0C0A18; color: var(--text); }
 
     <div class="form-body" id="formBody">
 
+      <!-- REFERRAL LINKS BLOCK -->
+      <div class="ref-block">
+        <div class="ref-label">Step 0 — Don't have an account yet?</div>
+        <p class="ref-hint">Register on your chosen exchange using our referral link, then come back here to fill the form.</p>
+        <div class="ref-links">
+          <a href="https://bonus.bitgetapp.com/SANCTUM" target="_blank" rel="noopener noreferrer" class="ref-btn">
+            <span class="ref-btn-name">Bitget</span>
+            <span class="ref-btn-code">SANCTUM</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+          <a href="https://bingx.com/partner/SANCTUM/2clR7t" target="_blank" rel="noopener noreferrer" class="ref-btn">
+            <span class="ref-btn-name">BingX</span>
+            <span class="ref-btn-code">SANCTUM</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+          <a href="https://www.bitunix.com/register?inviteCode=mIsZwq" target="_blank" rel="noopener noreferrer" class="ref-btn">
+            <span class="ref-btn-name">Bitunix</span>
+            <span class="ref-btn-code">mIsZwq</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+      </div>
+
       <div class="step-label">Step 1 - Your Details</div>
 
       <div class="field">
@@ -516,7 +601,7 @@ select.field-input option { background: #0C0A18; color: var(--text); }
 
 <script>
   var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbycm_3_dHyrlQrSmpu5jAlGP4-IM9wgjDAhSbDo4zjSJslBTzJEWyQWHxBTaT12QK_UBA/exec";
-  var referrers  = { "Bitget": "KazzyBTG", "BingX": "KazzyBX", "Bitunix": "TBA" };
+  var referrers  = { "Bitget": "SANCTUM", "BingX": "SANCTUM", "Bitunix": "mIsZwq" };
 
   // canvas starfield
   (function() {
