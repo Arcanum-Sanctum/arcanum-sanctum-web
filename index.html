@@ -729,25 +729,101 @@ Reduce Your Trading Costs and Keep More of Your Profits</div>
     </div>
 
     <!-- ── PROP FIRM PARTNERS ── -->
-    <div class="pblock rev d2">
-      <div class="pbtitle">Prop Firm Partners</div>
-      <div class="prow">
-        <div class="pcard-prop">
-          <div class="pcard-prop-inner">
-            <div class="pcard-prop-top">
-              <img src="ARCxNEOMA.png" alt="Neomaaa Funded" class="pcard-prop-logo" onerror="this.style.display='none'">
-              <div class="pcard-prop-badge">Prop Firm</div>
-            </div>
-            <div class="pcard-prop-name">Neomaaa Funded</div>
-            <div class="pcard-prop-desc">Access funded trading accounts with professional risk parameters. Prove your edge — trade with capital.</div>
-            <a href="https://neomaaafunded.com/affiliate-registration/?affiliateId=sanctum" target="_blank" rel="noopener noreferrer" class="pcard-prop-btn">
-              Get Funded
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-            </a>
-          </div>
+    <style>
+  .pcard-img-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .pcard-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    background: rgba(10,10,10,0.6);
+    transition: all 0.35s ease;
+    border: 1px solid rgba(255,255,255,0.06);
+    backdrop-filter: blur(10px);
+  }
+
+  .pcard-img::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(201,168,76,0.18), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+  }
+
+  .pcard-img:hover {
+    transform: translateY(-6px);
+    border-color: rgba(201,168,76,0.5);
+    box-shadow: 0 0 25px rgba(201,168,76,0.25);
+  }
+
+  .pcard-img:hover::before {
+    opacity: 1;
+  }
+
+  .pcard-img-label {
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+
+  .pcard-img-sub {
+    opacity: 0.7;
+    font-size: 12px;
+  }
+
+  .funded-cta {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #C9A84C;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.3s ease;
+  }
+
+  .pcard-img:hover .funded-cta {
+    gap: 10px;
+    text-shadow: 0 0 10px rgba(201,168,76,0.4);
+  }
+
+  .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+  .pcard-img:hover .arrow {
+    transform: translateX(4px);
+  }
+</style>
+
+<div class="pblock rev d2">
+  <div class="pbtitle">Prop Firm Partners</div>
+
+  <div class="prow">
+
+    <a href="https://neomaaafunded.com/affiliate-registration/?affiliateId=sanctum"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="pcard-img-link">
+
+      <div class="pcard-img">
+        <img src="ARCxNEOMA.png" alt="Neomaaa Funded" onerror="this.style.display='none'">
+
+        <div class="pcard-img-label">Neomaaa Funded</div>
+        <div class="pcard-img-sub">Prop Firm Partner</div>
+
+        <div class="funded-cta">
+          Get Funded <span class="arrow">→</span>
         </div>
       </div>
-    </div>
+
+    </a>
+
 
     <!-- ── COMMUNITY PARTNERS ── -->
     <div class="pblock rev d3">
