@@ -460,6 +460,43 @@ select.field-input option { background: #0C0A18; color: var(--text); }
   transition: all .2s;
 }
 .cf-tag:hover { color: rgba(201,168,76,.65); border-color: rgba(201,168,76,.3); }
+
+/* ══ STEP 0 — TWO PATH LAYOUT ══ */
+.step0-wrap{margin-bottom:28px;border:.5px solid rgba(201,168,76,.2);border-radius:12px;padding:26px;background:rgba(8,12,26,.7);backdrop-filter:blur(10px)}
+.step0-title{font-family:'Cinzel',serif;font-size:13px;font-weight:700;color:#C9A84C;letter-spacing:.06em;margin-bottom:6px;text-transform:uppercase;letter-spacing:.1em}
+.step0-sub{font-size:12px;color:rgba(255,255,255,.5);margin-bottom:22px;line-height:1.65}
+.step0-cols{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:start}
+@media(max-width:680px){.step0-cols{grid-template-columns:1fr;gap:20px}.step0-or{display:flex;justify-content:center}}
+.step0-col{background:rgba(255,255,255,.03);border:.5px solid rgba(255,255,255,.07);border-radius:8px;padding:18px}
+.div-col{border-color:rgba(155,126,248,.2)}
+.aeth-col{border-color:rgba(201,168,76,.2)}
+.step0-col-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.step0-icon{font-size:22px;line-height:1}
+.step0-role{font-family:'Cinzel',serif;font-size:13px;font-weight:700;color:#9B7EF8;letter-spacing:.04em}
+.aeth-role{color:#C9A84C}
+.step0-role-sub{font-size:10px;color:rgba(255,255,255,.4);font-family:'Rajdhani',sans-serif;letter-spacing:.14em;text-transform:uppercase;margin-top:2px}
+.step0-col-desc{font-size:12px;color:rgba(255,255,255,.5);line-height:1.65;margin-bottom:16px}
+.step0-col-desc strong{color:rgba(255,255,255,.8)}
+.step0-partners{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.step0-partner-btn{display:flex;align-items:center;gap:10px;padding:10px 14px;background:rgba(255,255,255,.04);border:.5px solid rgba(255,255,255,.08);border-radius:6px;text-decoration:none;transition:all .3s;position:relative}
+.step0-partner-btn:hover{background:rgba(155,126,248,.08);border-color:rgba(155,126,248,.25);transform:translateX(3px)}
+.aeth-btn:hover{background:rgba(201,168,76,.08);border-color:rgba(201,168,76,.25)}
+.step0-partner-btn svg{margin-left:auto;flex-shrink:0;stroke:rgba(255,255,255,.3)}
+.step0-partner-btn:hover svg{stroke:rgba(155,126,248,.7)}
+.aeth-btn:hover svg{stroke:rgba(201,168,76,.7)}
+.step0-partner-name{font-family:'Cinzel',serif;font-size:12px;font-weight:600;color:rgba(255,255,255,.85);letter-spacing:.03em}
+.step0-partner-detail{font-size:10px;color:rgba(255,255,255,.4);font-family:'Rajdhani',sans-serif;letter-spacing:.06em;margin-left:auto}
+.step0-partner-code{font-size:10px;color:rgba(201,168,76,.55);font-family:'Rajdhani',sans-serif;letter-spacing:.08em}
+.step0-unlocks{display:flex;align-items:center;gap:8px;padding-top:12px;border-top:.5px solid rgba(255,255,255,.06)}
+.step0-unlocks-label{font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.3)}
+.step0-chamber{font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;border-radius:20px}
+.div-chamber{background:rgba(155,126,248,.12);color:#9B7EF8;border:.5px solid rgba(155,126,248,.25)}
+.aeth-chamber{background:rgba(201,168,76,.12);color:#C9A84C;border:.5px solid rgba(201,168,76,.25)}
+.step0-or{display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:40px}
+.step0-or span{font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.25);background:rgba(8,12,26,.8);padding:6px 8px;border-radius:50%;border:.5px solid rgba(255,255,255,.08);width:28px;height:28px;display:flex;align-items:center;justify-content:center}
+.step0-note{font-size:11px;color:rgba(255,255,255,.35);margin-top:14px;line-height:1.65;text-align:center}
+.step0-note strong{color:rgba(201,168,76,.7)}
+
 </style>
 </head>
 <body>
@@ -478,7 +515,7 @@ select.field-input option { background: #0C0A18; color: var(--text); }
         <div class="ring-m"></div>
         <div class="ring-i"></div>
         <div class="logo-circle">
-          <img src="AS.png" alt="Arcanum Sanctum">
+          <img src="ARC.png" alt="Arcanum Sanctum">
         </div>
       </div>
       <div class="eyebrow">Ascendant Verification</div>
@@ -497,25 +534,80 @@ select.field-input option { background: #0C0A18; color: var(--text); }
 
     <div class="form-body" id="formBody">
 
-      <!-- REFERRAL LINKS BLOCK -->
-      <div class="ref-block">
-        <div class="ref-label">Step 0 — Don't have an account yet?</div>
-        <p class="ref-hint">Register on your chosen exchange using our referral link, then come back here to fill the form.</p>
-        <div class="ref-links">
-                    <a href="https://www.mexc.co/acquisition/custom-sign-up?shareCode=mexc-sanctum" target="_blank" rel="noopener noreferrer" class="ref-btn">
-            <span class="ref-btn-name">MEXC</span>
-            <span class="ref-btn-code">mexc-sanctum</span>
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-          </a>
-          <a href="https://www.bitunix.com/register?vipCode=SANCTUM" target="_blank" rel="noopener noreferrer" class="ref-btn">
-            <span class="ref-btn-name">Bitunix</span>
-            <span class="ref-btn-code">SANCTUM</span>
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-          </a>
+      <!-- STEP 0 — CHOOSE YOUR PATH -->
+      <div class="step0-wrap">
+        <div class="step0-title">Step 0 &mdash; Choose Your Access Path</div>
+        <p class="step0-sub">Select the path that applies to you. Register or purchase through our official links, then fill the form below.</p>
+        <div class="step0-cols">
+
+          <!-- DIVINATION SEEKER -->
+          <div class="step0-col div-col">
+            <div class="step0-col-header">
+              <span class="step0-icon">&#x1F52E;</span>
+              <div>
+                <div class="step0-role">Divination Seeker</div>
+                <div class="step0-role-sub">Crypto Trading Access</div>
+              </div>
+            </div>
+            <p class="step0-col-desc">Register through our partnered exchange to unlock the <strong>Divination Chamber</strong> and all crypto trading content.</p>
+            <div class="step0-partners">
+              <a href="https://www.bitunix.com/register?vipCode=SANCTUM" target="_blank" rel="noopener noreferrer" class="step0-partner-btn">
+                <div class="step0-partner-name">Bitunix</div>
+                <div class="step0-partner-detail">Futures &middot; 20% Rebate</div>
+                <div class="step0-partner-code">Code: SANCTUM</div>
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </a>
+            </div>
+            <div class="step0-unlocks">
+              <span class="step0-unlocks-label">Unlocks:</span>
+              <span class="step0-chamber div-chamber">&#x1F52E; Divination Chamber</span>
+            </div>
           </div>
+
+          <!-- COLUMN DIVIDER -->
+          <div class="step0-or"><span>or</span></div>
+
+          <!-- AETHER SEEKER -->
+          <div class="step0-col aeth-col">
+            <div class="step0-col-header">
+              <span class="step0-icon">&#x2694;&#xFE0F;</span>
+              <div>
+                <div class="step0-role aeth-role">Aether Seeker</div>
+                <div class="step0-role-sub">CFD &amp; Prop Trading Access</div>
+              </div>
+            </div>
+            <p class="step0-col-desc">Purchase an account through one of our partnered prop firms to unlock the <strong>Aether Chamber</strong> and all CFD trading content.</p>
+            <div class="step0-partners">
+              <a href="https://affiliates.atlasfunded.com/Tracking/S/6a70d3911356becd0cccf005" target="_blank" rel="noopener noreferrer" class="step0-partner-btn aeth-btn">
+                <div class="step0-partner-name">Atlas Funded</div>
+                <div class="step0-partner-detail">40% OFF All Accounts</div>
+                <div class="step0-partner-code">Code: SANCTUM</div>
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </a>
+              <a href="https://app.alphacapitalgroup.uk/signup/SANCTUM" target="_blank" rel="noopener noreferrer" class="step0-partner-btn aeth-btn">
+                <div class="step0-partner-name">Alpha Capital Group</div>
+                <div class="step0-partner-detail">40% OFF All Accounts</div>
+                <div class="step0-partner-code">Code: SANCTUM</div>
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </a>
+              <a href="https://www.aquafunded.com/?afmc=SANCTUM" target="_blank" rel="noopener noreferrer" class="step0-partner-btn aeth-btn">
+                <div class="step0-partner-name">AquaFunded</div>
+                <div class="step0-partner-detail">40% OFF Instant Accounts</div>
+                <div class="step0-partner-code">Code: SANCTUM</div>
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </a>
+            </div>
+            <div class="step0-unlocks">
+              <span class="step0-unlocks-label">Unlocks:</span>
+              <span class="step0-chamber aeth-chamber">&#x2694;&#xFE0F; Aether Chamber</span>
+            </div>
+          </div>
+
+        </div>
+        <p class="step0-note">&#9432; You can qualify for <strong>both roles</strong> by completing both requirements. Members with both roles get full access to the Divination Chamber and Aether Chamber.</p>
       </div>
 
-      <div class="step-label">Step 1 - Your Details</div>
+<div class="step-label">Step 1 - Your Details</div>
 
       <div class="field">
         <label class="field-label" for="uid">Exchange UID</label>
@@ -531,7 +623,7 @@ select.field-input option { background: #0C0A18; color: var(--text); }
           <select class="field-input" id="platform" onchange="setReferrer()">
             <option value="">Select your exchange</option>
 <option value="MEXC">MEXC</option>
-            <option value="Bitunix">Bitunix</option>
+            <option value="Bitget">Bitunix</option>
 
           </select>
         </div>
@@ -593,7 +685,7 @@ select.field-input option { background: #0C0A18; color: var(--text); }
 
 <script>
   var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbycm_3_dHyrlQrSmpu5jAlGP4-IM9wgjDAhSbDo4zjSJslBTzJEWyQWHxBTaT12QK_UBA/exec";
-  var referrers  = { "MEXC": "mexc-sanctum", "Bitunix": "SANCTUM" };
+  var referrers  = { "MEXC": "mexc-sanctum", "Bitget": "SANCTUM" };
 
   // canvas starfield
   (function() {
