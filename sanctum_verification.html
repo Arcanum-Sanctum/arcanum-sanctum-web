@@ -2,817 +2,747 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arcanum Sanctum - Ascendant Verification</title>
-
-<script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/ae8a434926e182ce53196b2e/script.js"></script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NKSGQ11H05"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-NKSGQ11H05');
-</script>
-
-<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Sanctum Verification — Arcanum Sanctum</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#050816;color:rgba(255,255,255,.88);font-family:'Inter',sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:#050816}
+::-webkit-scrollbar-thumb{background:#7A5820;border-radius:2px}
+::selection{background:rgba(201,168,76,.2);color:#fff}
+:focus-visible{outline:2px solid #C9A84C;outline-offset:3px;border-radius:3px}
 
-:root {
-  --gold:        #C9A84C;
-  --gold-bright: #E8C060;
-  --gold-dim:    rgba(201,168,76,.45);
-  --gold-faint:  rgba(201,168,76,.08);
-  --gold-border: rgba(201,168,76,.2);
-  --bg:          #060410;
-  --surface:     #0C0A18;
-  --surface2:    #100E1E;
-  --text:        #EDE8DC;
-  --muted:       rgba(237,232,220,.45);
-  --red:         #C83C5A;
-  --green:       #2AA478;
-}
-
-html, body { min-height: 100%; background: var(--bg); }
-
-body {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Rajdhani', sans-serif;
-  padding: 40px 16px;
-  position: relative;
-  overflow-x: hidden;
+:root{
+  --gold:#C9A84C;--goldl:#E8C468;--goldd:#9A7828;
+  --ga:rgba(201,168,76,.1);--gb:rgba(201,168,76,.22);
+  --purple:#9B7EF8;--purplea:rgba(155,126,248,.12);--purpleb:rgba(155,126,248,.25);
+  --em:#2AA478;--ema:rgba(42,164,120,.12);
+  --bg0:#050816;--bg1:#080C1A;--bg2:#0C1020;--bg3:#101428;
+  --s1:rgba(255,255,255,.04);--s2:rgba(255,255,255,.07);
+  --t1:rgba(255,255,255,.88);--t2:rgba(255,255,255,.55);--t3:rgba(255,255,255,.3);
+  --b1:rgba(201,168,76,.18);--b2:rgba(255,255,255,.07);--b3:rgba(255,255,255,.03);
+  --r1:4px;--r2:8px;--r3:12px;
+  --ease:cubic-bezier(.22,1,.36,1);
 }
 
-canvas#bg {
-  position: fixed; inset: 0;
-  z-index: 0; pointer-events: none;
-}
+/* BG CANVAS */
+#bgcvs{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.6}
 
-.glow-layer {
-  position: fixed; inset: 0; z-index: 0; pointer-events: none;
-  background:
-    radial-gradient(ellipse 60% 45% at 50% 0%,   rgba(201,168,76,.09) 0%, transparent 60%),
-    radial-gradient(ellipse 35% 25% at 15% 85%,  rgba(100,60,180,.06) 0%, transparent 60%),
-    radial-gradient(ellipse 35% 25% at 85% 85%,  rgba(50,90,200,.05)  0%, transparent 60%);
-  animation: glowBreathe 7s ease-in-out infinite;
-}
-@keyframes glowBreathe { 0%,100% { opacity: .7; } 50% { opacity: 1; } }
+/* NAV */
+.vnav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 0;background:rgba(5,8,22,.92);backdrop-filter:blur(20px);border-bottom:.5px solid var(--b2)}
+.vnav-i{max-width:900px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.vnav-brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.vnav-logo{width:33px;height:33px;border-radius:50%;border:1px solid var(--gb);background:var(--ga);overflow:hidden}
+.vnav-logo img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.vnav-name{font-family:'Cinzel',serif;font-size:12px;font-weight:700;color:var(--gold);letter-spacing:.06em}
+.vnav-back{font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--t3);text-decoration:none;display:flex;align-items:center;gap:6px;transition:color .2s}
+.vnav-back:hover{color:var(--gold)}
+.vnav-back svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
-.diag {
-  position: fixed; inset: 0; z-index: 0; pointer-events: none;
-  opacity: .02;
-  background: repeating-linear-gradient(55deg, transparent, transparent 40px, rgba(201,168,76,1) 40px, rgba(201,168,76,1) 41px);
-}
+/* PAGE WRAPPER */
+.vpage{min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:90px 20px 60px;position:relative;z-index:2}
+.vcard{width:100%;max-width:860px;background:rgba(10,14,32,.82);backdrop-filter:blur(16px);border:.5px solid var(--b2);border-radius:16px;overflow:hidden}
 
-/* ---- wrap & card ---- */
-.wrap {
-  width: 100%; max-width: 500px;
-  position: relative; z-index: 1;
-  animation: cardIn .9s cubic-bezier(.22,1,.36,1) both;
-}
-@keyframes cardIn {
-  from { opacity: 0; transform: translateY(36px) scale(.97); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
-}
+/* HEADER */
+.vcard-head{padding:28px 32px 24px;border-bottom:.5px solid var(--b2);text-align:center}
+.vcard-eyebrow{font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.vcard-title{font-family:'Cinzel',serif;font-size:clamp(18px,3vw,26px);font-weight:700;color:#fff;letter-spacing:.04em;margin-bottom:6px}
+.vcard-sub{font-size:12.5px;color:var(--t2);line-height:1.65}
 
-.card {
-  background: var(--surface);
-  border: 1px solid var(--gold-border);
-  border-radius: 3px;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0 0 60px rgba(201,168,76,.07), 0 32px 64px rgba(0,0,0,.6);
-}
+/* PROGRESS */
+.vprog{display:flex;align-items:center;justify-content:center;gap:0;padding:20px 32px;border-bottom:.5px solid var(--b2)}
+.vstep-pill{display:flex;align-items:center;gap:8px;padding:6px 16px;border-radius:20px;font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--t3);transition:all .35s var(--ease)}
+.vstep-pill.active{color:var(--gold);background:var(--ga)}
+.vstep-pill.done{color:var(--em)}
+.vstep-num{width:20px;height:20px;border-radius:50%;border:1px solid currentColor;display:flex;align-items:center;justify-content:center;font-size:9px;flex-shrink:0}
+.vstep-pill.done .vstep-num{background:var(--em);border-color:var(--em);color:#fff}
+.vprog-line{flex:1;height:.5px;background:var(--b2);max-width:40px;transition:background .35s}
+.vprog-line.done{background:var(--em)}
 
-.card::before, .card::after {
-  content: ''; position: absolute;
-  width: 22px; height: 22px;
-  border-color: var(--gold-dim); border-style: solid; z-index: 3;
-}
-.card::before { top: 10px;    left: 10px;  border-width: 1px 0 0 1px; }
-.card::after  { bottom: 10px; right: 10px; border-width: 0 1px 1px 0; }
+/* BODY */
+.vcard-body{padding:28px 32px}
+@media(max-width:600px){.vcard-body{padding:20px 18px}.vcard-head{padding:20px 18px 18px}.vprog{padding:16px 18px}}
 
-.top-bar {
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  opacity: .8; position: relative; overflow: hidden;
-}
-.top-bar::after {
-  content: ''; position: absolute; top: 0; left: -80%; width: 60%; height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,.8), transparent);
-  animation: shimmer 3s ease-in-out infinite;
-}
-@keyframes shimmer { to { left: 130%; } }
+/* ══ STEP 0 — PATH CHOOSER ══════════════════════════════ */
+.s0-label{font-family:'Cinzel',serif;font-size:13px;font-weight:600;color:#fff;letter-spacing:.05em;margin-bottom:6px}
+.s0-sub{font-size:12px;color:var(--t2);margin-bottom:22px;line-height:1.65}
 
-/* ---- header ---- */
-.header { padding: 44px 40px 28px; text-align: center; }
+.s0-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:580px){.s0-cards{grid-template-columns:1fr}}
 
-.orbit-wrap {
-  width: 110px; height: 110px;
-  margin: 0 auto 24px;
-  position: relative;
-  display: flex; align-items: center; justify-content: center;
-}
+.s0-card{border:.5px solid var(--b2);border-radius:var(--r3);padding:20px;cursor:pointer;transition:all .35s var(--ease);position:relative;background:var(--s1);user-select:none}
+.s0-card:hover{border-color:var(--b1);background:var(--ga)}
+.s0-card.selected-div{border-color:var(--purpleb);background:var(--purplea);box-shadow:0 0 28px rgba(155,126,248,.1)}
+.s0-card.selected-aeth{border-color:var(--gb);background:var(--ga);box-shadow:0 0 28px rgba(201,168,76,.1)}
+.s0-card-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.s0-icon{font-size:24px;line-height:1}
+.s0-role{font-family:'Cinzel',serif;font-size:14px;font-weight:700;letter-spacing:.04em;color:#fff}
+.s0-card.selected-div .s0-role{color:var(--purple)}
+.s0-card.selected-aeth .s0-role{color:var(--gold)}
+.s0-role-sub{font-family:'Rajdhani',sans-serif;font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--t3);margin-top:2px}
+.s0-desc{font-size:12px;color:var(--t2);line-height:1.65;margin-bottom:14px}
+.s0-desc strong{color:rgba(255,255,255,.8)}
+.s0-partners-list{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.s0-partner-chip{padding:7px 12px;background:rgba(255,255,255,.04);border:.5px solid rgba(255,255,255,.08);border-radius:6px;font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:600;color:var(--t2);letter-spacing:.08em;display:flex;align-items:center;justify-content:space-between}
+.s0-partner-chip span{font-size:10px;color:var(--gold);opacity:.6}
+.s0-unlock{display:flex;align-items:center;gap:8px;padding-top:12px;border-top:.5px solid var(--b3)}
+.s0-unlock-lbl{font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--t3)}
+.s0-chamber{font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;border-radius:20px}
+.div-ch{background:var(--purplea);color:var(--purple);border:.5px solid var(--purpleb)}
+.aeth-ch{background:var(--ga);color:var(--gold);border:.5px solid var(--gb)}
+.s0-check{position:absolute;top:14px;right:14px;width:20px;height:20px;border-radius:50%;border:1.5px solid var(--b2);display:flex;align-items:center;justify-content:center;transition:all .3s;flex-shrink:0}
+.s0-card.selected-div .s0-check{background:var(--purple);border-color:var(--purple)}
+.s0-card.selected-aeth .s0-check{background:var(--gold);border-color:var(--gold)}
+.s0-check svg{width:10px;height:10px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;opacity:0;transition:opacity .25s}
+.s0-card.selected-div .s0-check svg,
+.s0-card.selected-aeth .s0-check svg{opacity:1}
+.s0-note{font-size:11px;color:var(--t3);margin-top:16px;text-align:center;line-height:1.65}
+.s0-note strong{color:rgba(201,168,76,.65)}
 
-.ring-o {
-  position: absolute; inset: 0; border-radius: 50%;
-  border: 1px solid rgba(201,168,76,.22);
-  animation: spinCW 18s linear infinite;
-}
-.ring-o::before, .ring-o::after {
-  content: ''; position: absolute; border-radius: 50%;
-  background: var(--gold);
-}
-.ring-o::before { width: 6px; height: 6px; top: -3px; left: 50%; transform: translateX(-50%); box-shadow: 0 0 10px var(--gold), 0 0 20px rgba(201,168,76,.4); }
-.ring-o::after  { width: 4px; height: 4px; bottom: -2px; left: 50%; transform: translateX(-50%); opacity: .4; }
+/* ══ STEP 1 ══════════════════════════════════════════════ */
+.s1-wrap{display:none}
+.s1-wrap.visible{display:block}
 
-.ring-m {
-  position: absolute; inset: 14px; border-radius: 50%;
-  border: 0.5px solid rgba(201,168,76,.14);
-  animation: spinCCW 25s linear infinite;
-}
-.ring-m::before {
-  content: ''; position: absolute; width: 5px; height: 5px; border-radius: 50%;
-  background: var(--gold-bright); opacity: .55;
-  top: -2.5px; left: 50%; transform: translateX(-50%);
-  box-shadow: 0 0 6px var(--gold);
-}
+/* Platform selector */
+.field-label{font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--t2);margin-bottom:8px;display:block}
+.platform-grid{display:grid;gap:8px;margin-bottom:20px}
+.platform-grid.single{grid-template-columns:1fr}
+.platform-grid.triple{grid-template-columns:repeat(3,1fr)}
+@media(max-width:560px){.platform-grid.triple{grid-template-columns:1fr}}
 
-.ring-i {
-  position: absolute; inset: 26px; border-radius: 50%;
-  border: 0.5px solid rgba(201,168,76,.09);
-  animation: spinCW 12s linear infinite;
-}
+.plat-btn{border:.5px solid var(--b2);border-radius:var(--r2);padding:12px 16px;cursor:pointer;transition:all .3s var(--ease);background:var(--s1);text-align:left;display:flex;flex-direction:column;gap:3px}
+.plat-btn:hover{border-color:var(--b1);background:var(--ga)}
+.plat-btn.selected{border-color:var(--gold);background:var(--ga);box-shadow:0 0 18px rgba(201,168,76,.1)}
+.plat-name{font-family:'Cinzel',serif;font-size:13px;font-weight:600;color:#fff;letter-spacing:.03em}
+.plat-code{font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:600;letter-spacing:.12em;color:var(--gold);opacity:.75}
+.plat-detail{font-size:11px;color:var(--t2)}
 
-@keyframes spinCW  { from { transform: rotate(0deg);   } to { transform: rotate(360deg);  } }
-@keyframes spinCCW { from { transform: rotate(0deg);   } to { transform: rotate(-360deg); } }
+/* Code display */
+.code-box{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;background:var(--ga);border:.5px solid var(--gb);border-radius:var(--r2);margin-bottom:20px}
+.code-label{font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--t2)}
+.code-val{font-family:'Cinzel',serif;font-size:14px;font-weight:700;color:var(--gold);letter-spacing:.1em}
+.code-copy{font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--t3);cursor:pointer;padding:4px 10px;border:.5px solid var(--b2);border-radius:20px;background:none;transition:all .2s}
+.code-copy:hover{color:var(--gold);border-color:var(--gb)}
 
-.logo-circle {
-  width: 66px; height: 66px; border-radius: 50%;
-  border: 1px solid var(--gold-dim);
-  background: rgba(201,168,76,.06);
-  overflow: hidden; position: relative; z-index: 1;
-  box-shadow: 0 0 24px rgba(201,168,76,.15), inset 0 0 14px rgba(201,168,76,.06);
-  animation: logoPulse 4s ease-in-out infinite;
-}
-@keyframes logoPulse {
-  0%,100% { box-shadow: 0 0 24px rgba(201,168,76,.15), inset 0 0 14px rgba(201,168,76,.06); }
-  50%      { box-shadow: 0 0 36px rgba(201,168,76,.28), inset 0 0 20px rgba(201,168,76,.12); }
-}
-.logo-circle img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+/* Form fields */
+.field{margin-bottom:16px}
+.field-input{width:100%;padding:11px 14px;background:var(--s1);border:.5px solid var(--b2);border-radius:var(--r2);font-family:'Inter',sans-serif;font-size:13px;color:var(--t1);outline:none;transition:border-color .25s}
+.field-input:focus{border-color:var(--gb)}
+.field-input::placeholder{color:var(--t3)}
+.field-select{width:100%;padding:11px 14px;background:var(--bg2);border:.5px solid var(--b2);border-radius:var(--r2);font-family:'Inter',sans-serif;font-size:13px;color:var(--t1);outline:none;transition:border-color .25s;cursor:pointer;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,.35)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.field-select:focus{border-color:var(--gb)}
+.field-select option{background:#0C1020;color:#fff}
+.field-hint{font-size:11px;color:var(--t3);margin-top:5px;line-height:1.55}
 
-.eyebrow {
-  font-size: 10px; font-weight: 600; letter-spacing: .3em; text-transform: uppercase;
-  color: var(--gold-dim); margin-bottom: 8px;
-  animation: fadeUp .7s ease .1s both;
-}
-.page-title {
-  font-family: 'Cinzel', serif; font-size: 22px; font-weight: 600;
-  color: var(--text); letter-spacing: .06em; margin-bottom: 8px;
-  text-shadow: 0 0 24px rgba(201,168,76,.15);
-  animation: fadeUp .7s ease .15s both;
-}
-.page-subtitle {
-  font-family: 'Cormorant Garamond', serif; font-size: 15px; font-style: italic;
-  color: var(--muted); line-height: 1.6;
-  animation: fadeUp .7s ease .2s both;
-}
+/* Size grid */
+.size-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin-bottom:16px}
+@media(max-width:520px){.size-grid{grid-template-columns:repeat(3,1fr)}}
+.size-btn{border:.5px solid var(--b2);border-radius:var(--r2);padding:8px 4px;cursor:pointer;transition:all .3s;background:var(--s1);font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--t2);text-align:center}
+.size-btn:hover{border-color:var(--b1);color:var(--t1)}
+.size-btn.selected{border-color:var(--gold);background:var(--ga);color:var(--gold)}
 
-.role-strip {
-  display: flex; justify-content: center; gap: 8px; margin-top: 16px;
-  animation: fadeUp .7s ease .25s both;
-}
-.role-badge {
-  font-size: 9px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
-  color: rgba(201,168,76,.45); background: rgba(201,168,76,.06);
-  border: .5px solid rgba(201,168,76,.16); padding: 4px 10px; border-radius: 2px;
-  transition: all .2s;
-}
-.role-badge:hover { color: rgba(201,168,76,.8); border-color: rgba(201,168,76,.35); background: rgba(201,168,76,.1); }
+/* ══ STEP 2 ══════════════════════════════════════════════ */
+.s2-wrap{display:none}
+.s2-wrap.visible{display:block}
 
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(14px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
+.upload-area{border:.5px dashed rgba(201,168,76,.3);border-radius:var(--r3);padding:28px;text-align:center;cursor:pointer;transition:all .3s;background:var(--s1);position:relative}
+.upload-area:hover{border-color:var(--gb);background:var(--ga)}
+.upload-area.has-file{border-color:rgba(42,164,120,.4);background:var(--ema)}
+.upload-icon{margin:0 auto 10px;width:36px;height:36px;border-radius:50%;background:var(--ga);border:.5px solid var(--gb);display:flex;align-items:center;justify-content:center}
+.upload-icon svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.upload-title{font-family:'Cinzel',serif;font-size:12px;font-weight:600;color:var(--t1);margin-bottom:4px}
+.upload-sub{font-size:11px;color:var(--t3);line-height:1.55}
+.upload-input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.file-name{font-size:11px;color:var(--em);margin-top:8px;font-weight:500}
 
-/* ---- divider ---- */
-.divider { display: flex; align-items: center; padding: 0 40px; margin-bottom: 28px; }
-.div-l { flex: 1; height: .5px; background: linear-gradient(to right, transparent, var(--gold-dim)); }
-.div-r { flex: 1; height: .5px; background: linear-gradient(to left,  transparent, var(--gold-dim)); }
-.div-d {
-  width: 6px; height: 6px; background: var(--gold); transform: rotate(45deg);
-  margin: 0 12px; flex-shrink: 0;
-  box-shadow: 0 0 8px rgba(201,168,76,.5);
-}
+/* Receipt note */
+.receipt-note{padding:12px 16px;background:var(--ema);border:.5px solid rgba(42,164,120,.25);border-radius:var(--r2);margin-bottom:18px;font-size:12px;color:rgba(255,255,255,.7);line-height:1.65}
+.receipt-note strong{color:var(--em)}
 
-/* ---- form ---- */
-.form-body { padding: 0 40px 40px; }
+/* ══ BUTTONS ══════════════════════════════════════════════ */
+.btn-row{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap}
+.vbtn{display:inline-flex;align-items:center;gap:8px;font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;border-radius:var(--r1);cursor:pointer;transition:all .35s var(--ease);padding:12px 26px;border:none}
+.vbtn svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s var(--ease)}
+.vbtn:hover svg{transform:translateX(3px)}
+.vbtn-primary{background:var(--gold);color:#06040F}
+.vbtn-primary:hover{background:var(--goldl);transform:translateY(-2px);box-shadow:0 10px 30px rgba(201,168,76,.35)}
+.vbtn-ghost{background:var(--s1);color:var(--t2);border:.5px solid var(--b2)}
+.vbtn-ghost:hover{background:var(--s2);color:var(--t1);border-color:var(--b1)}
+.vbtn-ghost svg{transform:rotate(180deg)}
+.vbtn-ghost:hover svg{transform:rotate(180deg) translateX(3px)}
+.vbtn:disabled{opacity:.4;cursor:not-allowed;transform:none!important;box-shadow:none!important}
 
-.step-label {
-  font-size: 10px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase;
-  color: var(--gold-dim); margin-bottom: 18px;
-  display: flex; align-items: center; gap: 12px;
-}
-.step-label::before {
-  content: ''; width: 6px; height: 6px; border-radius: 50%;
-  background: var(--gold); box-shadow: 0 0 6px rgba(201,168,76,.6);
-  flex-shrink: 0;
-  animation: dotPulse 2.5s ease-in-out infinite;
-}
-@keyframes dotPulse { 0%,100% { box-shadow: 0 0 6px rgba(201,168,76,.6); } 50% { box-shadow: 0 0 14px rgba(201,168,76,.9); } }
-.step-label::after { content: ''; flex: 1; height: .5px; background: linear-gradient(to right, var(--gold-border), transparent); }
+/* ══ SUCCESS STATE ════════════════════════════════════════ */
+.vsuccess{display:none;text-align:center;padding:40px 24px}
+.vsuccess.visible{display:block}
+.vsuccess-icon{width:64px;height:64px;border-radius:50%;background:var(--ema);border:.5px solid rgba(42,164,120,.3);display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+.vsuccess-icon svg{width:28px;height:28px;stroke:var(--em);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.vsuccess-title{font-family:'Cinzel',serif;font-size:22px;font-weight:700;color:#fff;letter-spacing:.04em;margin-bottom:8px}
+.vsuccess-sub{font-size:13px;color:var(--t2);line-height:1.7;max-width:460px;margin:0 auto 24px}
+.vsuccess-discord{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:rgba(88,101,242,.15);border:.5px solid rgba(88,101,242,.3);border-radius:20px;font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7289da;text-decoration:none;transition:all .3s}
+.vsuccess-discord:hover{background:rgba(88,101,242,.25)}
 
-.field { margin-bottom: 14px; animation: fadeUp .6s ease both; }
-.field:nth-child(1) { animation-delay: .05s; }
-.field:nth-child(2) { animation-delay: .10s; }
-.field:nth-child(3) { animation-delay: .15s; }
-.field:nth-child(4) { animation-delay: .20s; }
+/* ══ ERROR / LOADING ══════════════════════════════════════ */
+.vloading{display:none;text-align:center;padding:20px}
+.vloading.visible{display:block}
+.vspinner{width:32px;height:32px;border-radius:50%;border:2px solid var(--b2);border-top-color:var(--gold);animation:spin .9s linear infinite;margin:0 auto 10px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.vloading-txt{font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--t3)}
 
-.field-label {
-  font-size: 10px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
-  color: var(--gold-dim); margin-bottom: 7px; display: block;
-  transition: color .2s;
-}
-.field:focus-within .field-label { color: rgba(201,168,76,.8); }
+.verror{font-size:12px;color:#E05070;margin-top:10px;display:none}
+.verror.visible{display:block}
 
-.field-input {
-  width: 100%; padding: 13px 16px;
-  background: var(--surface2); border: 1px solid var(--gold-border);
-  color: var(--text); font-family: 'Rajdhani', sans-serif;
-  font-size: 14px; font-weight: 500;
-  outline: none; border-radius: 2px;
-  transition: border-color .25s, background .25s, box-shadow .25s;
-  appearance: none; -webkit-appearance: none;
-}
-.field-input::placeholder { color: rgba(237,232,220,.18); font-size: 13px; }
-.field-input:focus {
-  border-color: rgba(201,168,76,.55);
-  background: rgba(201,168,76,.04);
-  box-shadow: 0 0 0 3px rgba(201,168,76,.07), inset 0 1px 4px rgba(0,0,0,.3);
-}
-.field-input[readonly] { color: rgba(201,168,76,.7); cursor: default; border-color: rgba(201,168,76,.12); }
+/* ══ DIVIDER ══════════════════════════════════════════════ */
+.sec-div{display:flex;align-items:center;gap:12px;margin:20px 0}
+.sec-div::before,.sec-div::after{content:'';flex:1;height:.5px;background:var(--b2)}
+.sec-div-lbl{font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--t3);white-space:nowrap}
 
-.select-wrap { position: relative; }
-.select-wrap::after {
-  content: ''; position: absolute; right: 16px; top: 50%;
-  transform: translateY(-50%) rotate(45deg);
-  width: 7px; height: 7px;
-  border-right: 1px solid var(--gold-dim); border-bottom: 1px solid var(--gold-dim);
-  pointer-events: none; margin-top: -2px; transition: border-color .2s;
-}
-.select-wrap:focus-within::after { border-color: rgba(201,168,76,.7); }
-select.field-input { cursor: pointer; }
-select.field-input option { background: #0C0A18; color: var(--text); }
+/* ══ SEEKER BADGE ═════════════════════════════════════════ */
+.seeker-badge{display:inline-flex;align-items:center;gap:7px;padding:5px 14px;border-radius:20px;font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px}
+.seeker-badge.div{background:var(--purplea);color:var(--purple);border:.5px solid var(--purpleb)}
+.seeker-badge.aeth{background:var(--ga);color:var(--gold);border:.5px solid var(--gb)}
 
-.referrer-wrap { position: relative; }
-.referrer-badge {
-  position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
-  font-size: 9px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
-  color: var(--gold); background: rgba(201,168,76,.1); border: .5px solid rgba(201,168,76,.3);
-  padding: 3px 9px; border-radius: 2px; display: none;
+/* Responsive */
+@media(max-width:600px){
+  .vpage{padding:80px 12px 40px}
 }
-.referrer-badge.show {
-  display: block;
-  animation: badgePop .3s cubic-bezier(.34,1.56,.64,1) both;
-}
-@keyframes badgePop {
-  from { transform: translateY(-50%) scale(.6); opacity: 0; }
-  to   { transform: translateY(-50%) scale(1); opacity: 1; }
-}
-
-/* upload */
-.upload-zone {
-  border: 1px dashed var(--gold-border); border-radius: 2px;
-  background: var(--surface2); padding: 28px 16px;
-  text-align: center; cursor: pointer;
-  transition: border-color .25s, background .25s, box-shadow .25s;
-  position: relative; overflow: hidden;
-}
-.upload-zone::before {
-  content: ''; position: absolute; inset: 0;
-  background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(201,168,76,.07) 0%, transparent 70%);
-  opacity: 0; transition: opacity .3s;
-}
-.upload-zone:hover { border-color: rgba(201,168,76,.5); background: rgba(201,168,76,.03); }
-.upload-zone:hover::before, .upload-zone.drag::before { opacity: 1; }
-.upload-zone.drag { border-color: rgba(201,168,76,.6); box-shadow: 0 0 24px rgba(201,168,76,.1); }
-.upload-zone.has-file { border-style: solid; border-color: rgba(201,168,76,.45); }
-.upload-zone input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; z-index: 10; width: 100%; height: 100%; }
-
-.upload-icon {
-  width: 42px; height: 42px; border-radius: 50%;
-  border: 1px solid var(--gold-border); background: rgba(201,168,76,.06);
-  display: flex; align-items: center; justify-content: center;
-  margin: 0 auto 12px; transition: all .3s; position: relative;
-}
-.upload-icon::before {
-  content: ''; position: absolute; inset: -5px; border-radius: 50%;
-  border: .5px solid rgba(201,168,76,.1);
-  animation: spinCW 10s linear infinite;
-}
-.upload-zone:hover .upload-icon, .upload-zone.has-file .upload-icon {
-  border-color: var(--gold-dim); background: rgba(201,168,76,.12);
-  box-shadow: 0 0 14px rgba(201,168,76,.18);
-}
-.upload-icon svg { width: 16px; height: 16px; stroke: var(--gold); transition: transform .3s; }
-.upload-zone:hover .upload-icon svg { transform: translateY(-2px); }
-.upload-primary { font-size: 12px; font-weight: 600; letter-spacing: .06em; color: var(--text); margin-bottom: 4px; }
-.upload-secondary { font-size: 11px; color: var(--muted); letter-spacing: .04em; }
-.upload-filename { font-size: 11px; color: var(--gold); font-weight: 600; letter-spacing: .06em; margin-top: 10px; display: none; animation: fadeUp .3s ease both; }
-
-/* hint */
-/* ---- Referral Block ---- */
-.ref-block {
-  background: rgba(201,168,76,.04);
-  border: .5px solid rgba(201,168,76,.2);
-  border-radius: 2px;
-  padding: 18px 20px;
-  margin-bottom: 26px;
-  position: relative;
-  overflow: hidden;
-}
-.ref-block::before {
-  content: '';
-  position: absolute; top: 0; left: 0; right: 0; height: 1px;
-  background: linear-gradient(to right, transparent, var(--gold-dim), transparent);
-}
-.ref-label {
-  font-size: 10px; font-weight: 600;
-  letter-spacing: .2em; text-transform: uppercase;
-  color: var(--gold-dim); margin-bottom: 8px;
-}
-.ref-hint {
-  font-size: 13px; color: var(--muted);
-  line-height: 1.55; margin-bottom: 14px;
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-}
-.ref-links {
-  display: flex; gap: 10px; flex-wrap: wrap;
-}
-.ref-btn {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 9px 16px;
-  background: var(--surface2);
-  border: .5px solid rgba(201,168,76,.2);
-  border-radius: 2px; text-decoration: none;
-  transition: all .25s cubic-bezier(.22,1,.36,1);
-  position: relative; overflow: hidden;
-}
-.ref-btn::before {
-  content: '';
-  position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(201,168,76,.08), transparent);
-  transition: left .5s;
-}
-.ref-btn:hover { border-color: rgba(201,168,76,.5); transform: translateY(-2px); }
-.ref-btn:hover::before { left: 100%; }
-.ref-btn-name {
-  font-family: 'Cinzel', serif;
-  font-size: 11px; font-weight: 600;
-  color: var(--text); letter-spacing: .05em;
-}
-.ref-btn-code {
-  font-size: 10px; font-weight: 600;
-  letter-spacing: .1em; text-transform: uppercase;
-  color: var(--gold); background: rgba(201,168,76,.1);
-  border: .5px solid rgba(201,168,76,.25);
-  padding: 2px 7px; border-radius: 2px;
-}
-.ref-btn svg { stroke: var(--gold); opacity: .7; transition: opacity .2s; flex-shrink: 0; }
-.ref-btn:hover svg { opacity: 1; }
-
-/* ---- Hint Box ---- */
-.hint-box {
-  display: flex; gap: 12px;
-  background: rgba(201,168,76,.04);
-  border: .5px solid rgba(201,168,76,.12);
-  border-left: 2px solid rgba(201,168,76,.35);
-  border-radius: 0 2px 2px 0;
-  padding: 12px 14px; margin-bottom: 20px;
-}
-.hint-dot {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: var(--gold); margin-top: 5px; flex-shrink: 0; opacity: .6;
-  animation: blink 2.2s ease-in-out infinite;
-}
-@keyframes blink { 0%,100% { opacity: .6; } 50% { opacity: .15; } }
-.hint-text { font-size: 11px; color: var(--muted); line-height: 1.6; letter-spacing: .03em; }
-.hint-text strong { color: rgba(201,168,76,.8); font-weight: 600; }
-
-/* error */
-.error-msg {
-  font-size: 11px; color: var(--red); letter-spacing: .04em;
-  margin-top: 10px; display: none; text-align: center;
-  padding: 8px 12px;
-  background: rgba(200,60,90,.07); border: .5px solid rgba(200,60,90,.2); border-radius: 2px;
-  animation: fadeUp .3s ease both;
-}
-
-/* submit */
-.submit-btn {
-  width: 100%; margin-top: 6px; padding: 15px;
-  background: transparent; border: 1px solid var(--gold-dim);
-  color: var(--gold); font-family: 'Rajdhani', sans-serif;
-  font-size: 12px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase;
-  cursor: pointer; border-radius: 2px;
-  position: relative; overflow: hidden;
-  transition: letter-spacing .3s, border-color .3s, box-shadow .3s;
-  display: flex; align-items: center; justify-content: center; gap: 10px;
-}
-.submit-btn::before {
-  content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(201,168,76,.14), transparent);
-  transition: left .55s ease;
-}
-.submit-btn:hover {
-  letter-spacing: .32em; border-color: var(--gold);
-  box-shadow: 0 0 24px rgba(201,168,76,.12);
-}
-.submit-btn:hover::before { left: 100%; }
-.submit-btn:disabled { opacity: .4; cursor: not-allowed; letter-spacing: .24em; }
-.btn-spinner {
-  width: 14px; height: 14px;
-  border: 1.5px solid rgba(201,168,76,.25); border-top-color: var(--gold);
-  border-radius: 50%; animation: spinCW .7s linear infinite; display: none; flex-shrink: 0;
-}
-.submit-btn.loading .btn-spinner { display: block; }
-.submit-btn.loading .btn-text { opacity: .6; }
-
-/* footer */
-.card-footer {
-  padding: 14px 40px 22px; border-top: .5px solid rgba(201,168,76,.08);
-  display: flex; justify-content: space-between; align-items: center;
-}
-.cf-brand {
-  font-family: 'Cinzel', serif; font-size: 10px; font-weight: 600;
-  letter-spacing: .15em; text-transform: uppercase; color: rgba(201,168,76,.28);
-}
-.cf-tags { display: flex; gap: 6px; }
-.cf-tag {
-  font-size: 9px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
-  color: rgba(201,168,76,.28); background: rgba(201,168,76,.04);
-  border: .5px solid rgba(201,168,76,.1); padding: 3px 7px; border-radius: 2px;
-  transition: all .2s;
-}
-.cf-tag:hover { color: rgba(201,168,76,.65); border-color: rgba(201,168,76,.3); }
-
-/* ══ STEP 0 — TWO PATH LAYOUT ══ */
-.step0-wrap{margin-bottom:28px;border:.5px solid rgba(201,168,76,.2);border-radius:12px;padding:26px;background:rgba(8,12,26,.7);backdrop-filter:blur(10px)}
-.step0-title{font-family:'Cinzel',serif;font-size:13px;font-weight:700;color:#C9A84C;letter-spacing:.06em;margin-bottom:6px;text-transform:uppercase;letter-spacing:.1em}
-.step0-sub{font-size:12px;color:rgba(255,255,255,.5);margin-bottom:22px;line-height:1.65}
-.step0-cols{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:start}
-@media(max-width:680px){.step0-cols{grid-template-columns:1fr;gap:20px}.step0-or{display:flex;justify-content:center}}
-.step0-col{background:rgba(255,255,255,.03);border:.5px solid rgba(255,255,255,.07);border-radius:8px;padding:18px}
-.div-col{border-color:rgba(155,126,248,.2)}
-.aeth-col{border-color:rgba(201,168,76,.2)}
-.step0-col-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
-.step0-icon{font-size:22px;line-height:1}
-.step0-role{font-family:'Cinzel',serif;font-size:13px;font-weight:700;color:#9B7EF8;letter-spacing:.04em}
-.aeth-role{color:#C9A84C}
-.step0-role-sub{font-size:10px;color:rgba(255,255,255,.4);font-family:'Rajdhani',sans-serif;letter-spacing:.14em;text-transform:uppercase;margin-top:2px}
-.step0-col-desc{font-size:12px;color:rgba(255,255,255,.5);line-height:1.65;margin-bottom:16px}
-.step0-col-desc strong{color:rgba(255,255,255,.8)}
-.step0-partners{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
-.step0-partner-btn{display:flex;align-items:center;gap:10px;padding:10px 14px;background:rgba(255,255,255,.04);border:.5px solid rgba(255,255,255,.08);border-radius:6px;text-decoration:none;transition:all .3s;position:relative}
-.step0-partner-btn:hover{background:rgba(155,126,248,.08);border-color:rgba(155,126,248,.25);transform:translateX(3px)}
-.aeth-btn:hover{background:rgba(201,168,76,.08);border-color:rgba(201,168,76,.25)}
-.step0-partner-btn svg{margin-left:auto;flex-shrink:0;stroke:rgba(255,255,255,.3)}
-.step0-partner-btn:hover svg{stroke:rgba(155,126,248,.7)}
-.aeth-btn:hover svg{stroke:rgba(201,168,76,.7)}
-.step0-partner-name{font-family:'Cinzel',serif;font-size:12px;font-weight:600;color:rgba(255,255,255,.85);letter-spacing:.03em}
-.step0-partner-detail{font-size:10px;color:rgba(255,255,255,.4);font-family:'Rajdhani',sans-serif;letter-spacing:.06em;margin-left:auto}
-.step0-partner-code{font-size:10px;color:rgba(201,168,76,.55);font-family:'Rajdhani',sans-serif;letter-spacing:.08em}
-.step0-unlocks{display:flex;align-items:center;gap:8px;padding-top:12px;border-top:.5px solid rgba(255,255,255,.06)}
-.step0-unlocks-label{font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.3)}
-.step0-chamber{font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;border-radius:20px}
-.div-chamber{background:rgba(155,126,248,.12);color:#9B7EF8;border:.5px solid rgba(155,126,248,.25)}
-.aeth-chamber{background:rgba(201,168,76,.12);color:#C9A84C;border:.5px solid rgba(201,168,76,.25)}
-.step0-or{display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:40px}
-.step0-or span{font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.25);background:rgba(8,12,26,.8);padding:6px 8px;border-radius:50%;border:.5px solid rgba(255,255,255,.08);width:28px;height:28px;display:flex;align-items:center;justify-content:center}
-.step0-note{font-size:11px;color:rgba(255,255,255,.35);margin-top:14px;line-height:1.65;text-align:center}
-.step0-note strong{color:rgba(201,168,76,.7)}
-
 </style>
 </head>
 <body>
 
-<canvas id="bg"></canvas>
-<div class="glow-layer"></div>
-<div class="diag"></div>
+<canvas id="bgcvs" aria-hidden="true"></canvas>
 
-<div class="wrap">
-  <div class="card">
-    <div class="top-bar"></div>
-
-    <div class="header">
-      <div class="orbit-wrap">
-        <div class="ring-o"></div>
-        <div class="ring-m"></div>
-        <div class="ring-i"></div>
-        <div class="logo-circle">
-          <img src="ARC.png" alt="Arcanum Sanctum">
-        </div>
-      </div>
-      <div class="eyebrow">Ascendant Verification</div>
-      <div class="page-title">Claim Your Role</div>
-      <div class="page-subtitle">Submit your credentials to unlock<br>full Ascendant privileges</div>
-      <div class="role-strip">
-        <span class="role-badge">MEXC</span>
-        <span class="role-badge">Bitunix</span>
-
-      </div>
-    </div>
-
-    <div class="divider">
-      <div class="div-l"></div><div class="div-d"></div><div class="div-r"></div>
-    </div>
-
-    <div class="form-body" id="formBody">
-
-      <!-- STEP 0 — CHOOSE YOUR PATH -->
-      <div class="step0-wrap">
-        <div class="step0-title">Step 0 &mdash; Choose Your Access Path</div>
-        <p class="step0-sub">Select the path that applies to you. Register or purchase through our official links, then fill the form below.</p>
-        <div class="step0-cols">
-
-          <!-- DIVINATION SEEKER -->
-          <div class="step0-col div-col">
-            <div class="step0-col-header">
-              <span class="step0-icon">&#x1F52E;</span>
-              <div>
-                <div class="step0-role">Divination Seeker</div>
-                <div class="step0-role-sub">Crypto Trading Access</div>
-              </div>
-            </div>
-            <p class="step0-col-desc">Register through our partnered exchange to unlock the <strong>Divination Chamber</strong> and all crypto trading content.</p>
-            <div class="step0-partners">
-              <a href="https://www.bitunix.com/register?vipCode=SANCTUM" target="_blank" rel="noopener noreferrer" class="step0-partner-btn">
-                <div class="step0-partner-name">Bitunix</div>
-                <div class="step0-partner-detail">Futures &middot; 20% Rebate</div>
-                <div class="step0-partner-code">Code: SANCTUM</div>
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-              </a>
-            </div>
-            <div class="step0-unlocks">
-              <span class="step0-unlocks-label">Unlocks:</span>
-              <span class="step0-chamber div-chamber">&#x1F52E; Divination Chamber</span>
-            </div>
-          </div>
-
-          <!-- COLUMN DIVIDER -->
-          <div class="step0-or"><span>or</span></div>
-
-          <!-- AETHER SEEKER -->
-          <div class="step0-col aeth-col">
-            <div class="step0-col-header">
-              <span class="step0-icon">&#x2694;&#xFE0F;</span>
-              <div>
-                <div class="step0-role aeth-role">Aether Seeker</div>
-                <div class="step0-role-sub">CFD &amp; Prop Trading Access</div>
-              </div>
-            </div>
-            <p class="step0-col-desc">Purchase an account through one of our partnered prop firms to unlock the <strong>Aether Chamber</strong> and all CFD trading content.</p>
-            <div class="step0-partners">
-              <a href="https://affiliates.atlasfunded.com/Tracking/S/6a70d3911356becd0cccf005" target="_blank" rel="noopener noreferrer" class="step0-partner-btn aeth-btn">
-                <div class="step0-partner-name">Atlas Funded</div>
-                <div class="step0-partner-detail">40% OFF All Accounts</div>
-                <div class="step0-partner-code">Code: SANCTUM</div>
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-              </a>
-              <a href="https://app.alphacapitalgroup.uk/signup/SANCTUM" target="_blank" rel="noopener noreferrer" class="step0-partner-btn aeth-btn">
-                <div class="step0-partner-name">Alpha Capital Group</div>
-                <div class="step0-partner-detail">40% OFF All Accounts</div>
-                <div class="step0-partner-code">Code: SANCTUM</div>
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-              </a>
-              <a href="https://www.aquafunded.com/?afmc=SANCTUM" target="_blank" rel="noopener noreferrer" class="step0-partner-btn aeth-btn">
-                <div class="step0-partner-name">AquaFunded</div>
-                <div class="step0-partner-detail">40% OFF Instant Accounts</div>
-                <div class="step0-partner-code">Code: SANCTUM</div>
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-              </a>
-            </div>
-            <div class="step0-unlocks">
-              <span class="step0-unlocks-label">Unlocks:</span>
-              <span class="step0-chamber aeth-chamber">&#x2694;&#xFE0F; Aether Chamber</span>
-            </div>
-          </div>
-
-        </div>
-        <p class="step0-note">&#9432; You can qualify for <strong>both roles</strong> by completing both requirements. Members with both roles get full access to the Divination Chamber and Aether Chamber.</p>
-      </div>
-
-<div class="step-label">Step 1 - Your Details</div>
-
-      <div class="field">
-        <label class="field-label" for="uid">Exchange UID</label>
-        <input class="field-input" id="uid" type="text" placeholder="Enter your UID number" autocomplete="off">
-      </div>
-      <div class="field">
-        <label class="field-label" for="discord">Discord Username</label>
-        <input class="field-input" id="discord" type="text" placeholder="e.g. kazzy#0000" autocomplete="off">
-      </div>
-      <div class="field">
-        <label class="field-label" for="platform">Platform</label>
-        <div class="select-wrap">
-          <select class="field-input" id="platform" onchange="setReferrer()">
-            <option value="">Select your exchange</option>
-<option value="MEXC">MEXC</option>
-            <option value="Bitget">Bitunix</option>
-
-          </select>
-        </div>
-      </div>
-      <div class="field">
-        <label class="field-label" for="referrer">Referral Code</label>
-        <div class="referrer-wrap">
-          <input class="field-input" id="referrer" type="text" readonly placeholder="Auto-filled on platform select">
-          <span class="referrer-badge" id="referrerBadge">Verified</span>
-        </div>
-      </div>
-
-      <div class="step-label" style="margin-top:26px;">Step 2 - Proof of Registration</div>
-
-      <div class="hint-box">
-        <div class="hint-dot"></div>
-        <div class="hint-text">
-          Upload a <strong>screenshot</strong> of your exchange registration using the Sanctum referral link.
-          Must show your <strong>UID</strong> and <strong>deposit confirmation</strong> of at least <strong>$50</strong>.
-        </div>
-      </div>
-
-      <div class="field">
-        <label class="field-label">Screenshot</label>
-        <div class="upload-zone" id="uploadZone">
-          <input type="file" id="fileInput" accept="image/*,.pdf" onchange="handleFile(this)">
-          <div class="upload-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-              <polyline points="17 8 12 3 7 8"/>
-              <line x1="12" y1="3" x2="12" y2="15"/>
-            </svg>
-          </div>
-          <div class="upload-primary">Drop file here or click to browse</div>
-          <div class="upload-secondary">PNG, JPG, PDF - Max 10MB</div>
-          <div class="upload-filename" id="uploadFilename"></div>
-        </div>
-      </div>
-
-      <div class="error-msg" id="errorMsg"></div>
-
-      <button class="submit-btn" id="submitBtn" onclick="submitForm()">
-        <div class="btn-spinner"></div>
-        <span class="btn-text">Submit Verification</span>
-      </button>
-
-    </div>
-
-    <div class="card-footer">
-      <div class="cf-brand">Arcanum Sanctum</div>
-      <div class="cf-tags">
-        <span class="cf-tag">MEXC</span>
-        <span class="cf-tag">Bitunix</span>
-
-      </div>
-    </div>
+<!-- NAV -->
+<nav class="vnav" aria-label="Verification navigation">
+  <div class="vnav-i">
+    <a href="./index.html" class="vnav-brand" aria-label="Arcanum Sanctum Home">
+      <div class="vnav-logo"><img src="ARC.png" alt="Arcanum Sanctum" width="33" height="33"></div>
+      <span class="vnav-name">Arcanum Sanctum</span>
+    </a>
+    <a href="./index.html" class="vnav-back" aria-label="Back to main site">
+      <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to Site
+    </a>
   </div>
-</div>
+</nav>
+
+<div class="vpage">
+<div class="vcard">
+
+  <!-- HEADER -->
+  <div class="vcard-head">
+    <div class="vcard-eyebrow">Ascendant Access</div>
+    <div class="vcard-title">Sanctum Verification</div>
+    <div class="vcard-sub">Complete your verification to unlock full access to the Sanctum.</div>
+  </div>
+
+  <!-- PROGRESS -->
+  <div class="vprog" id="vprog">
+    <div class="vstep-pill active" id="pill0"><div class="vstep-num">0</div><span>Choose Path</span></div>
+    <div class="vprog-line" id="line01"></div>
+    <div class="vstep-pill" id="pill1"><div class="vstep-num">1</div><span>Your Details</span></div>
+    <div class="vprog-line" id="line12"></div>
+    <div class="vstep-pill" id="pill2"><div class="vstep-num">2</div><span>Proof</span></div>
+  </div>
+
+  <!-- BODY -->
+  <div class="vcard-body">
+
+    <!-- ══ STEP 0 ══ -->
+    <div id="step0">
+      <div class="s0-label">Step 0 &mdash; Choose Your Access Path</div>
+      <div class="s0-sub">Select the path that applies to you, then fill in your details below.</div>
+      <div class="s0-cards">
+
+        <!-- DIVINATION SEEKER -->
+        <div class="s0-card" id="div-card" onclick="selectPath('div')" role="button" tabindex="0" aria-label="Select Divination Seeker">
+          <div class="s0-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="s0-card-header">
+            <span class="s0-icon">&#x1F52E;</span>
+            <div>
+              <div class="s0-role">Divination Seeker</div>
+              <div class="s0-role-sub">Crypto Trading Access</div>
+            </div>
+          </div>
+          <p class="s0-desc">Register through our partnered exchange to unlock the <strong>Divination Chamber</strong> and all crypto trading content.</p>
+          <div class="s0-partners-list">
+            <div class="s0-partner-chip">Bitunix <span>Code: SANCTUM</span></div>
+          </div>
+          <div class="s0-unlock">
+            <span class="s0-unlock-lbl">Unlocks:</span>
+            <span class="s0-chamber div-ch">&#x1F52E; Divination Chamber</span>
+          </div>
+        </div>
+
+        <!-- AETHER SEEKER -->
+        <div class="s0-card" id="aeth-card" onclick="selectPath('aeth')" role="button" tabindex="0" aria-label="Select Aether Seeker">
+          <div class="s0-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="s0-card-header">
+            <span class="s0-icon">&#x2694;&#xFE0F;</span>
+            <div>
+              <div class="s0-role">Aether Seeker</div>
+              <div class="s0-role-sub">CFD &amp; Prop Trading Access</div>
+            </div>
+          </div>
+          <p class="s0-desc">Purchase an account through our partnered prop firms to unlock the <strong>Aether Chamber</strong> and all CFD trading content.</p>
+          <div class="s0-partners-list">
+            <div class="s0-partner-chip">Atlas Funded <span>40% Off &middot; SANCTUM</span></div>
+            <div class="s0-partner-chip">Alpha Capital Group <span>40% Off &middot; SANCTUM</span></div>
+            <div class="s0-partner-chip">AquaFunded <span>40% Off Instant</span></div>
+          </div>
+          <div class="s0-unlock">
+            <span class="s0-unlock-lbl">Unlocks:</span>
+            <span class="s0-chamber aeth-ch">&#x2694;&#xFE0F; Aether Chamber</span>
+          </div>
+        </div>
+
+      </div>
+      <p class="s0-note">&#9432; You can hold <strong>both roles</strong> by completing both requirements separately.</p>
+      <div class="btn-row" style="justify-content:flex-end">
+        <button class="vbtn vbtn-primary" id="s0-next" onclick="goStep(1)" disabled>
+          Continue <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- ══ STEP 1 — DIVINATION ══ -->
+    <div class="s1-wrap" id="step1-div">
+      <div class="seeker-badge div">&#x1F52E; Divination Seeker</div>
+
+      <label class="field-label">Select Exchange Platform</label>
+      <div class="platform-grid single">
+        <div class="plat-btn selected" id="plat-bitunix" onclick="selectPlatDiv('bitunix')" role="button" tabindex="0">
+          <div class="plat-name">Bitunix</div>
+          <div class="plat-detail">Futures &middot; 20% Trading Rebate</div>
+        </div>
+      </div>
+
+      <label class="field-label">Your Referral Code</label>
+      <div class="code-box" style="margin-bottom:20px">
+        <div>
+          <div class="code-label">Register with this code</div>
+          <div class="code-val">SANCTUM</div>
+        </div>
+        <a href="https://www.bitunix.com/register?vipCode=SANCTUM" target="_blank" rel="noopener noreferrer" class="code-copy" style="text-decoration:none;white-space:nowrap">Register &rarr;</a>
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="div-uid">Exchange UID <span style="color:#E05070">*</span></label>
+        <input type="text" id="div-uid" class="field-input" placeholder="Your Bitunix UID (e.g. 123456789)" autocomplete="off">
+        <div class="field-hint">Find your UID in Bitunix &rarr; Profile &rarr; Account Info</div>
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="div-discord">Discord Username <span style="color:#E05070">*</span></label>
+        <input type="text" id="div-discord" class="field-input" placeholder="e.g. pattss or pattss#0001" autocomplete="off">
+        <div class="field-hint">So we can identify and verify you in our server</div>
+      </div>
+
+      <div class="verror" id="s1div-err">Please fill in all required fields.</div>
+      <div class="btn-row">
+        <button class="vbtn vbtn-ghost" onclick="goStep(0)"><svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Back</button>
+        <button class="vbtn vbtn-primary" onclick="validateS1Div()">Continue <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+      </div>
+    </div>
+
+    <!-- ══ STEP 1 — AETHER ══ -->
+    <div class="s1-wrap" id="step1-aeth">
+      <div class="seeker-badge aeth">&#x2694;&#xFE0F; Aether Seeker</div>
+
+      <label class="field-label">Select Prop Firm Platform</label>
+      <div class="platform-grid triple" id="aeth-plat-grid">
+        <div class="plat-btn" id="plat-atlas" onclick="selectPlatAeth('atlas')" role="button" tabindex="0">
+          <div class="plat-name">Atlas Funded</div>
+          <div class="plat-code">SANCTUM &mdash; 40% Off</div>
+        </div>
+        <div class="plat-btn" id="plat-alpha" onclick="selectPlatAeth('alpha')" role="button" tabindex="0">
+          <div class="plat-name">Alpha Capital</div>
+          <div class="plat-code">SANCTUM &mdash; 40% Off</div>
+        </div>
+        <div class="plat-btn" id="plat-aqua" onclick="selectPlatAeth('aqua')" role="button" tabindex="0">
+          <div class="plat-name">AquaFunded</div>
+          <div class="plat-code">SANCTUM &mdash; 40% Off Instant</div>
+        </div>
+      </div>
+
+      <div id="aeth-code-box" style="display:none">
+        <label class="field-label">Your Discount Code</label>
+        <div class="code-box" style="margin-bottom:20px">
+          <div>
+            <div class="code-label" id="aeth-code-lbl">Use this code at checkout</div>
+            <div class="code-val">SANCTUM</div>
+          </div>
+          <a id="aeth-reg-link" href="#" target="_blank" rel="noopener noreferrer" class="code-copy" style="text-decoration:none;white-space:nowrap">Purchase &rarr;</a>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="aeth-gmail">Gmail Address <span style="color:#E05070">*</span></label>
+        <input type="email" id="aeth-gmail" class="field-input" placeholder="e.g. pattss.core@gmail.com" autocomplete="email">
+        <div class="field-hint">The Gmail used to purchase the funded account</div>
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="aeth-type">Account Type <span style="color:#E05070">*</span></label>
+        <select id="aeth-type" class="field-select">
+          <option value="" disabled selected>Select account type</option>
+          <option value="1 Step">1 Step</option>
+          <option value="2 Step">2 Step</option>
+          <option value="3 Step">3 Step</option>
+          <option value="Instant">Instant</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label class="field-label">Account Size <span style="color:#E05070">*</span></label>
+        <div class="size-grid" id="size-grid">
+          <div class="size-btn" onclick="selectSize(this,'2.5k')">$2.5K</div>
+          <div class="size-btn" onclick="selectSize(this,'5k')">$5K</div>
+          <div class="size-btn" onclick="selectSize(this,'10k')">$10K</div>
+          <div class="size-btn" onclick="selectSize(this,'25k')">$25K</div>
+          <div class="size-btn" onclick="selectSize(this,'50k')">$50K</div>
+          <div class="size-btn" onclick="selectSize(this,'100k')">$100K</div>
+          <div class="size-btn" onclick="selectSize(this,'150k')">$150K</div>
+          <div class="size-btn" onclick="selectSize(this,'200k')">$200K</div>
+          <div class="size-btn" onclick="selectSize(this,'250k')">$250K</div>
+          <div class="size-btn" onclick="selectSize(this,'500k')">$500K</div>
+        </div>
+        <input type="hidden" id="aeth-size" value="">
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="aeth-discord">Discord Username <span style="color:#E05070">*</span></label>
+        <input type="text" id="aeth-discord" class="field-input" placeholder="e.g. pattss or pattss#0001" autocomplete="off">
+        <div class="field-hint">So we can identify and verify you in our server</div>
+      </div>
+
+      <div class="verror" id="s1aeth-err">Please fill in all required fields.</div>
+      <div class="btn-row">
+        <button class="vbtn vbtn-ghost" onclick="goStep(0)"><svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Back</button>
+        <button class="vbtn vbtn-primary" onclick="validateS1Aeth()">Continue <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+      </div>
+    </div>
+
+    <!-- ══ STEP 2 — PROOF ══ -->
+    <div class="s2-wrap" id="step2">
+      <div id="step2-badge"></div>
+
+      <div id="step2-div-note" style="display:none">
+        <div class="receipt-note">Upload a <strong>screenshot of your Bitunix registration</strong> showing your account was created using referral code <strong>SANCTUM</strong>. This can be your profile page, account info, or the referral confirmation screen.</div>
+      </div>
+      <div id="step2-aeth-note" style="display:none">
+        <div class="receipt-note">Upload your <strong>purchase receipt or order confirmation</strong> from the prop firm you selected. This should clearly show your name, email, account type, and that the discount code <strong>SANCTUM</strong> was applied.</div>
+      </div>
+
+      <label class="field-label">Upload Proof <span style="color:#E05070">*</span></label>
+      <div class="upload-area" id="upload-area">
+        <input type="file" id="proof-file" class="upload-input" accept="image/*,.pdf" onchange="handleFile(this)">
+        <div class="upload-icon"><svg viewBox="0 0 24 24"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg></div>
+        <div class="upload-title">Drop your screenshot or receipt here</div>
+        <div class="upload-sub">PNG, JPG, or PDF &middot; Max 10MB<br>Click or drag to upload</div>
+        <div class="file-name" id="file-name" style="display:none"></div>
+      </div>
+
+      <div class="verror" id="s2-err">Please upload your proof before submitting.</div>
+      <div class="vloading" id="v-loading">
+        <div class="vspinner"></div>
+        <div class="vloading-txt">Submitting your verification...</div>
+      </div>
+
+      <div class="btn-row">
+        <button class="vbtn vbtn-ghost" onclick="goStep(1)"><svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Back</button>
+        <button class="vbtn vbtn-primary" id="submit-btn" onclick="submitForm()">Submit Verification <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+      </div>
+    </div>
+
+    <!-- ══ SUCCESS ══ -->
+    <div class="vsuccess" id="vsuccess">
+      <div class="vsuccess-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <div class="vsuccess-title">Verification Submitted</div>
+      <div class="vsuccess-sub">Your verification has been received. Our team will review it and grant your role within 24 hours. Make sure you are in the Discord server so we can assign your role.</div>
+      <a href="https://discord.gg/Mp8Fhsmd5S" target="_blank" rel="noopener noreferrer" class="vsuccess-discord">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.033.057a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+        Join Discord Server
+      </a>
+    </div>
+
+  </div><!-- end vcard-body -->
+</div><!-- end vcard -->
+</div><!-- end vpage -->
 
 <script>
-  var SCRIPT_URL = "https://script.google.com/macros/s/AKfycbycm_3_dHyrlQrSmpu5jAlGP4-IM9wgjDAhSbDo4zjSJslBTzJEWyQWHxBTaT12QK_UBA/exec";
-  var referrers  = { "MEXC": "mexc-sanctum", "Bitget": "SANCTUM" };
+/* ══ STATE ══════════════════════════════════════════════ */
+var state = {
+  path: '',       // 'div' or 'aeth'
+  step: 0,
+  platform: '',   // exchange or prop firm selected
+  size: ''        // account size
+};
 
-  // canvas starfield
-  (function() {
-    var c = document.getElementById('bg');
-    var x = c.getContext('2d');
-    var W, H, S = [], P = [];
+var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbycm_3_dHyrlQrSmpu5jAlGP4-IM9wgjDAhSbDo4zjSJslBTzJEWyQWHxBTaT12QK_UBA/exec';
 
-    function resize() { W = c.width = window.innerWidth; H = c.height = window.innerHeight; }
+/* ══ PATH SELECTION ═════════════════════════════════════ */
+function selectPath(path) {
+  state.path = path;
+  var divCard = document.getElementById('div-card');
+  var aethCard = document.getElementById('aeth-card');
+  divCard.classList.remove('selected-div','selected-aeth');
+  aethCard.classList.remove('selected-div','selected-aeth');
+  if (path === 'div') divCard.classList.add('selected-div');
+  else aethCard.classList.add('selected-aeth');
+  document.getElementById('s0-next').disabled = false;
+}
 
-    function mkS() {
-      return { x: Math.random()*W, y: Math.random()*H, r: Math.random()*1.1+0.2,
-               o: Math.random()*0.65+0.1, sp: Math.random()*0.007+0.002,
-               ph: Math.random()*Math.PI*2, g: Math.random()<0.07 };
-    }
+/* ══ STEP NAVIGATION ════════════════════════════════════ */
+function goStep(n) {
+  state.step = n;
+  document.getElementById('step0').style.display = n === 0 ? 'block' : 'none';
+  document.getElementById('step1-div').style.display = 'none';
+  document.getElementById('step1-aeth').style.display = 'none';
+  document.getElementById('step2').style.display = 'none';
 
-    function mkP() {
-      return { x: Math.random()*W, y: H+10, vx: (Math.random()-0.5)*0.4,
-               vy: -(Math.random()*0.6+0.2), life: 1, dec: Math.random()*0.006+0.003,
-               r: Math.random()*1.5+0.5 };
-    }
-
-    function init() {
-      resize();
-      S = [];
-      for (var i = 0; i < 180; i++) S.push(mkS());
-      setInterval(function() { if (P.length < 12) P.push(mkP()); }, 600);
-    }
-
-    function draw() {
-      x.clearRect(0, 0, W, H);
-      var t = Date.now() * 0.001;
-      for (var i = 0; i < S.length; i++) {
-        var s  = S[i];
-        var op = s.o * (0.5 + 0.5 * Math.sin(t * s.sp * 7 + s.ph));
-        x.beginPath();
-        x.arc(s.x, s.y, s.r, 0, Math.PI*2);
-        x.fillStyle = s.g ? 'rgba(201,168,76,'+op+')' : 'rgba(255,255,255,'+op+')';
-        x.fill();
-      }
-      for (var j = P.length-1; j >= 0; j--) {
-        var p = P[j];
-        p.x += p.vx; p.y += p.vy; p.life -= p.dec;
-        if (p.life <= 0) { P.splice(j,1); continue; }
-        x.beginPath();
-        x.arc(p.x, p.y, p.r * p.life, 0, Math.PI*2);
-        x.fillStyle = 'rgba(201,168,76,'+(p.life*0.55)+')';
-        x.fill();
-      }
-      requestAnimationFrame(draw);
-    }
-
-    window.addEventListener('resize', resize);
-    init(); draw();
-  })();
-
-  function setReferrer() {
-    var platform = document.getElementById("platform").value;
-    var refInput = document.getElementById("referrer");
-    var badge    = document.getElementById("referrerBadge");
-    if (referrers[platform]) {
-      refInput.value = referrers[platform];
-      badge.classList.remove("show");
-      setTimeout(function() { badge.classList.add("show"); }, 10);
+  if (n === 1) {
+    if (state.path === 'div') {
+      document.getElementById('step1-div').style.display = 'block';
     } else {
-      refInput.value = "";
-      badge.classList.remove("show");
+      document.getElementById('step1-aeth').style.display = 'block';
     }
   }
-
-  function handleFile(input) {
-    var fn   = document.getElementById("uploadFilename");
-    var zone = document.getElementById("uploadZone");
-    if (input.files && input.files[0]) {
-      fn.textContent = "✦  " + input.files[0].name;
-      fn.style.display = "block";
-      zone.classList.add("has-file");
+  if (n === 2) {
+    document.getElementById('step2').style.display = 'block';
+    var badge = document.getElementById('step2-badge');
+    if (state.path === 'div') {
+      badge.innerHTML = '<div class="seeker-badge div">\u{1F52E} Divination Seeker</div>';
+      document.getElementById('step2-div-note').style.display = 'block';
+      document.getElementById('step2-aeth-note').style.display = 'none';
+    } else {
+      badge.innerHTML = '<div class="seeker-badge aeth">\u2694\uFE0F Aether Seeker</div>';
+      document.getElementById('step2-aeth-note').style.display = 'block';
+      document.getElementById('step2-div-note').style.display = 'none';
     }
   }
+  updateProgress(n);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
 
-  var zone = document.getElementById("uploadZone");
-  zone.addEventListener("dragover",  function(e) { e.preventDefault(); zone.classList.add("drag"); });
-  zone.addEventListener("dragleave", function()  { zone.classList.remove("drag"); });
-  zone.addEventListener("drop",      function()  { zone.classList.remove("drag"); });
-
-  function showError(msg) {
-    var el = document.getElementById("errorMsg");
-    el.textContent = msg; el.style.display = "block";
-    setTimeout(function() { el.style.display = "none"; }, 4000);
+function updateProgress(n) {
+  for (var i = 0; i <= 2; i++) {
+    var pill = document.getElementById('pill'+i);
+    pill.classList.remove('active','done');
+    if (i < n) pill.classList.add('done');
+    else if (i === n) pill.classList.add('active');
   }
+  var l01 = document.getElementById('line01');
+  var l12 = document.getElementById('line12');
+  if (l01) l01.classList.toggle('done', n > 0);
+  if (l12) l12.classList.toggle('done', n > 1);
+}
 
-  function submitForm() {
-    var uid      = document.getElementById("uid").value.trim();
-    var discord  = document.getElementById("discord").value.trim();
-    var platform = document.getElementById("platform").value;
-    var referrer = document.getElementById("referrer").value;
-    var file     = document.getElementById("fileInput").files[0];
+/* ══ PLATFORM SELECTION ═════════════════════════════════ */
+function selectPlatDiv(p) {
+  state.platform = p;
+  // Only Bitunix available
+  document.getElementById('plat-bitunix').classList.add('selected');
+}
 
-    if (!uid)      { showError("Please enter your Exchange UID.");       return; }
-    if (!discord)  { showError("Please enter your Discord username.");   return; }
-    if (!platform) { showError("Please select your exchange platform."); return; }
-    if (!file)     { showError("Please upload your screenshot.");        return; }
+var PLAT_LINKS = {
+  'atlas': 'https://affiliates.atlasfunded.com/Tracking/S/6a70d3911356becd0cccf005',
+  'alpha': 'https://app.alphacapitalgroup.uk/signup/SANCTUM',
+  'aqua':  'https://www.aquafunded.com/?afmc=SANCTUM'
+};
+var PLAT_LABELS = {
+  'atlas': 'Atlas Funded \u2014 40% Off All Accounts',
+  'alpha': 'Alpha Capital Group \u2014 40% Off All Accounts',
+  'aqua':  'AquaFunded \u2014 40% Off Instant Accounts'
+};
 
-    var btn = document.getElementById("submitBtn");
-    btn.classList.add("loading"); btn.disabled = true;
+function selectPlatAeth(p) {
+  state.platform = p;
+  var btns = document.querySelectorAll('#aeth-plat-grid .plat-btn');
+  btns.forEach(function(b) { b.classList.remove('selected'); });
+  document.getElementById('plat-'+p).classList.add('selected');
+  var codeBox = document.getElementById('aeth-code-box');
+  codeBox.style.display = 'block';
+  document.getElementById('aeth-code-lbl').textContent = PLAT_LABELS[p];
+  document.getElementById('aeth-reg-link').href = PLAT_LINKS[p];
+}
 
-    var reader = new FileReader();
-    reader.onload = function() {
-      var base64 = reader.result.split(",")[1];
-      var params = new URLSearchParams();
-      params.append("uid",      uid);
-      params.append("discord",  discord);
-      params.append("platform", platform);
-      params.append("referrer", referrer);
-      params.append("file",     base64);
-      params.append("fileName", file.name);
-      params.append("mimeType", file.type);
+/* ══ SIZE SELECTION ═════════════════════════════════════ */
+function selectSize(el, val) {
+  state.size = val;
+  document.querySelectorAll('.size-btn').forEach(function(b) { b.classList.remove('selected'); });
+  el.classList.add('selected');
+  document.getElementById('aeth-size').value = val;
+}
 
-      fetch(SCRIPT_URL, { method: "POST", mode: "no-cors", body: params })
-        .then(function()  { window.location.href = "sanctum_submitted.html"; })
-        .catch(function() { window.location.href = "sanctum_submitted.html"; });
-    };
-    reader.onerror = function() {
-      showError("Could not read the file. Please try again.");
-      btn.classList.remove("loading"); btn.disabled = false;
-    };
-    reader.readAsDataURL(file);
+/* ══ VALIDATION ═════════════════════════════════════════ */
+function validateS1Div() {
+  var uid = document.getElementById('div-uid').value.trim();
+  var discord = document.getElementById('div-discord').value.trim();
+  var err = document.getElementById('s1div-err');
+  if (!uid || !discord) { err.style.display = 'block'; return; }
+  err.style.display = 'none';
+  goStep(2);
+}
+
+function validateS1Aeth() {
+  var gmail   = document.getElementById('aeth-gmail').value.trim();
+  var type    = document.getElementById('aeth-type').value;
+  var size    = document.getElementById('aeth-size').value;
+  var discord = document.getElementById('aeth-discord').value.trim();
+  var err     = document.getElementById('s1aeth-err');
+  if (!state.platform || !gmail || !type || !size || !discord) {
+    err.style.display = 'block';
+    err.textContent = !state.platform ? 'Please select a prop firm platform.' :
+                      !gmail ? 'Please enter your Gmail address.' :
+                      !type ? 'Please select an account type.' :
+                      !size ? 'Please select an account size.' :
+                      'Please enter your Discord username.';
+    return;
   }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(gmail)) {
+    err.style.display = 'block';
+    err.textContent = 'Please enter a valid email address.';
+    return;
+  }
+  err.style.display = 'none';
+  goStep(2);
+}
+
+/* ══ FILE UPLOAD ════════════════════════════════════════ */
+function handleFile(input) {
+  var file = input.files[0];
+  var area = document.getElementById('upload-area');
+  var fn   = document.getElementById('file-name');
+  if (file) {
+    area.classList.add('has-file');
+    fn.style.display = 'block';
+    fn.textContent = file.name + ' (' + (file.size/1024/1024).toFixed(2) + ' MB)';
+  } else {
+    area.classList.remove('has-file');
+    fn.style.display = 'none';
+  }
+}
+
+/* ══ SUBMIT ═════════════════════════════════════════════ */
+function submitForm() {
+  var file = document.getElementById('proof-file').files[0];
+  var err  = document.getElementById('s2-err');
+  if (!file) { err.style.display = 'block'; return; }
+  err.style.display = 'none';
+
+  document.getElementById('submit-btn').disabled = true;
+  document.getElementById('v-loading').style.display = 'block';
+
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    var b64 = e.target.result.split(',')[1];
+    var payload = {
+      seekerType:    state.path === 'div' ? 'Divination Seeker' : 'Aether Seeker',
+      platform:      state.platform,
+      fileName:      file.name,
+      fileData:      b64,
+      timestamp:     new Date().toISOString()
+    };
+
+    if (state.path === 'div') {
+      payload.exchangeUID    = document.getElementById('div-uid').value.trim();
+      payload.discordUsername = document.getElementById('div-discord').value.trim();
+    } else {
+      payload.gmail           = document.getElementById('aeth-gmail').value.trim();
+      payload.accountType     = document.getElementById('aeth-type').value;
+      payload.accountSize     = document.getElementById('aeth-size').value;
+      payload.discordUsername = document.getElementById('aeth-discord').value.trim();
+    }
+
+    fetch(SCRIPT_URL, {
+      method: 'POST',
+      body: JSON.stringify(payload)
+    })
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      document.getElementById('v-loading').style.display = 'none';
+      if (data.status === 'success' || data.result === 'success') {
+        showSuccess();
+      } else {
+        showSubmitErr('Something went wrong. Please try again or contact us on Discord.');
+      }
+    })
+    .catch(function() {
+      document.getElementById('v-loading').style.display = 'none';
+      showSubmitErr('Submission failed. Please check your connection and try again.');
+    });
+  };
+  reader.onerror = function() {
+    document.getElementById('v-loading').style.display = 'none';
+    showSubmitErr('Could not read the file. Please try a different image.');
+  };
+  reader.readAsDataURL(file);
+}
+
+function showSuccess() {
+  document.getElementById('step2').style.display = 'none';
+  document.getElementById('vsuccess').style.display = 'block';
+  document.getElementById('vprog').style.display = 'none';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function showSubmitErr(msg) {
+  document.getElementById('submit-btn').disabled = false;
+  var err = document.getElementById('s2-err');
+  err.style.display = 'block';
+  err.textContent = msg;
+}
+
+/* ══ KEYBOARD ACCESS ════════════════════════════════════ */
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' || e.key === ' ') {
+    var t = e.target;
+    if (t.id === 'div-card') { e.preventDefault(); selectPath('div'); }
+    if (t.id === 'aeth-card') { e.preventDefault(); selectPath('aeth'); }
+    if (t.id === 'plat-bitunix') { e.preventDefault(); selectPlatDiv('bitunix'); }
+    if (t.id === 'plat-atlas') { e.preventDefault(); selectPlatAeth('atlas'); }
+    if (t.id === 'plat-alpha') { e.preventDefault(); selectPlatAeth('alpha'); }
+    if (t.id === 'plat-aqua') { e.preventDefault(); selectPlatAeth('aqua'); }
+  }
+});
+
+/* ══ CANVAS BG ══════════════════════════════════════════ */
+(function() {
+  var cv = document.getElementById('bgcvs');
+  if (!cv) return;
+  var ctx = cv.getContext('2d');
+  var W, H, stars = [], t = 0;
+  function resize() { W = cv.width = innerWidth; H = cv.height = innerHeight; }
+  function mkS() { return { x:Math.random()*W, y:Math.random()*H, r:Math.random()*1.1+.1, o:Math.random()*.5+.06, sp:Math.random()*.004+.001, ph:Math.random()*Math.PI*2, gold:Math.random()<.07 }; }
+  function init() { resize(); stars = []; for (var i = 0; i < 120; i++) stars.push(mkS()); }
+  function draw() {
+    ctx.clearRect(0,0,W,H); t += .003;
+    for (var i = 0; i < stars.length; i++) {
+      var s = stars[i];
+      var op = s.o * (.6 + .4 * Math.sin(t * s.sp * 8 + s.ph));
+      ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI*2);
+      ctx.fillStyle = s.gold ? 'rgba(201,168,76,' + op + ')' : 'rgba(220,216,210,' + op + ')';
+      ctx.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+  document.addEventListener('visibilitychange', function() {});
+  window.addEventListener('resize', resize);
+  init(); draw();
+})();
+
+/* ══ INIT ═══════════════════════════════════════════════ */
+goStep(0);
+// pre-select bitunix (always selected)
+document.getElementById('plat-bitunix').classList.add('selected');
+state.platform = 'bitunix';
 </script>
 </body>
 </html>
