@@ -213,6 +213,9 @@ body{background:#050816;color:rgba(255,255,255,.88);font-family:'Inter',sans-ser
   .vpage{padding:80px 12px 40px}
 }
 </style>
+<script>!function(w,d,s,u,n,a,b){if(w[n])return;a=w[n]={q:[],t:+new Date,s:[],o:u,track:function(){a.q.push([+new Date].concat([].slice.call(arguments)))},setScope:function(){a.s=[].slice.call(arguments).filter(function(x){return typeof x==="string"});a.q.push([+new Date,"setScope"].concat(a.s))},scope:function(){var c=[].slice.call(arguments);return{track:function(){a.q.push([+new Date].concat([].slice.call(arguments)).concat([{__scope:c}]))}}}};b=d.createElement(s);b.async=1;b.src=u+"/s.js";d.getElementsByTagName(s)[0].parentNode.insertBefore(b,d.getElementsByTagName(s)[0])}(window,document,"script","https://t.whop.tw","whop");whop.setScope("biz_qaPXQG0yg879sI");whop.track("page");</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NKSGQ11H05"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-NKSGQ11H05");</script>
 </head>
 <body>
 
@@ -687,10 +690,8 @@ function submitForm() {
 }
 
 function showSuccess() {
-  document.getElementById('step2').style.display = 'none';
-  document.getElementById('vsuccess').style.display = 'block';
-  document.getElementById('vprog').style.display = 'none';
-  window.scrollTo({top:0,behavior:'smooth'});
+  var type = state.path === 'div' ? 'div' : 'aeth';
+  window.location.href = './sanctum_submitted.html?type=' + type;
 }
 
 function showSubmitErr(msg) {
