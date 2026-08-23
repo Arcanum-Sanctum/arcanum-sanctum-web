@@ -2,522 +2,241 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arcanum Sanctum - Submission Received</title>
-
-<script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/ae8a434926e182ce53196b2e/script.js"></script>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Verification Submitted — Arcanum Sanctum</title>
+<meta name="robots" content="noindex,nofollow">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NKSGQ11H05"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-NKSGQ11H05');
-</script>
-
-<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
-
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-NKSGQ11H05');</script>
+<script>!function(w,d,s,u,n,a,b){if(w[n])return;a=w[n]={q:[],t:+new Date,s:[],o:u,track:function(){a.q.push([+new Date].concat([].slice.call(arguments)))},setScope:function(){a.s=[].slice.call(arguments).filter(function(x){return typeof x==="string"});a.q.push([+new Date,"setScope"].concat(a.s))},scope:function(){var c=[].slice.call(arguments);return{track:function(){a.q.push([+new Date].concat([].slice.call(arguments)).concat([{__scope:c}]))}}}};b=d.createElement(s);b.async=1;b.src=u+"/s.js";d.getElementsByTagName(s)[0].parentNode.insertBefore(b,d.getElementsByTagName(s)[0])}(window,document,"script","https://t.whop.tw","whop");whop.setScope("biz_qaPXQG0yg879sI");whop.track("page");</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{min-height:100vh}
+body{background:#050816;color:rgba(255,255,255,.88);font-family:'Inter',sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px;position:relative;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+:root{
+  --gold:#C9A84C;--goldl:#E8C468;--goldd:#9A7828;
+  --ga:rgba(201,168,76,.1);--gb:rgba(201,168,76,.22);
+  --em:#2AA478;--ema:rgba(42,164,120,.12);--emb:rgba(42,164,120,.28);
+  --purple:#9B7EF8;
+  --bg0:#050816;--bg2:#0C1020;
+  --s1:rgba(255,255,255,.04);--s2:rgba(255,255,255,.07);
+  --t1:rgba(255,255,255,.88);--t2:rgba(255,255,255,.55);--t3:rgba(255,255,255,.3);
+  --b1:rgba(201,168,76,.18);--b2:rgba(255,255,255,.07);
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+::selection{background:rgba(201,168,76,.2);color:#fff}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:3px}
 
-:root {
-  --gold:        #C9A84C;
-  --gold-bright: #E8C060;
-  --gold-dim:    rgba(201,168,76,.45);
-  --gold-faint:  rgba(201,168,76,.08);
-  --gold-border: rgba(201,168,76,.2);
-  --bg:          #060410;
-  --surface:     #0C0A18;
-  --surface2:    #100E1E;
-  --text:        #EDE8DC;
-  --muted:       rgba(237,232,220,.45);
-  --green:       #2AA478;
-  --green-dim:   rgba(42,164,120,.35);
-  --discord:     #5865F2;
-}
+/* BG CANVAS */
+#bgcvs{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.55}
 
-html, body { min-height: 100%; background: var(--bg); }
+/* NAV */
+.vnav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 0;background:rgba(5,8,22,.92);backdrop-filter:blur(20px);border-bottom:.5px solid var(--b2)}
+.vnav-i{max-width:900px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
+.vnav-brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.vnav-logo{width:33px;height:33px;border-radius:50%;border:1px solid var(--gb);background:var(--ga);overflow:hidden}
+.vnav-logo img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.vnav-name{font-family:'Cinzel',serif;font-size:12px;font-weight:700;color:var(--gold);letter-spacing:.06em}
+.vnav-back{font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--t3);text-decoration:none;display:flex;align-items:center;gap:6px;transition:color .2s}
+.vnav-back:hover{color:var(--gold)}
+.vnav-back svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
-body {
-  min-height: 100vh;
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Rajdhani', sans-serif;
-  padding: 40px 16px;
-  position: relative; overflow-x: hidden;
-}
+/* MAIN CARD */
+.scard{width:100%;max-width:560px;background:rgba(10,14,32,.82);backdrop-filter:blur(16px);border:.5px solid var(--b2);border-radius:16px;overflow:hidden;position:relative;z-index:2;animation:cin .9s var(--ease) both}
+@keyframes cin{from{opacity:0;transform:translateY(28px) scale(.97)}to{opacity:1;transform:none}}
 
-canvas#bg { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+/* TOP ACCENT LINE */
+.scard::before{content:'';position:absolute;top:0;left:0;right:0;height:1.5px;background:linear-gradient(90deg,transparent,var(--em),transparent)}
 
-.glow-layer {
-  position: fixed; inset: 0; z-index: 0; pointer-events: none;
-  background:
-    radial-gradient(ellipse 60% 45% at 50% 0%,   rgba(42,164,120,.08)  0%, transparent 60%),
-    radial-gradient(ellipse 40% 30% at 50% 50%,  rgba(201,168,76,.06)  0%, transparent 60%),
-    radial-gradient(ellipse 30% 25% at 15% 85%,  rgba(88,101,242,.06)  0%, transparent 60%),
-    radial-gradient(ellipse 30% 25% at 85% 85%,  rgba(88,101,242,.05)  0%, transparent 60%);
-  animation: glowShift 6s ease-in-out infinite;
-}
-@keyframes glowShift { 0%,100% { opacity: .7; } 50% { opacity: 1; } }
+/* EMBLEM */
+.s-emblem{display:flex;justify-content:center;padding:40px 32px 28px}
+.s-emblem-wrap{position:relative;width:90px;height:90px}
+.s-ring{position:absolute;inset:0;border-radius:50%;border:1px solid var(--emb);animation:spin 20s linear infinite}
+.s-ring::before{content:'';position:absolute;width:7px;height:7px;border-radius:50%;background:var(--em);box-shadow:0 0 10px var(--em);top:-3.5px;left:50%;transform:translateX(-50%)}
+.s-ring-i{position:absolute;inset:14px;border-radius:50%;border:.5px solid rgba(42,164,120,.18);animation:spin 30s linear infinite reverse}
+.s-icon-wrap{position:absolute;inset:22px;border-radius:50%;background:var(--ema);border:.5px solid var(--emb);display:flex;align-items:center;justify-content:center;animation:icp 3.5s ease-in-out infinite}
+.s-icon-wrap svg{width:26px;height:26px;stroke:var(--em);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes icp{0%,100%{box-shadow:0 0 14px rgba(42,164,120,.15)}50%{box-shadow:0 0 30px rgba(42,164,120,.35)}}
 
-.diag {
-  position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .02;
-  background: repeating-linear-gradient(55deg, transparent, transparent 40px, rgba(201,168,76,1) 40px, rgba(201,168,76,1) 41px);
-}
+/* CONTENT */
+.s-body{padding:0 36px 36px;text-align:center}
+@media(max-width:480px){.s-body{padding:0 20px 28px}}
+.s-eyebrow{font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:700;letter-spacing:.36em;text-transform:uppercase;color:var(--em);margin-bottom:8px}
+.s-title{font-family:'Cinzel',serif;font-size:clamp(20px,4vw,28px);font-weight:700;color:#fff;letter-spacing:.04em;margin-bottom:10px}
+.s-sub{font-size:13px;color:var(--t2);line-height:1.75;margin-bottom:28px;max-width:420px;margin-left:auto;margin-right:auto}
 
-/* ---- wrap ---- */
-.wrap {
-  width: 100%; max-width: 520px;
-  position: relative; z-index: 1;
-  animation: cardIn .9s cubic-bezier(.22,1,.36,1) both;
-}
-@keyframes cardIn {
-  from { opacity: 0; transform: translateY(36px) scale(.97); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
-}
+/* STATUS STEPS */
+.s-steps{display:flex;flex-direction:column;gap:10px;margin-bottom:28px;text-align:left}
+.s-step{display:flex;align-items:flex-start;gap:12px;padding:13px 16px;background:var(--s1);border:.5px solid var(--b2);border-radius:8px}
+.s-step-icon{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.s-step-icon.done{background:var(--ema);border:.5px solid var(--emb)}
+.s-step-icon.pending{background:var(--ga);border:.5px solid var(--gb)}
+.s-step-icon svg{width:13px;height:13px;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.s-step-icon.done svg{stroke:var(--em)}
+.s-step-icon.pending svg{stroke:var(--gold)}
+.s-step-t{font-family:'Cinzel',serif;font-size:12px;font-weight:600;color:#fff;letter-spacing:.03em;margin-bottom:2px}
+.s-step-d{font-size:11.5px;color:var(--t2);line-height:1.6}
 
-.card {
-  background: var(--surface);
-  border: 1px solid var(--gold-border);
-  border-radius: 3px; overflow: hidden; position: relative;
-  box-shadow: 0 0 60px rgba(201,168,76,.07), 0 32px 64px rgba(0,0,0,.6);
-}
-.card::before, .card::after {
-  content: ''; position: absolute;
-  width: 22px; height: 22px;
-  border-color: var(--gold-dim); border-style: solid; z-index: 3;
-}
-.card::before { top: 10px;    left: 10px;  border-width: 1px 0 0 1px; }
-.card::after  { bottom: 10px; right: 10px; border-width: 0 1px 1px 0; }
+/* DIVIDER */
+.s-divider{display:flex;align-items:center;gap:12px;margin:6px 0 24px}
+.s-divider::before,.s-divider::after{content:'';flex:1;height:.5px;background:var(--b2)}
+.s-divider-gem{width:6px;height:6px;background:var(--gold);transform:rotate(45deg);box-shadow:0 0 10px rgba(201,168,76,.5)}
 
-.top-bar {
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--green), rgba(201,168,76,.8), transparent);
-  opacity: .9; position: relative; overflow: hidden;
-}
-.top-bar::after {
-  content: ''; position: absolute; top: 0; left: -80%; width: 60%; height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,.8), transparent);
-  animation: shimmer 3s ease-in-out infinite;
-}
-@keyframes shimmer { to { left: 130%; } }
+/* BUTTONS */
+.s-btns{display:flex;flex-direction:column;gap:10px}
+.sbtn{display:flex;align-items:center;justify-content:center;gap:9px;padding:13px 24px;border-radius:4px;font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;transition:all .35s var(--ease);border:none;cursor:pointer;width:100%}
+.sbtn svg{width:15px;height:15px;fill:currentColor;flex-shrink:0}
+.sbtn-discord{background:rgba(88,101,242,.18);color:#7289da;border:.5px solid rgba(88,101,242,.3)}
+.sbtn-discord:hover{background:rgba(88,101,242,.28);transform:translateY(-2px);box-shadow:0 10px 30px rgba(88,101,242,.2)}
+.sbtn-home{background:var(--s1);color:var(--t2);border:.5px solid var(--b2)}
+.sbtn-home:hover{background:var(--s2);color:var(--t1);border-color:var(--b1);transform:translateY(-2px)}
 
-/* ---- hero ---- */
-.hero { padding: 48px 40px 32px; text-align: center; }
+/* REVIEW TIME */
+.s-review{font-size:11px;color:var(--t3);text-align:center;margin-top:16px;line-height:1.65}
+.s-review strong{color:var(--gold)}
 
-.orbit-wrap {
-  width: 112px; height: 112px;
-  margin: 0 auto 26px;
-  position: relative; display: flex; align-items: center; justify-content: center;
-}
-
-.ring-g1 {
-  position: absolute; inset: 0; border-radius: 50%;
-  border: 1px solid rgba(42,164,120,.28);
-  animation: spinCW 14s linear infinite;
-}
-.ring-g1::before, .ring-g1::after {
-  content: ''; position: absolute; border-radius: 50%;
-  background: var(--green);
-}
-.ring-g1::before { width: 7px; height: 7px; top: -3.5px; left: 50%; transform: translateX(-50%); box-shadow: 0 0 10px var(--green), 0 0 20px rgba(42,164,120,.4); }
-.ring-g1::after  { width: 5px; height: 5px; bottom: -2.5px; left: 50%; transform: translateX(-50%); opacity: .35; }
-
-.ring-g2 {
-  position: absolute; inset: 14px; border-radius: 50%;
-  border: .5px solid rgba(201,168,76,.18);
-  animation: spinCCW 22s linear infinite;
-}
-.ring-g2::before {
-  content: ''; position: absolute; width: 5px; height: 5px; border-radius: 50%;
-  background: var(--gold); opacity: .6;
-  top: -2.5px; left: 50%; transform: translateX(-50%);
-  box-shadow: 0 0 6px var(--gold);
-}
-
-@keyframes spinCW  { from { transform: rotate(0deg);   } to { transform: rotate(360deg);  } }
-@keyframes spinCCW { from { transform: rotate(0deg);   } to { transform: rotate(-360deg); } }
-
-.check-circle {
-  width: 66px; height: 66px; border-radius: 50%;
-  background: rgba(42,164,120,.1); border: 1.5px solid rgba(42,164,120,.45);
-  display: flex; align-items: center; justify-content: center;
-  position: relative; z-index: 1;
-  box-shadow: 0 0 28px rgba(42,164,120,.2), 0 0 56px rgba(42,164,120,.08);
-  animation: popIn .7s cubic-bezier(.34,1.56,.64,1) .2s both;
-}
-@keyframes popIn { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-.check-circle svg { width: 28px; height: 28px; stroke: var(--green); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; animation: checkFade .4s ease .85s both; }
-@keyframes checkFade { from { opacity: 0; } to { opacity: 1; } }
-
-.status-pill {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 5px 16px; border-radius: 20px;
-  background: rgba(42,164,120,.1); border: .5px solid rgba(42,164,120,.3);
-  margin-bottom: 18px;
-}
-.status-dot {
-  width: 6px; height: 6px; border-radius: 50%; background: var(--green);
-  box-shadow: 0 0 6px var(--green); animation: blink 1.8s ease-in-out infinite;
-}
-@keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: .25; } }
-.status-text { font-size: 10px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--green); }
-
-.hero-title {
-  font-family: 'Cinzel', serif; font-size: 22px; font-weight: 600;
-  color: var(--text); letter-spacing: .05em; line-height: 1.3; margin-bottom: 14px;
-  animation: fadeUp .7s ease .1s both;
-}
-.hero-body {
-  font-family: 'Cormorant Garamond', serif; font-size: 16px; font-style: italic;
-  color: var(--muted); line-height: 1.75;
-  animation: fadeUp .7s ease .15s both;
-}
-.hero-body strong { font-style: normal; font-weight: 600; color: rgba(201,168,76,.85); }
-
-@keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
-
-/* ---- divider ---- */
-.divider { display: flex; align-items: center; padding: 0 40px; margin: 8px 0 30px; }
-.div-l { flex: 1; height: .5px; background: linear-gradient(to right, transparent, var(--gold-dim)); }
-.div-r { flex: 1; height: .5px; background: linear-gradient(to left,  transparent, var(--gold-dim)); }
-.div-d { width: 6px; height: 6px; background: var(--gold); transform: rotate(45deg); margin: 0 12px; flex-shrink: 0; box-shadow: 0 0 8px rgba(201,168,76,.5); }
-
-/* ---- review section ---- */
-.review-section { padding: 0 40px 32px; }
-
-.section-tag {
-  font-size: 10px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase;
-  color: var(--gold-dim); margin-bottom: 20px;
-  display: flex; align-items: center; gap: 10px;
-}
-.section-tag::after { content: ''; flex: 1; height: .5px; background: var(--gold-border); }
-
-.chain { display: flex; flex-direction: column; margin-bottom: 30px; }
-
-.chain-item { display: flex; gap: 18px; }
-.chain-left { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; width: 36px; }
-
-.chain-node {
-  width: 36px; height: 36px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0; font-family: 'Rajdhani', sans-serif;
-  font-size: 11px; font-weight: 600; position: relative; z-index: 1;
-  transition: all .3s;
-}
-.chain-node.done {
-  background: rgba(42,164,120,.12); border: 1px solid rgba(42,164,120,.45);
-  color: var(--green); box-shadow: 0 0 14px rgba(42,164,120,.18);
-}
-.chain-node.pending { background: var(--surface2); border: 1px solid var(--gold-border); color: var(--gold-dim); }
-
-.chain-line {
-  width: 1px; flex: 1; min-height: 18px; margin: 3px 0;
-  background: linear-gradient(to bottom, var(--gold-border), rgba(201,168,76,.04));
-}
-
-.chain-body { padding: 5px 0 22px; flex: 1; }
-.chain-item:last-child .chain-body { padding-bottom: 0; }
-
-.chain-role {
-  font-family: 'Cinzel', serif; font-size: 13px; font-weight: 600;
-  letter-spacing: .05em; margin-bottom: 5px; line-height: 1.3;
-}
-.chain-role.done    { color: var(--green); }
-.chain-role.pending { color: var(--text); }
-.chain-desc { font-family: 'Rajdhani', sans-serif; font-size: 12px; color: var(--muted); letter-spacing: .03em; line-height: 1.55; }
-
-/* ---- discord block ---- */
-.discord-block {
-  background: rgba(88,101,242,.07); border: 1px solid rgba(88,101,242,.28);
-  border-radius: 3px; padding: 28px; text-align: center;
-  position: relative; overflow: hidden;
-}
-.discord-block::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1.5px;
-  background: linear-gradient(to right, transparent, rgba(88,101,242,.65), transparent);
-}
-.discord-block::after {
-  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: .5px;
-  background: linear-gradient(to right, transparent, rgba(88,101,242,.2), transparent);
-}
-
-.dc-corner {
-  position: absolute; width: 14px; height: 14px;
-  border-color: rgba(88,101,242,.35); border-style: solid;
-}
-.dc-tl { top: 8px;    left: 8px;  border-width: 1px 0 0 1px; }
-.dc-br { bottom: 8px; right: 8px; border-width: 0 1px 1px 0; }
-
-.discord-logo-wrap {
-  width: 52px; height: 52px; border-radius: 50%;
-  background: rgba(88,101,242,.12); border: 1px solid rgba(88,101,242,.35);
-  display: flex; align-items: center; justify-content: center;
-  margin: 0 auto 16px;
-  box-shadow: 0 0 24px rgba(88,101,242,.18);
-  animation: logoPulse 3.5s ease-in-out infinite;
-}
-@keyframes logoPulse {
-  0%,100% { box-shadow: 0 0 24px rgba(88,101,242,.18); }
-  50%      { box-shadow: 0 0 36px rgba(88,101,242,.32); }
-}
-.discord-logo-wrap svg { width: 24px; height: 24px; fill: #7289DA; }
-
-.discord-eyebrow {
-  font-size: 10px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase;
-  color: rgba(88,101,242,.6); margin-bottom: 8px;
-}
-.discord-title {
-  font-family: 'Cinzel', serif; font-size: 15px; font-weight: 600;
-  color: var(--text); letter-spacing: .06em; margin-bottom: 8px;
-}
-.discord-sub {
-  font-family: 'Cormorant Garamond', serif; font-size: 15px; font-style: italic;
-  color: var(--muted); line-height: 1.65; margin-bottom: 22px;
-}
-.discord-sub strong { font-style: normal; font-weight: 600; color: rgba(237,232,220,.7); }
-
-.discord-btn {
-  display: inline-flex; align-items: center; gap: 10px;
-  padding: 14px 32px;
-  background: rgba(88,101,242,.12); border: 1px solid rgba(88,101,242,.45);
-  color: #a5b4fc; font-family: 'Rajdhani', sans-serif;
-  font-size: 12px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase;
-  text-decoration: none; border-radius: 2px;
-  position: relative; overflow: hidden;
-  transition: letter-spacing .3s, border-color .3s, color .3s, box-shadow .3s;
-}
-.discord-btn::before {
-  content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(88,101,242,.2), transparent);
-  transition: left .55s ease;
-}
-.discord-btn:hover { letter-spacing: .28em; border-color: rgba(88,101,242,.7); color: #c7d2fe; box-shadow: 0 0 24px rgba(88,101,242,.18); }
-.discord-btn:hover::before { left: 100%; }
-.discord-btn svg { width: 17px; height: 17px; fill: currentColor; flex-shrink: 0; }
-
-/* ---- footer ---- */
-.card-footer {
-  padding: 16px 40px 22px; border-top: .5px solid rgba(201,168,76,.08);
-  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;
-}
-.cf-brand {
-  font-family: 'Cinzel', serif; font-size: 10px; font-weight: 600;
-  letter-spacing: .18em; text-transform: uppercase; color: rgba(201,168,76,.28);
-}
-.cf-right { display: flex; align-items: center; gap: 8px; }
-.cf-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--green); box-shadow: 0 0 5px var(--green); animation: blink 2s ease-in-out infinite; }
-.cf-note { font-size: 10px; font-weight: 500; color: rgba(237,232,220,.22); letter-spacing: .06em; }
+/* ROLE CHIPS */
+.role-chips{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.role-chip{display:inline-flex;align-items:center;gap:6px;padding:4px 14px;border-radius:20px;font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.chip-div{background:rgba(155,126,248,.12);color:var(--purple);border:.5px solid rgba(155,126,248,.25)}
+.chip-aeth{background:var(--ga);color:var(--gold);border:.5px solid var(--gb)}
 </style>
 </head>
 <body>
 
-<canvas id="bg"></canvas>
-<div class="glow-layer"></div>
-<div class="diag"></div>
+<canvas id="bgcvs" aria-hidden="true"></canvas>
 
-<div class="wrap">
-  <div class="card">
-    <div class="top-bar"></div>
+<!-- NAV -->
+<nav class="vnav" aria-label="Navigation">
+  <div class="vnav-i">
+    <a href="./index.html" class="vnav-brand" aria-label="Arcanum Sanctum">
+      <div class="vnav-logo"><img src="ARC.png" alt="Arcanum Sanctum" width="33" height="33"></div>
+      <span class="vnav-name">Arcanum Sanctum</span>
+    </a>
+    <a href="./index.html" class="vnav-back">
+      <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to Site
+    </a>
+  </div>
+</nav>
 
-    <div class="hero">
-      <div class="orbit-wrap">
-        <div class="ring-g1"></div>
-        <div class="ring-g2"></div>
-        <div class="check-circle">
-          <svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"/></svg>
-        </div>
-      </div>
+<!-- CARD -->
+<div class="scard" role="main">
 
-      <div class="status-pill">
-        <div class="status-dot"></div>
-        <span class="status-text">Submission Received</span>
-      </div>
-
-      <div class="hero-title">Your Verification<br>Has Been Submitted</div>
-      <div class="hero-body">
-        Your credentials are now in the hands of the Sanctum.<br>
-        A <strong>Sovereign</strong>, <strong>Archon</strong>, or <strong>Sentinel</strong><br>
-        will review and confirm your role within <strong>24 to 48 hours</strong>.
-      </div>
-    </div>
-
-    <div class="divider">
-      <div class="div-l"></div><div class="div-d"></div><div class="div-r"></div>
-    </div>
-
-    <div class="review-section">
-      <div class="section-tag">What Happens Next</div>
-
-      <div class="chain">
-
-        <div class="chain-item">
-          <div class="chain-left">
-            <div class="chain-node done">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <div class="chain-line"></div>
-          </div>
-          <div class="chain-body">
-            <div class="chain-role done">Submission Logged</div>
-            <div class="chain-desc">Your UID, Discord username, screenshot, and exchange details have been received and recorded in the Sanctum registry.</div>
-          </div>
-        </div>
-
-        <div class="chain-item">
-          <div class="chain-left">
-            <div class="chain-node pending">02</div>
-            <div class="chain-line"></div>
-          </div>
-          <div class="chain-body">
-            <div class="chain-role pending">Sentinel Review</div>
-            <div class="chain-desc">A Sentinel will verify your exchange registration, referral link usage, and confirm your deposit meets the minimum requirement of $50.</div>
-          </div>
-        </div>
-
-        <div class="chain-item">
-          <div class="chain-left">
-            <div class="chain-node pending">03</div>
-            <div class="chain-line"></div>
-          </div>
-          <div class="chain-body">
-            <div class="chain-role pending">Archon or Sovereign Approval</div>
-            <div class="chain-desc">An Archon or the Sovereign issues final approval. Your identity in the Sanctum is confirmed at this stage before the role is assigned.</div>
-          </div>
-        </div>
-
-        <div class="chain-item">
-          <div class="chain-left">
-            <div class="chain-node pending">04</div>
-          </div>
-          <div class="chain-body">
-            <div class="chain-role pending">Ascendant Role Granted</div>
-            <div class="chain-desc">You will be notified in Discord. Your Ascendant role and all privileges unlock immediately — signals, learning vault, mentoring, rewards, and more.</div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="discord-block">
-        <div class="dc-corner dc-tl"></div>
-        <div class="dc-corner dc-br"></div>
-
-        <div class="discord-logo-wrap">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.033.057a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.104a13.2 13.2 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
-          </svg>
-        </div>
-
-        <div class="discord-eyebrow">Sanctum Gateway</div>
-        <div class="discord-title">Enter the Server</div>
-        <div class="discord-sub">
-          While your verification is being reviewed,<br>
-          join the Sanctum Discord.<br>
-          <strong>The Sovereign will find you there.</strong>
-        </div>
-
-        <a class="discord-btn" href="https://discord.gg/Mp8Fhsmd5S" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.033.057a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.104a13.2 13.2 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
-          </svg>
-          Join Arcanum Sanctum
-        </a>
-      </div>
-    </div>
-
-    <div class="card-footer">
-      <div class="cf-brand">Arcanum Sanctum</div>
-      <div class="cf-right">
-        <div class="cf-dot"></div>
-        <span class="cf-note">Role assigned within 24-48 hours</span>
+  <div class="s-emblem">
+    <div class="s-emblem-wrap">
+      <div class="s-ring"></div>
+      <div class="s-ring-i"></div>
+      <div class="s-icon-wrap">
+        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
       </div>
     </div>
   </div>
+
+  <div class="s-body">
+    <div class="s-eyebrow">Verification Received</div>
+    <div class="s-title">You're In the Queue</div>
+    <p class="s-sub" id="s-sub-txt">Your verification has been submitted successfully. Our team will review it and assign your role within 24 hours.</p>
+
+    <div id="seeker-badge" style="display:flex;justify-content:center;margin-bottom:22px"></div>
+
+    <div class="s-steps" role="list" aria-label="Verification steps">
+      <div class="s-step" role="listitem">
+        <div class="s-step-icon done" aria-label="Completed">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <div class="s-step-t">Verification Submitted</div>
+          <div class="s-step-d">Your details and proof of registration have been received by our system.</div>
+        </div>
+      </div>
+      <div class="s-step" role="listitem">
+        <div class="s-step-icon pending" aria-label="Pending">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="s-step-t">Under Review</div>
+          <div class="s-step-d">A Keeper will review your submission and verify your eligibility within 24 hours.</div>
+        </div>
+      </div>
+      <div class="s-step" role="listitem">
+        <div class="s-step-icon pending" aria-label="Pending">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <div class="s-step-t">Role Assignment</div>
+          <div id="role-step-desc" class="s-step-d">Once approved, your role will be assigned in Discord.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="s-divider"><div class="s-divider-gem"></div></div>
+
+    <div class="s-btns">
+      <a href="https://discord.gg/Mp8Fhsmd5S" target="_blank" rel="noopener noreferrer" class="sbtn sbtn-discord" aria-label="Join Discord server">
+        <svg viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.033.057a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+        Join Discord Server
+      </a>
+      <a href="./index.html" class="sbtn sbtn-home" aria-label="Return to main site">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Return to Website
+      </a>
+    </div>
+
+    <div class="s-review">
+      Expected review time: <strong>within 24 hours</strong><br>
+      Make sure you are in the Discord server so we can assign your role.
+    </div>
+  </div>
+
 </div>
 
-<script>
-// Canvas starfield + particles
+
+/* ══ DYNAMIC SEEKER TYPE ═══════════════════════════════ */
 (function() {
-  var c = document.getElementById('bg');
-  var x = c.getContext('2d');
-  var W, H, S = [], P = [], SS = [];
+  var params = new URLSearchParams(window.location.search);
+  var type = params.get('type');
+  var badge = document.getElementById('seeker-badge');
+  var roleDesc = document.getElementById('role-step-desc');
+  var subTxt = document.getElementById('s-sub-txt');
 
-  function resize() { W = c.width = window.innerWidth; H = c.height = window.innerHeight; }
-
-  function mkS() {
-    return { x: Math.random()*W, y: Math.random()*H,
-             r: Math.random()*1.2+0.2, o: Math.random()*0.65+0.1,
-             sp: Math.random()*0.007+0.002, ph: Math.random()*Math.PI*2,
-             g: Math.random() < 0.06, gr: Math.random() < 0.03 };
+  if (type === 'div') {
+    badge.innerHTML = '<span class="role-chip chip-div" style="font-size:12px;padding:6px 18px">&#x1F52E; Divination Seeker</span>';
+    roleDesc.textContent = 'Once approved, your Divination Seeker role will be assigned and you will unlock full access to the Divination Chamber.';
+    subTxt.textContent = 'Your Divination Seeker verification has been submitted. Our team will review it and assign your role within 24 hours.';
+  } else if (type === 'aeth') {
+    badge.innerHTML = '<span class="role-chip chip-aeth" style="font-size:12px;padding:6px 18px">&#x2694;&#xFE0F; Aether Seeker</span>';
+    roleDesc.textContent = 'Once approved, your Aether Seeker role will be assigned and you will unlock full access to the Aether Chamber.';
+    subTxt.textContent = 'Your Aether Seeker verification has been submitted. Our team will review it and assign your role within 24 hours.';
+  } else {
+    // Fallback if no param
+    badge.innerHTML = '<span class="role-chip chip-div" style="font-size:12px;padding:6px 18px;margin-right:8px">&#x1F52E; Divination Seeker</span><span class="role-chip chip-aeth" style="font-size:12px;padding:6px 18px">&#x2694;&#xFE0F; Aether Seeker</span>';
   }
+})();
 
-  function mkP() {
-    return { x: Math.random()*W, y: H+10, vx: (Math.random()-0.5)*0.5,
-             vy: -(Math.random()*0.7+0.25), life: 1,
-             dec: Math.random()*0.005+0.003, r: Math.random()*1.8+0.4,
-             green: Math.random() < 0.35 };
-  }
-
-  function mkSS() {
-    return { x: Math.random()*W*0.7+W*0.15, y: Math.random()*H*0.4,
-             len: Math.random()*130+70, spd: Math.random()*7+4, life: 1,
-             decay: Math.random()*0.013+0.009,
-             angle: Math.PI/4 + (Math.random()-0.5)*0.35 };
-  }
-
-  function init() {
-    resize();
-    S = [];
-    for (var i = 0; i < 200; i++) S.push(mkS());
-    setInterval(function() { if (P.length < 15) P.push(mkP()); }, 500);
-    setInterval(function() { if (SS.length < 2 && Math.random() < 0.45) SS.push(mkSS()); }, 2500);
-  }
-
+<script>
+(function() {
+  var cv = document.getElementById('bgcvs');
+  if (!cv) return;
+  var ctx = cv.getContext('2d');
+  var W, H, stars = [], t = 0;
+  function resize() { W = cv.width = innerWidth; H = cv.height = innerHeight; }
+  function mkS() { return { x:Math.random()*W, y:Math.random()*H, r:Math.random()*1.1+.1, o:Math.random()*.45+.06, sp:Math.random()*.004+.001, ph:Math.random()*Math.PI*2, gold:Math.random()<.07, em:Math.random()<.04 }; }
+  function init() { resize(); stars = []; for (var i = 0; i < 110; i++) stars.push(mkS()); }
   function draw() {
-    x.clearRect(0, 0, W, H);
-    var t = Date.now() * 0.001;
-
-    for (var i = 0; i < S.length; i++) {
-      var s  = S[i];
-      var op = s.o * (0.5 + 0.5 * Math.sin(t * s.sp * 7 + s.ph));
-      x.beginPath(); x.arc(s.x, s.y, s.r, 0, Math.PI*2);
-      if (s.gr)      x.fillStyle = 'rgba(42,164,120,'+op+')';
-      else if (s.g)  x.fillStyle = 'rgba(201,168,76,'+op+')';
-      else           x.fillStyle = 'rgba(255,255,255,'+op+')';
-      x.fill();
+    ctx.clearRect(0,0,W,H); t += .003;
+    for (var i = 0; i < stars.length; i++) {
+      var s = stars[i];
+      var op = s.o * (.55 + .45 * Math.sin(t * s.sp * 8 + s.ph));
+      ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI*2);
+      ctx.fillStyle = s.gold ? 'rgba(201,168,76,' + op + ')' : s.em ? 'rgba(42,164,120,' + op + ')' : 'rgba(220,216,210,' + op + ')';
+      ctx.fill();
     }
-
-    for (var j = P.length-1; j >= 0; j--) {
-      var p = P[j]; p.x += p.vx; p.y += p.vy; p.life -= p.dec;
-      if (p.life <= 0) { P.splice(j,1); continue; }
-      x.beginPath(); x.arc(p.x, p.y, p.r * p.life, 0, Math.PI*2);
-      x.fillStyle = p.green
-        ? 'rgba(42,164,120,'+(p.life*0.5)+')'
-        : 'rgba(201,168,76,'+(p.life*0.45)+')';
-      x.fill();
-    }
-
-    for (var k = SS.length-1; k >= 0; k--) {
-      var ss = SS[k];
-      ss.x += Math.cos(ss.angle) * ss.spd;
-      ss.y += Math.sin(ss.angle) * ss.spd;
-      ss.life -= ss.decay;
-      if (ss.life <= 0) { SS.splice(k,1); continue; }
-      var g = x.createLinearGradient(
-        ss.x, ss.y,
-        ss.x - Math.cos(ss.angle)*ss.len,
-        ss.y - Math.sin(ss.angle)*ss.len
-      );
-      g.addColorStop(0,   'rgba(255,255,255,'+(ss.life*0.9)+')');
-      g.addColorStop(0.3, 'rgba(42,164,120,'+(ss.life*0.5)+')');
-      g.addColorStop(1,   'rgba(42,164,120,0)');
-      x.beginPath();
-      x.moveTo(ss.x, ss.y);
-      x.lineTo(ss.x - Math.cos(ss.angle)*ss.len, ss.y - Math.sin(ss.angle)*ss.len);
-      x.strokeStyle = g; x.lineWidth = ss.life * 1.5; x.stroke();
-    }
-
     requestAnimationFrame(draw);
   }
-
   window.addEventListener('resize', resize);
   init(); draw();
 })();
