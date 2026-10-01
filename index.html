@@ -433,7 +433,45 @@ footer{background:rgba(3,5,10,.96);border-top:.5px solid var(--b2);padding:52px 
 
 /* REDUCED MOTION */
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}#bgcvs{display:none}}
+
+/* ══ RESPONSIVE FIXES ═══════════════════════════════════ */
+@media(max-width:768px){
+  .bg{grid-template-columns:repeat(2,1fr)}
+  .chg{grid-template-columns:1fr}
+  .pwg{grid-template-columns:1fr}
+  .prow{flex-direction:column;align-items:center}
+  .pfirm,.pcomm{width:100%;max-width:340px}
+  .pex{width:100%;max-width:340px}
+  .krow{flex-wrap:wrap}
+  .kcard{min-width:155px;flex:0 0 calc(50% - 7px)}
+  .fg{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+  .hero-acts{flex-direction:column;align-items:center}
+  .hero-acts .btn{width:100%;max-width:280px;justify-content:center}
+  .vsteps{flex-direction:column;align-items:center;gap:10px}
+  .vsep{display:none}
+  .h1{font-size:clamp(28px,8vw,44px)}
+  .h2{font-size:clamp(20px,6vw,32px)}
+  .tc-outer{padding:0 44px}
+  .am{grid-template-columns:1fr 1fr}
+  .size-grid{grid-template-columns:repeat(3,1fr)}
+  .s0-cards{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .bg{grid-template-columns:1fr}
+  .kcard{min-width:140px;flex:0 0 calc(50% - 7px)}
+  .wrap{padding:0 16px}
+  .sec{padding:60px 0}
+  .vcard-body,.vcard-head{padding:18px 16px}
+  .s-body{padding:0 16px 24px}
+}
+@media(max-width:380px){
+  .kcard{flex:0 0 100%;max-width:260px}
+  .krow{flex-direction:column;align-items:center}
+}
+
 </style>
+<script>!function(w,d,s,u,n,a,b){if(w[n])return;a=w[n]={q:[],t:+new Date,s:[],o:u,track:function(){a.q.push([+new Date].concat([].slice.call(arguments)))},setScope:function(){a.s=[].slice.call(arguments).filter(function(x){return typeof x==="string"});a.q.push([+new Date,"setScope"].concat(a.s))},scope:function(){var c=[].slice.call(arguments);return{track:function(){a.q.push([+new Date].concat([].slice.call(arguments)).concat([{__scope:c}]))}}}};b=d.createElement(s);b.async=1;b.src=u+"/s.js";d.getElementsByTagName(s)[0].parentNode.insertBefore(b,d.getElementsByTagName(s)[0])}(window,document,"script","https://t.whop.tw","whop");whop.setScope("biz_qaPXQG0yg879sI");whop.track("page");</script>
 </head>
 <body>
 
@@ -552,7 +590,7 @@ footer{background:rgba(3,5,10,.96);border-top:.5px solid var(--b2);padding:52px 
       <article class="bc rev d1"><div class="bci"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div><h3 class="bct">ETF Curriculum</h3><p class="bcd">Complete investment education covering VOO, QQQM, SCHD, VXUS, DCA strategy, and long-term portfolio building through Aether Chamber.</p></article>
       <article class="bc rev d2"><div class="bci"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3 class="bct">Crypto Signals</h3><p class="bcd">High-conviction futures signals with full trade details — entry, stop loss, take profit, and structured live updates.</p></article>
       <article class="bc rev d3"><div class="bci"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><h3 class="bct">Forex &amp; TradFi</h3><p class="bcd">XAU, XAG, Forex pairs, Indices, and Commodities — multi-market coverage for the complete trader.</p></article>
-      <article class="bc rev d4"><div class="bci"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 class="bct">Prop Trading</h3><p class="bcd">Access funded accounts through Atlas Funded and Alpha Capital Group. Prove your edge with real capital.</p></article>
+      <article class="bc rev d4"><div class="bci"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3 class="bct">Prop Trading</h3><p class="bcd">Access funded accounts through Atlas Funded and . Prove your edge with real capital.</p></article>
       <article class="bc rev d1"><div class="bci"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><h3 class="bct">Market Analysis</h3><p class="bcd">Daily and weekly breakdowns of macro conditions, liquidity levels, and high-impact trading sessions.</p></article>
       <article class="bc rev d2"><div class="bci"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3 class="bct">1-on-1 Mentoring</h3><p class="bcd">Direct sessions with Grand Strategists. Personal, focused, and immediately actionable guidance.</p></article>
       <article class="bc rev d3"><div class="bci"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><h3 class="bct">Rewards System</h3><p class="bcd">Earn points through engagement. Redeem for vouchers, funded slots, and exclusive Sanctum access.</p></article>
@@ -613,7 +651,7 @@ footer{background:rgba(3,5,10,.96);border-top:.5px solid var(--b2);padding:52px 
     <div class="chg">
       <article class="chc gld rev d1"><span class="chdiv db">Beginner</span><h3 class="cht">CFD Trading Foundations</h3><p class="chs">The mechanics of CFD trading, understanding prop firm structures, risk parameters, leverage, and how to prepare for your first funded challenge.</p><div class="chtags"><span class="chtag">CFD Mechanics</span><span class="chtag">Prop Structures</span><span class="chtag">Risk Params</span></div><a href="https://discord.gg/Mp8Fhsmd5S" target="_blank" rel="noopener noreferrer" class="cha gld">Start Learning<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></article>
       <article class="chc gld rev d2"><span class="chdiv di">Intermediate</span><h3 class="cht">Prop Firm Challenge Strategy</h3><p class="chs">How to build and execute a strategy specifically designed to pass prop firm evaluations. Consistency models, scaling plans, and rule compliance.</p><div class="chtags"><span class="chtag">Challenge Rules</span><span class="chtag">Consistency</span><span class="chtag">Scaling Plans</span></div><a href="./sanctum_verification.html" class="cha gld">Verify to Access<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></article>
-      <article class="chc gld rev d3"><span class="chdiv di">Intermediate</span><h3 class="cht">CFD &amp; Prop Firm Development</h3><p class="chs">Prepare for prop firm challenges. CFD mechanics, funded account rules, and challenge strategy.</p><div class="chtags"><span class="chtag">CFD Trading</span><span class="chtag">Atlas Funded</span><span class="chtag">Alpha Capital</span></div><a href="https://affiliates.atlasfunded.com/Tracking/S/6a70d3911356becd0cccf005" target="_blank" rel="noopener noreferrer" class="cha gld">Get Funded<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></article>
+      <article class="chc gld rev d3"><span class="chdiv di">Intermediate</span><h3 class="cht">CFD &amp; Prop Firm Development</h3><p class="chs">Prepare for prop firm challenges. CFD mechanics, funded account rules, and challenge strategy.</p><div class="chtags"><span class="chtag">CFD Trading</span><span class="chtag">Atlas Funded</span><span class="chtag"></span></div><a href="https://affiliates.atlasfunded.com/Tracking/S/6a70d3911356becd0cccf005" target="_blank" rel="noopener noreferrer" class="cha gld">Get Funded<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></article>
       <article class="chc gld rev d1"><span class="chdiv di">Intermediate</span><h3 class="cht">Long-Term Wealth Building</h3><p class="chs">The compounding mindset. Build wealth systematically across ETFs, US stocks, and alternative assets.</p><div class="chtags"><span class="chtag">Compounding</span><span class="chtag">US Stocks</span><span class="chtag">DCA Plans</span></div><a href="./sanctum_verification.html" class="cha gld">Verify to Access<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></article>
       <article class="chc gld rev d2"><span class="chdiv da">Advanced</span><h3 class="cht">Portfolio Reviews &amp; Macro Analysis</h3><p class="chs">Monthly reviews, macro economic interpretation, and advanced thesis development with mentor feedback.</p><div class="chtags"><span class="chtag">Reviews</span><span class="chtag">Macro Economy</span><span class="chtag">Mentorship</span></div><a href="./sanctum_verification.html" class="cha gld">Verify to Access<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></article>
       <article class="chc gld rev d3"><span class="chdiv da">Advanced</span><h3 class="cht">Professional Trader Development</h3><p class="chs">From retail investor to professional funded trader. Systems, routines, performance tracking, and mindset.</p><div class="chtags"><span class="chtag">Pro Systems</span><span class="chtag">Performance</span><span class="chtag">Funded Career</span></div><a href="./sanctum_verification.html" class="cha gld">Verify to Access<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></article>
@@ -630,14 +668,14 @@ footer{background:rgba(3,5,10,.96);border-top:.5px solid var(--b2);padding:52px 
       <p class="lead">A curated network of exchanges, prop firms, brokers, and communities aligned with the Sanctum mission.</p>
     </header>
     <div class="psec rev">
-      <div class="plbl">Exchange Partner</div>
+      <div class="plbl">Primary Crypto Partner</div>
       <div class="prow">
         <a href="https://www.bitunix.com/register?vipCode=SANCTUM" target="_blank" rel="noopener noreferrer" class="pex" aria-label="Bitunix">
           <div class="pbadge">Official Partner</div>
           <img src="ASBitunix.png" alt="Bitunix" width="72" height="50" loading="lazy" onerror="imgErr(this)">
           <div class="pex-name">Bitunix</div>
-          <div class="pex-type">Futures &middot; Trading Rebate</div>
-          <div class="pex-code">Code: SANCTUM</div>
+          <div class="pex-type">Futures &middot; 20% Trading Rebate</div>
+          <div class="pex-code">Code: SANCTUM &middot; 20% Rebate</div>
           <div class="pex-ban"><img src="ARCxBITUNIX.png" alt="ARCxBitunix" loading="lazy" onerror="this.style.display='none'"></div>
         </a>
       </div>
@@ -650,12 +688,14 @@ footer{background:rgba(3,5,10,.96);border-top:.5px solid var(--b2);padding:52px 
           <div class="pfirm-body"><div class="pfirm-hd"><div class="pfirm-name">Atlas Funded</div><span class="pfirm-tag">Prop Firm</span></div><p class="pfirm-sub">Get 50% off all funded accounts using code SANCTUM. Start your funded trading journey today.</p><a href="https://affiliates.atlasfunded.com/Tracking/S/6a70d3911356becd0cccf005" target="_blank" rel="noopener noreferrer" class="pfirm-a">Get Funded<svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
         </div>
         <div class="pfirm">
-          <a href="https://app.alphacapitalgroup.uk/signup/SANCTUM" target="_blank" rel="noopener noreferrer" aria-label="Alpha Capital Group"><img src="ARCxALPHA.png" alt="Alpha Capital Group" class="pfirm-img" loading="lazy"></a>
-          <div class="pfirm-body"><div class="pfirm-hd"><div class="pfirm-name">Alpha Capital Group</div><span class="pfirm-tag">Prop Firm</span></div><p class="pfirm-sub">Get 30% off Challenge accounts and 50% off Instant accounts using code SANCTUM. Start your funded trading journey today..</p><a href="https://app.alphacapitalgroup.uk/signup/SANCTUM" target="_blank" rel="noopener noreferrer" class="pfirm-a">50% Off &mdash; Get Funded<svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
+          <a href="https://fundedtradermarkets.com/ref/_pxttss" target="_blank" rel="noopener noreferrer" aria-label="FundedTraderMarkets"><img src="FTMxARC.png" alt="FundedTraderMarkets" class="pfirm-img" loading="lazy" onerror="imgErr(this)"></a>
+          <div class="pfirm-body"><div class="pfirm-hd"><div class="pfirm-name">Funded Trader Markets</div><span class="pfirm-tag">Prop Firm</span></div><p class="pfirm-sub">Get 40% off all funded accounts using code SANCTUM. Access professional funded trading through FTM.</p><a href="https://fundedtradermarkets.com/ref/_pxttss" target="_blank" rel="noopener noreferrer" class="pfirm-a">40% Off &mdash; Get Funded<svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+          </div>
         </div>
+        
         <div class="pfirm">
           <a href="https://www.aquafunded.com/?afmc=SANCTUM" target="_blank" rel="noopener noreferrer" aria-label="AquaFunded"><img src="ARCxAQUA.png" alt="AquaFunded" class="pfirm-img" loading="lazy" onerror="imgErr(this)"></a>
-          <div class="pfirm-body"><div class="pfirm-hd"><div class="pfirm-name">AquaFunded</div><span class="pfirm-tag">Prop Firm</span></div><p class="pfirm-sub">Get 40% off Instant Accounts using code SANCTUM. Instant Accounts are currently available in our region.</p><a href="https://www.aquafunded.com/?afmc=SANCTUM" target="_blank" rel="noopener noreferrer" class="pfirm-a">40% Off Instant Accounts<svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
+          <div class="pfirm-body"><div class="pfirm-hd"><div class="pfirm-name">AquaFunded</div><span class="pfirm-tag">Prop Firm</span></div><p class="pfirm-sub">Get 40% off Instant Accounts using code SANCTUM. Instant Accounts are currently available in our region.</p><a href="https://www.aquafunded.com/?afmc=SANCTUM" target="_blank" rel="noopener noreferrer" class="pfirm-a">50% Off Instant Accounts<svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
         </div>
       </div>
     </div>
@@ -690,7 +730,7 @@ footer{background:rgba(3,5,10,.96);border-top:.5px solid var(--b2);padding:52px 
       <div class="tlbl">Sovereign &mdash; Founders</div>
       <div class="krow">
         <article class="kcard"><div class="kav"><div class="kav-ph">Z</div><img src="AS zaire.png" alt="Zaire" width="74" height="74" loading="lazy"></div><div class="krole">Sovereign &middot; Founder</div><h3 class="kname">Zaire</h3><p class="kbio">Primary market analyst and liquidity hunter. Leads signal intelligence at the highest level.</p><div class="ksocs"><a href="https://x.com/zaire8169" target="_blank" rel="noopener noreferrer" class="ksoc" aria-label="Zaire on X">&#x1D54F;</a></div></article>
-        <article class="kcard"><div class="kav"><div class="kav-ph">P</div><img src="AS Patts.png" alt="Patts" width="74" height="74" loading="lazy"></div><div class="krole">Sovereign &middot; Founder</div><h3 class="kname">Pat</h3><p class="kbio">REE, Trader, Investor and operations lead. Drives community identity, partnerships, and vision.</p><div class="ksocs"><a href="https://x.com/_pxttss" target="_blank" rel="noopener noreferrer" class="ksoc" aria-label="Pat on X">&#x1D54F;</a></div></article>
+        <article class="kcard"><div class="kav"><div class="kav-ph">P</div><img src="AS Patts.png" alt="Patts" width="74" height="74" loading="lazy"></div><div class="krole">Sovereign &middot; Founder</div><h3 class="kname">Patts</h3><p class="kbio">REE, trader, investor and operations lead. Drives community identity, partnerships, and vision.</p><div class="ksocs"><a href="https://x.com/_pxttss" target="_blank" rel="noopener noreferrer" class="ksoc" aria-label="Pat on X">&#x1D54F;</a></div></article>
       </div>
     </div>
     <div class="ktier rev d1">
@@ -730,10 +770,10 @@ footer{background:rgba(3,5,10,.96);border-top:.5px solid var(--b2);padding:52px 
       <p class="lead">Everything you need to know before joining the Sanctum.</p>
     </header>
     <div class="faq-wrap">
-      <div class="faq-item rev"><div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">How do I join Arcanum Sanctum?</span><div class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-body"><div class="faq-ans">Register through Bitunix (code: SANCTUM), deposit minimum $50, then submit the verification form on our portal. Once verified, you gain full access to all Sanctum resources including signals, courses, mentoring, and rewards.</div></div></div>
+      <div class="faq-item rev"><div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">How do I join Arcanum Sanctum?</span><div class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-body"><div class="faq-ans">Register through  (code: ) or Bitunix (code: SANCTUM), deposit minimum $50, then submit the verification form on our portal. Once verified, you gain full access to all Sanctum resources including signals, courses, mentoring, and rewards.</div></div></div>
       <div class="faq-item rev d1"><div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">What is the Divination Chamber?</span><div class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-body"><div class="faq-ans">The Divination Chamber is our active crypto trading education hub covering ICT concepts, market structure, order blocks, fair value gaps, liquidity, risk management, live sessions, and premium futures signals. Designed for traders who want to develop consistent execution from beginner to advanced.</div></div></div>
-      <div class="faq-item rev d2"><div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">What is the Aether Chamber?</span><div class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-body"><div class="faq-ans">Aether Chamber covers long-term investing and professional trader development. This includes ETF investing (VOO, QQQM, SCHD, VXUS), portfolio building, DCA strategies, CFD trading, and prop firm challenge preparation through Atlas Funded and Alpha Capital Group.</div></div></div>
-      <div class="faq-item rev d3"><div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">How do the prop firm partnerships work?</span><div class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-body"><div class="faq-ans">We partner with Atlas Funded and Alpha Capital Group. Atlas Funded provides funded accounts after completing their challenge. Alpha Capital Group offers 50% off all accounts with code SANCTUM. These are separate from community verification and can be accessed independently.</div></div></div>
+      <div class="faq-item rev d2"><div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">What is the Aether Chamber?</span><div class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-body"><div class="faq-ans">Aether Chamber covers long-term investing and professional trader development. This includes ETF investing (VOO, QQQM, SCHD, VXUS), portfolio building, DCA strategies, CFD trading, and prop firm challenge preparation through Atlas Funded and .</div></div></div>
+      <div class="faq-item rev d3"><div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">How do the prop firm partnerships work?</span><div class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-body"><div class="faq-ans">We partner with Atlas Funded and . Atlas Funded provides funded accounts after completing their challenge.  offers 50% off all accounts with code SANCTUM. These are separate from community verification and can be accessed independently.</div></div></div>
       <div class="faq-item rev d1"><div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">Is this suitable for complete beginners?</span><div class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-body"><div class="faq-ans">Yes. Both chambers have dedicated beginner paths starting from absolute zero. No prior trading or investing experience required. The Sanctum takes you from wherever you are and builds systematically with structure, mentorship, and community accountability.</div></div></div>
       <div class="faq-item rev d2"><div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">What ETF platforms work for Philippine investors?</span><div class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-body"><div class="faq-ans">We recommend GoTrade for beginners — supports GCash, BPI, and Maya deposits, zero commission, fractional shares from $1. Use referral code 4GLD90. For more serious investors, IBKR GlobalTrader offers professional-grade access with $0 commission on US ETFs.</div></div></div>
       <div class="faq-item rev d3"><div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">How do I contact the team?</span><div class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-body"><div class="faq-ans">Reach us through Discord, via email at pattss.core@gmail.com, or through our social media channels. For partnership and collaboration inquiries contact pattss.core@gmail.com or kimbeansent11@gmail.com.</div></div></div>
@@ -749,9 +789,9 @@ footer{background:rgba(3,5,10,.96);border-top:.5px solid var(--b2);padding:52px 
       <div class="vemb" aria-hidden="true"><div class="vring"></div><div class="vring-i"></div><div class="vlogo"><img src="ARC.png" alt="Arcanum Sanctum" width="52" height="52"></div></div>
       <div class="eyebrow rev" style="justify-content:center">Ascendant Access</div>
       <h2 id="verify-h" class="h2 rev d1" style="margin-bottom:13px">Claim Your Place <span class="accent">in the Sanctum</span></h2>
-      <p class="lead rev d2" style="margin:0 auto 22px;text-align:center">Register through an exchange partner, complete verification, and unlock full access to signals, courses, mentoring, and rewards.</p>
+      <p class="lead rev d2" style="margin:0 auto 22px;text-align:center">Register through Bitunix (code: SANCTUM), deposit minimum $50, then submit the verification form on our portal. Once verified, you gain full access to all Sanctum resources including signals, courses, mentoring, and rewards.</p>
       <div class="vsteps rev d3">
-        <div class="vstep"><div class="vstep-n">1</div>Register on Bitunix or buy via Prop Firm</div>
+        <div class="vstep"><div class="vstep-n">1</div>Register through Bitunix (code: SANCTUM), deposit minimum $50, then submit the verification form on our portal. Once verified, you gain full access to all Sanctum resources including signals, courses, mentoring, and rewards.</div>
         <div class="vsep" aria-hidden="true">&mdash;</div>
         <div class="vstep"><div class="vstep-n">2</div>Deposit minimum $50</div>
         <div class="vsep" aria-hidden="true">&mdash;</div>
@@ -785,8 +825,9 @@ footer{background:rgba(3,5,10,.96);border-top:.5px solid var(--b2);padding:52px 
         </div>
       </div>
       <div class="fcol"><h4>Platform</h4><ul><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#divination">Divination Chamber</a></li><li><a href="#aether">Aether Chamber</a></li><li><a href="#faq">FAQ</a></li><li><a href="./sanctum_verification.html">Verify Now</a></li></ul></div>
-      <div class="fcol"><h4>Partners</h4><ul><li><a href="https://www.bitunix.com/register?vipCode=SANCTUM" target="_blank" rel="noopener noreferrer">Bitunix</a></li><li><a href="https://affiliates.atlasfunded.com/Tracking/S/6a70d3911356becd0cccf005" target="_blank" rel="noopener noreferrer">Atlas Funded</a></li><li><a href="https://app.alphacapitalgroup.uk/signup/SANCTUM" target="_blank" rel="noopener noreferrer">Alpha Capital Group</a></li><li><a href="https://heygotrade.com/referral?code=4GLD90" target="_blank" rel="noopener noreferrer">GoTrade</a></li></ul></div>
-      <div class="fcol"><h4>Community</h4><ul><li><a href="https://discord.gg/Mp8Fhsmd5S" target="_blank" rel="noopener noreferrer">Discord Server</a></li><li><a href="https://x.com/zaire8169" target="_blank" rel="noopener noreferrer">X &middot; Zaire</a></li><li><a href="https://x.com/_pxttss" target="_blank" rel="noopener noreferrer">X &middot; Pat</a></li><li><a href="mailto:pattss.core@gmail.com">Contact Us</a></li><li><a href="https://linktr.ee/ARCanumSanctum" target="_blank" rel="noopener noreferrer">All Links</a></li></ul></div>
+      <div class="fcol"><h4>Partners</h4><ul><li><a href="https://www.bitunix.com/register?vipCode=SANCTUM" target="_blank" rel="noopener noreferrer">Bitunix</a></li><li><a href="https://affiliates.atlasfunded.com/Tracking/S/6a70d3911356becd0cccf005" target="_blank" rel="noopener noreferrer">Atlas Funded</a></li>
+          <li><a href="https://fundedtradermarkets.com/ref/_pxttss" target="_blank" rel="noopener noreferrer">FundedTraderMarkets</a></li><li><a href="https://heygotrade.com/referral?code=4GLD90" target="_blank" rel="noopener noreferrer">GoTrade</a></li></ul></div>
+      <div class="fcol"><h4>Community</h4><ul><li><a href="https://discord.gg/Mp8Fhsmd5S" target="_blank" rel="noopener noreferrer">Discord Server</a></li><li><a href="https://x.com/zaire8169" target="_blank" rel="noopener noreferrer">X &middot; Zaire</a></li><li><a href="https://x.com/_pxttss" target="_blank" rel="noopener noreferrer">X &middot; Patts</a></li><li><a href="mailto:pattss.core@gmail.com">Contact Us</a></li><li><a href="https://linktr.ee/ARCanumSanctum" target="_blank" rel="noopener noreferrer">All Links</a></li></ul></div>
     </div>
     <div class="fbot">
       <p class="fcopy">&copy; 2025 Arcanum Sanctum &middot; All rights reserved</p>
