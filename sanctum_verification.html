@@ -133,7 +133,9 @@ body{background:#050816;color:rgba(255,255,255,.88);font-family:'Inter',sans-ser
 .plat-grid{display:grid;gap:8px;margin-bottom:20px}
 .plat-grid.one{grid-template-columns:1fr}
 .plat-grid.two{grid-template-columns:1fr 1fr}
-@media(max-width:480px){.plat-grid.two{grid-template-columns:1fr}}
+.plat-grid.three{grid-template-columns:repeat(3,1fr)}
+@media(max-width:480px){.plat-grid.two{grid-template-columns:1fr}
+.plat-grid.three{grid-template-columns:1fr}}
 .platbtn{border:.5px solid var(--b2);border-radius:var(--r2);padding:13px 16px;cursor:pointer;transition:all .3s var(--ease);background:var(--s1);text-align:left;display:flex;flex-direction:column;gap:3px}
 .platbtn:hover{border-color:var(--b1);background:var(--ga)}
 .platbtn.sel{border-color:var(--gold);background:var(--ga);box-shadow:0 0 16px rgba(201,168,76,.09)}
@@ -320,8 +322,9 @@ body{background:#050816;color:rgba(255,255,255,.88);font-family:'Inter',sans-ser
           </div>
           <p class="pcard-desc">Purchase a funded account through our official affiliate link to unlock the <strong>Aether Chamber</strong>.</p>
           <div class="pcard-chips">
-            <div class="pcard-chip">Atlas Funded <span>50% Off &middot; SANCTUM</span></div>
-            <div class="pcard-chip">AquaFunded <span>40% Off Instant</span></div>
+            <div class="pcard-chip">Atlas Funded <span>50% Off for All accounts &middot; SANCTUM</span></div>
+            <div class="pcard-chip">Funded Trader Markets <span>40% Off for All accounts &middot; SANCTUM</span></div>
+            <div class="pcard-chip">AquaFunded <span>40% Off for Instant accounts</span></div>
           </div>
           <div class="pcard-unlock">
             <span class="pcard-unlock-lbl">Unlocks:</span>
@@ -398,7 +401,7 @@ body{background:#050816;color:rgba(255,255,255,.88);font-family:'Inter',sans-ser
         <div class="reqbox-title">&#x26A0;&#xFE0F; Complete these steps before submitting</div>
         <ol>
           <li>Click on your chosen prop firm below and purchase an account through our <strong>official affiliate link</strong> — this is required for our Sentinels to verify your purchase</li>
-          <li>Use code <strong>SANCTUM</strong> at checkout to receive <strong>50% OFF</strong></li>
+          <li>Use code <strong>SANCTUM</strong> at checkout to receive <strong>50% OFF for All accounts</strong></li>
           <li>After purchasing, save your order confirmation or receipt email</li>
           <li>Return here, fill in your details, and upload your receipt as proof</li>
         </ol>
@@ -406,14 +409,18 @@ body{background:#050816;color:rgba(255,255,255,.88);font-family:'Inter',sans-ser
       </div>
 
       <label class="flabel">Select Prop Firm Platform <span style="color:var(--red)">*</span></label>
-      <div class="plat-grid two" style="margin-bottom:8px" id="aeth-platgrid">
+      <div class="plat-grid three" style="margin-bottom:8px" id="aeth-platgrid">
         <div class="platbtn" id="plat-atlas" onclick="pickPlat('atlas')" role="button" tabindex="0">
           <div class="platbtn-name">Atlas Funded</div>
-          <div class="platbtn-code">SANCTUM &mdash; 50% Off</div>
+          <div class="platbtn-code">SANCTUM &mdash; 50% Off for All accounts</div>
+        </div>
+        <div class="platbtn" id="plat-ftm" onclick="pickPlat('ftm')" role="button" tabindex="0">
+          <div class="platbtn-name">FundedTraderMarkets</div>
+          <div class="platbtn-code">SANCTUM &mdash; 40% Off for All accounts</div>
         </div>
         <div class="platbtn" id="plat-aqua" onclick="pickPlat('aqua')" role="button" tabindex="0">
           <div class="platbtn-name">AquaFunded</div>
-          <div class="platbtn-code">SANCTUM &mdash; 40% Off Instant</div>
+          <div class="platbtn-code">SANCTUM &mdash; 40% Off for Instant accounts</div>
         </div>
       </div>
 
@@ -530,11 +537,15 @@ var ST = { path: '', plat: '', size: '' };
 var PLAT = {
   atlas: {
     link: 'https://affiliates.atlasfunded.com/Tracking/S/6a70d3911356becd0cccf005',
-    lbl:  'Atlas Funded \u2014 50% Off All Accounts'
+    lbl:  'Atlas Funded — 50% Off All Accounts'
+  },
+  ftm: {
+    link: 'https://fundedtradermarkets.com/ref/_pxttss',
+    lbl:  'FundedTraderMarkets — 40% Off All Accounts'
   },
   aqua: {
     link: 'https://www.aquafunded.com/?afmc=SANCTUM',
-    lbl:  'AquaFunded \u2014 40% Off Instant Accounts'
+    lbl:  'AquaFunded — 40% Off Instant Accounts'
   }
 };
 
@@ -737,6 +748,7 @@ document.addEventListener('keydown', function(e) {
   if (t.id === 'card-div')   { e.preventDefault(); pickPath('div'); }
   if (t.id === 'card-aeth')  { e.preventDefault(); pickPath('aeth'); }
   if (t.id === 'plat-atlas') { e.preventDefault(); pickPlat('atlas'); }
+  if (t.id === 'plat-ftm')   { e.preventDefault(); pickPlat('ftm'); }
   if (t.id === 'plat-aqua')  { e.preventDefault(); pickPlat('aqua'); }
 });
 
