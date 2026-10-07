@@ -536,7 +536,7 @@ var ST = { path: '', plat: '', size: '' };
 
 var PLAT = {
   atlas: {
-    link: 'https://affiliates.atlasfunded.com/Tracking/S/6a70d3911356becd0cccf005',
+    link: 'https://app.atlasfunded.com/?afmc=SANCTUM',
     lbl:  'Atlas Funded — 50% Off All Accounts'
   },
   ftm: {
@@ -689,13 +689,61 @@ function doSubmit() {
   document.getElementById('submit-btn').disabled = true;
   document.getElementById('vloading').className  = 'vloading show';
 
-  var reader = new FileReader();
-  reader.onload = function(e) {
-    var b64 = e.target.result.split(',')[1];
+  // Validate file size (max 8MB before encoding)
+  if (file.size > 8 * 1024 * 1024) {
+    showErr('File is too large. Please upload an image under 8MB.');
+    document.getElementById('submit-btn').disabled = false;
+    document.getElementById('vloading').className = 'vloading';
+    return;
+  }
+
+  // Compress image if it is an image (to keep payload small)
+  function compress(file, cb) {
+    if (!file.type.match(/image\/(jpeg|jpg|png|webp)/)) {
+      // Not a compressible image — read as-is
+      var r = new FileReader();
+      r.onload = function(e) { cb(e.target.result.split(',')[1], file.name); };
+      r.onerror = function() { cb(null, file.name); };
+      r.readAsDataURL(file);
+      return;
+    }
+    var img = new Image();
+    var objUrl = URL.createObjectURL(file);
+    img.onload = function() {
+      URL.revokeObjectURL(objUrl);
+      var MAX = 1200;
+      var w = img.width, h = img.height;
+      if (w > MAX || h > MAX) {
+        if (w > h) { h = Math.round(h * MAX / w); w = MAX; }
+        else { w = Math.round(w * MAX / h); h = MAX; }
+      }
+      var canvas = document.createElement('canvas');
+      canvas.width = w; canvas.height = h;
+      var ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0, w, h);
+      var b64 = canvas.toDataURL('image/jpeg', 0.78).split(',')[1];
+      cb(b64, file.name.replace(/\.[^.]+$/, '.jpg'));
+    };
+    img.onerror = function() {
+      // Fallback — read original
+      var r = new FileReader();
+      r.onload = function(e) { cb(e.target.result.split(',')[1], file.name); };
+      r.readAsDataURL(file);
+    };
+    img.src = objUrl;
+  }
+
+  compress(file, function(b64, fname) {
+    if (!b64) {
+      document.getElementById('vloading').className = 'vloading';
+      showErr('Could not read the file. Please try a different image.');
+      return;
+    }
+
     var payload = {
       seekerType: ST.path === 'div' ? 'Divination Seeker' : 'Aether Seeker',
       platform:   ST.path === 'div' ? 'Bitunix' : ST.plat,
-      fileName:   file.name,
+      fileName:   fname,
       fileData:   b64,
       timestamp:  new Date().toISOString()
     };
@@ -709,26 +757,24 @@ function doSubmit() {
       payload.discordUsername = document.getElementById('aeth-discord').value.trim();
     }
 
-    fetch(SCRIPT_URL, { method: 'POST', body: JSON.stringify(payload) })
-      .then(function(r) { return r.json(); })
-      .then(function(d) {
-        document.getElementById('vloading').className = 'vloading';
-        if (d.status === 'success' || d.result === 'success') {
-          showSuccess();
-        } else {
-          showErr('Something went wrong. Please try again or contact us on Discord.');
-        }
-      })
-      .catch(function() {
-        document.getElementById('vloading').className = 'vloading';
-        showErr('Submission failed. Please check your connection and try again.');
-      });
-  };
-  reader.onerror = function() {
-    document.getElementById('vloading').className = 'vloading';
-    showErr('Could not read the file. Please try a different image.');
-  };
-  reader.readAsDataURL(file);
+    // Use no-cors — Google Apps Script does not return CORS headers.
+    // With no-cors the response is opaque (unreadable) but the POST
+    // goes through successfully. We show success if the network does
+    // not throw, and only show an error on an actual network failure.
+    fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: JSON.stringify(payload)
+    })
+    .then(function() {
+      document.getElementById('vloading').className = 'vloading';
+      showSuccess();
+    })
+    .catch(function() {
+      document.getElementById('vloading').className = 'vloading';
+      showErr('Network error. Check your connection and try again, or contact us on Discord.');
+    });
+  });
 }
 
 function showSuccess() {
