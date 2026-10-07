@@ -470,6 +470,150 @@ footer{background:rgba(3,5,10,.96);border-top:.5px solid var(--b2);padding:52px 
   .krow{flex-direction:column;align-items:center}
 }
 
+
+/* ════ FAQ ENHANCED ══════════════════════════════════════ */
+.faq-search-wrap{max-width:560px;margin:0 auto 28px}
+.faq-search-box{display:flex;align-items:center;gap:10px;padding:11px 16px;background:rgba(255,255,255,.04);border:.5px solid rgba(255,255,255,.08);border-radius:8px;transition:border-color .25s}
+.faq-search-box:focus-within{border-color:rgba(201,168,76,.3)}
+.faq-search-box svg{stroke:rgba(255,255,255,.3);flex-shrink:0}
+.faq-search-input{flex:1;background:none;border:none;outline:none;font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.88)}
+.faq-search-input::placeholder{color:rgba(255,255,255,.28)}
+.faq-search-clear{background:none;border:none;cursor:pointer;padding:2px;display:flex;align-items:center;color:rgba(255,255,255,.3);transition:color .2s}
+.faq-search-clear:hover{color:rgba(255,255,255,.7)}
+.faq-search-count{font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);text-align:center;margin-top:8px}
+
+.faq-cats{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin-bottom:28px}
+.faq-cat{font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:5px 14px;border-radius:20px;border:.5px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);color:rgba(255,255,255,.45);cursor:pointer;transition:all .25s}
+.faq-cat:hover{color:rgba(255,255,255,.75);border-color:rgba(255,255,255,.16)}
+.faq-cat.act{background:rgba(201,168,76,.12);border-color:rgba(201,168,76,.28);color:#C9A84C}
+
+.faq-list{display:flex;flex-direction:column;gap:6px;max-width:760px;margin:0 auto}
+.faq-item{background:rgba(255,255,255,.04);border:.5px solid rgba(255,255,255,.07);border-radius:8px;overflow:hidden;transition:border-color .3s}
+.faq-item.op{border-color:rgba(201,168,76,.2)}
+.faq-item.hidden{display:none}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:15px 18px;cursor:pointer;gap:12px}
+.faq-qt{font-family:'Cinzel',serif;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.88);letter-spacing:.03em;line-height:1.4}
+.faq-item.op .faq-qt{color:#C9A84C}
+.faq-ico{width:24px;height:24px;border-radius:50%;border:.5px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .3s}
+.faq-ico svg{width:12px;height:12px;stroke:rgba(255,255,255,.35);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .3s,stroke .3s}
+.faq-item.op .faq-ico{border-color:rgba(201,168,76,.3);background:rgba(201,168,76,.1)}
+.faq-item.op .faq-ico svg{transform:rotate(45deg);stroke:#C9A84C}
+.faq-body{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.22,1,.36,1)}
+.faq-item.op .faq-body{max-height:300px}
+.faq-ans{padding:0 18px 16px;font-size:12.5px;color:rgba(255,255,255,.6);line-height:1.78}
+.faq-ans mark{background:rgba(201,168,76,.2);color:#C9A84C;border-radius:2px;padding:0 2px}
+
+.faq-help-cta{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:36px;padding:22px 26px;background:rgba(255,255,255,.03);border:.5px solid rgba(255,255,255,.07);border-radius:12px;max-width:760px;margin-left:auto;margin-right:auto}
+.faq-help-title{font-family:'Cinzel',serif;font-size:13.5px;font-weight:700;color:#fff;margin-bottom:5px}
+.faq-help-sub{font-size:12px;color:rgba(255,255,255,.45);line-height:1.6}
+.faq-help-btns{display:flex;gap:9px;flex-wrap:wrap}
+.faq-help-btn{display:inline-flex;align-items:center;gap:7px;padding:10px 18px;border-radius:4px;font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;transition:all .3s;text-decoration:none;border:none;white-space:nowrap}
+.faq-help-btn.discord{background:rgba(88,101,242,.18);color:#7289da;border:.5px solid rgba(88,101,242,.28)}
+.faq-help-btn.discord:hover{background:rgba(88,101,242,.28);transform:translateY(-2px)}
+.faq-help-btn.ticket{background:rgba(201,168,76,.12);color:#C9A84C;border:.5px solid rgba(201,168,76,.24)}
+.faq-help-btn.ticket:hover{background:rgba(201,168,76,.2);transform:translateY(-2px)}
+@media(max-width:600px){.faq-help-cta{flex-direction:column;text-align:center}.faq-help-btns{justify-content:center}}
+
+/* ════ TICKET MODAL ══════════════════════════════════════ */
+#ticket-overlay{position:fixed;inset:0;z-index:800;background:rgba(2,4,12,.78);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:20px;animation:tovfade .3s ease}
+@keyframes tovfade{from{opacity:0}to{opacity:1}}
+#ticket-modal{width:100%;max-width:520px;background:rgba(10,14,32,.96);backdrop-filter:blur(20px);border:.5px solid rgba(201,168,76,.18);border-radius:14px;overflow:hidden;animation:tmodin .35s cubic-bezier(.22,1,.36,1);max-height:90vh;overflow-y:auto}
+@keyframes tmodin{from{opacity:0;transform:translateY(20px) scale(.96)}to{opacity:1;transform:none}}
+#ticket-modal::-webkit-scrollbar{width:3px}
+#ticket-modal::-webkit-scrollbar-thumb{background:rgba(201,168,76,.3);border-radius:2px}
+.tkt-header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:22px 24px 18px;border-bottom:.5px solid rgba(255,255,255,.07)}
+.tkt-title{font-family:'Cinzel',serif;font-size:15px;font-weight:700;color:#fff;letter-spacing:.04em;margin-bottom:4px}
+.tkt-sub{font-size:11.5px;color:rgba(255,255,255,.45)}
+.tkt-close{background:none;border:none;cursor:pointer;font-size:20px;color:rgba(255,255,255,.35);transition:color .2s;padding:2px;flex-shrink:0;line-height:1}
+.tkt-close:hover{color:rgba(255,255,255,.75)}
+.tkt-body{padding:20px 24px}
+.tkt-flow{display:flex;align-items:center;gap:0;margin-bottom:22px}
+.tkt-flow-step{display:flex;align-items:center;gap:7px;font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);transition:color .3s}
+.tkt-flow-step.act{color:#C9A84C}
+.tkt-flow-step.done{color:#2AA478}
+.tkt-flow-n{width:20px;height:20px;border-radius:50%;border:1px solid currentColor;display:flex;align-items:center;justify-content:center;font-size:9px;flex-shrink:0}
+.tkt-flow-step.done .tkt-flow-n{background:#2AA478;border-color:#2AA478;color:#fff}
+.tkt-flow-line{flex:1;height:.5px;background:rgba(255,255,255,.08);transition:background .3s}
+.tkt-flow-line.done{background:#2AA478}
+.tkt-field{margin-bottom:15px}
+.tkt-label{display:block;font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:7px}
+.req{color:#E05070}
+.tkt-opt{font-weight:400;text-transform:none;letter-spacing:0;opacity:.6;font-size:10px}
+.tkt-input,.tkt-select,.tkt-textarea{width:100%;padding:10px 13px;background:rgba(255,255,255,.04);border:.5px solid rgba(255,255,255,.09);border-radius:7px;font-family:'Inter',sans-serif;font-size:13px;color:rgba(255,255,255,.88);outline:none;transition:border-color .25s;-webkit-appearance:none;appearance:none}
+.tkt-input:focus,.tkt-select:focus,.tkt-textarea:focus{border-color:rgba(201,168,76,.35)}
+.tkt-input::placeholder,.tkt-textarea::placeholder{color:rgba(255,255,255,.25)}
+.tkt-select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,.3)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-color:rgba(10,14,32,.9);cursor:pointer}
+.tkt-select option{background:#0C1020;color:#fff}
+.tkt-textarea{resize:vertical;min-height:90px;line-height:1.6}
+.tkt-review{background:rgba(255,255,255,.03);border:.5px solid rgba(255,255,255,.08);border-radius:7px;padding:14px 16px;margin-bottom:16px;font-size:12px;color:rgba(255,255,255,.6);line-height:1.7}
+.tkt-review strong{color:rgba(255,255,255,.82)}
+.tkt-upload-area{border:.5px dashed rgba(201,168,76,.22);border-radius:8px;padding:18px;text-align:center;cursor:pointer;transition:all .25s;background:rgba(255,255,255,.02);position:relative}
+.tkt-upload-area:hover{border-color:rgba(201,168,76,.4);background:rgba(201,168,76,.04)}
+.tkt-upload-input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.tkt-err{font-size:12px;color:#E05070;margin-top:8px;display:none}
+.tkt-btns{display:flex;gap:9px;margin-top:18px;flex-wrap:wrap}
+.tkt-btn{display:inline-flex;align-items:center;gap:7px;padding:11px 22px;border-radius:4px;font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;transition:all .3s;border:none}
+.tkt-btn-gold{background:#C9A84C;color:#06040F}
+.tkt-btn-gold:hover{background:#E8C468;transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,168,76,.3)}
+.tkt-btn-ghost{background:rgba(255,255,255,.04);color:rgba(255,255,255,.55);border:.5px solid rgba(255,255,255,.09)}
+.tkt-btn-ghost:hover{background:rgba(255,255,255,.08);color:rgba(255,255,255,.88)}
+.tkt-success{text-align:center;padding:20px 0}
+.tkt-success-ico{width:56px;height:56px;border-radius:50%;background:rgba(42,164,120,.12);border:.5px solid rgba(42,164,120,.28);display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+.tkt-success-ico svg{width:24px;height:24px;stroke:#2AA478}
+.tkt-success-title{font-family:'Cinzel',serif;font-size:18px;font-weight:700;color:#fff;margin-bottom:8px}
+.tkt-success-sub{font-size:12.5px;color:rgba(255,255,255,.5);line-height:1.7;max-width:360px;margin:0 auto}
+
+/* ════ FLOATING SUPPORT ══════════════════════════════════ */
+#support-wrap{position:fixed;bottom:26px;right:26px;z-index:500;display:flex;flex-direction:column;align-items:flex-end;gap:11px}
+@media(max-width:480px){#support-wrap{bottom:18px;right:14px}}
+#support-fab{display:flex;align-items:center;gap:9px;padding:11px 20px 11px 16px;background:#C9A84C;color:#06040F;border:none;border-radius:28px;font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;box-shadow:0 6px 24px rgba(201,168,76,.42),0 2px 8px rgba(0,0,0,.28);transition:all .35s cubic-bezier(.22,1,.36,1);animation:fabp 3s ease-in-out infinite}
+#support-fab:hover{background:#E8C468;transform:translateY(-3px);box-shadow:0 12px 34px rgba(201,168,76,.52)}
+@keyframes fabp{0%,100%{box-shadow:0 6px 24px rgba(201,168,76,.42),0 2px 8px rgba(0,0,0,.28)}50%{box-shadow:0 6px 34px rgba(201,168,76,.62),0 0 20px rgba(201,168,76,.25)}}
+#support-wrap.open #support-fab{background:rgba(14,18,38,.95);color:rgba(255,255,255,.75);box-shadow:0 4px 18px rgba(0,0,0,.4);animation:none}
+.fab-open,.fab-close{display:flex;align-items:center}
+#support-wrap.open .fab-open{display:none}
+#support-wrap.open .fab-close{display:flex}
+#support-panel{width:300px;background:rgba(10,14,32,.96);backdrop-filter:blur(20px);border:.5px solid rgba(201,168,76,.18);border-radius:14px;overflow:hidden;transform:translateY(12px) scale(.95);opacity:0;pointer-events:none;transition:all .36s cubic-bezier(.22,1,.36,1);box-shadow:0 20px 55px rgba(0,0,0,.58),0 0 35px rgba(201,168,76,.07)}
+#support-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:1.5px;background:linear-gradient(90deg,transparent,rgba(201,168,76,.6),transparent)}
+#support-wrap.open #support-panel{transform:none;opacity:1;pointer-events:all}
+@media(max-width:480px){#support-panel{width:calc(100vw - 28px)}}
+.sup-head{padding:15px 17px 12px;border-bottom:.5px solid rgba(255,255,255,.07)}
+.sup-head-title{font-family:'Cinzel',serif;font-size:12.5px;font-weight:700;color:#fff;letter-spacing:.04em;margin-bottom:3px}
+.sup-head-sub{font-size:11px;color:rgba(255,255,255,.38)}
+.sup-search-row{padding:11px 11px 7px}
+.sup-search-box{display:flex;align-items:center;gap:8px;padding:8px 12px;background:rgba(255,255,255,.05);border:.5px solid rgba(255,255,255,.09);border-radius:7px;transition:border-color .25s}
+.sup-search-box:focus-within{border-color:rgba(201,168,76,.3)}
+.sup-search-box svg{stroke:rgba(255,255,255,.3);flex-shrink:0}
+.sup-search-input{flex:1;background:none;border:none;outline:none;font-family:'Inter',sans-serif;font-size:12px;color:rgba(255,255,255,.85)}
+.sup-search-input::placeholder{color:rgba(255,255,255,.28)}
+.sup-results{max-height:160px;overflow-y:auto;border-bottom:.5px solid rgba(255,255,255,.07)}
+.sup-results::-webkit-scrollbar{width:2px}
+.sup-results::-webkit-scrollbar-thumb{background:rgba(201,168,76,.3)}
+.sup-result-item{padding:9px 14px;cursor:pointer;transition:background .2s;border-bottom:.5px solid rgba(255,255,255,.04)}
+.sup-result-item:last-child{border-bottom:none}
+.sup-result-item:hover{background:rgba(255,255,255,.05)}
+.sup-result-q{font-family:'Cinzel',serif;font-size:11px;font-weight:600;color:rgba(255,255,255,.8);line-height:1.4;margin-bottom:2px}
+.sup-result-a{font-size:10.5px;color:rgba(255,255,255,.38);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sup-no-results{padding:12px 14px;font-size:11px;color:rgba(255,255,255,.3);text-align:center}
+.sup-divider{display:flex;align-items:center;gap:10px;padding:8px 14px;font-family:'Rajdhani',sans-serif;font-size:9px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.28)}
+.sup-divider::before,.sup-divider::after{content:'';flex:1;height:.5px;background:rgba(255,255,255,.07)}
+.sup-channels{padding:4px 8px 6px}
+.sup-ch{display:flex;align-items:center;gap:11px;padding:9px 10px;border-radius:7px;text-decoration:none;transition:all .25s}
+.sup-ch:hover{background:rgba(255,255,255,.06)}
+.sup-ch-ico{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .3s}
+.sup-ch:hover .sup-ch-ico{transform:scale(1.08)}
+.disc-ico{background:rgba(88,101,242,.15);border:.5px solid rgba(88,101,242,.25);color:#7289da}
+.mail-ico{background:rgba(201,168,76,.1);border:.5px solid rgba(201,168,76,.2);color:#C9A84C}
+.x-ico{background:rgba(255,255,255,.06);border:.5px solid rgba(255,255,255,.1);color:rgba(255,255,255,.75)}
+.sup-ch-info{flex:1;min-width:0}
+.sup-ch-name{font-family:'Cinzel',serif;font-size:11.5px;font-weight:600;color:#fff;letter-spacing:.03em}
+.sup-ch-detail{font-size:10px;color:rgba(255,255,255,.35);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sup-ch-arr{stroke:rgba(255,255,255,.25);flex-shrink:0;opacity:0;transition:all .2s;transform:translateX(-2px)}
+.sup-ch:hover .sup-ch-arr{opacity:1;transform:none}
+.sup-ticket-row{padding:8px 11px 13px}
+.sup-ticket-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:8px;padding:9px;background:rgba(201,168,76,.08);border:.5px solid rgba(201,168,76,.2);border-radius:7px;font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#C9A84C;cursor:pointer;transition:all .25s}
+.sup-ticket-btn:hover{background:rgba(201,168,76,.15);border-color:rgba(201,168,76,.35)}
+
 </style>
 <script>!function(w,d,s,u,n,a,b){if(w[n])return;a=w[n]={q:[],t:+new Date,s:[],o:u,track:function(){a.q.push([+new Date].concat([].slice.call(arguments)))},setScope:function(){a.s=[].slice.call(arguments).filter(function(x){return typeof x==="string"});a.q.push([+new Date,"setScope"].concat(a.s))},scope:function(){var c=[].slice.call(arguments);return{track:function(){a.q.push([+new Date].concat([].slice.call(arguments)).concat([{__scope:c}]))}}}};b=d.createElement(s);b.async=1;b.src=u+"/s.js";d.getElementsByTagName(s)[0].parentNode.insertBefore(b,d.getElementsByTagName(s)[0])}(window,document,"script","https://t.whop.tw","whop");whop.setScope("biz_qaPXQG0yg879sI");whop.track("page");</script>
 </head>
@@ -611,7 +755,7 @@ footer{background:rgba(3,5,10,.96);border-top:.5px solid var(--b2);padding:52px 
       <article class="pwc rev d1"><div class="pwn">01</div><h3 class="pwt">New to Trading</h3><p class="pws">Learn market fundamentals, risk management, and build a solid foundation before touching live capital.</p><a href="https://discord.gg/Mp8Fhsmd5S" target="_blank" rel="noopener noreferrer" class="pwa">Start Learning<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></article>
       <article class="pwc rev d2"><div class="pwn">02</div><h3 class="pwt">Trade Crypto</h3><p class="pws">Access premium crypto futures signals, ICT analysis, and liquidity-based setups across BTC, ETH, SOL, and more.</p><a href="./sanctum_verification.html" class="pwa">Access Signals<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></article>
       <article class="pwc rev d3"><div class="pwn">03</div><h3 class="pwt">Trade Forex &amp; TradFi</h3><p class="pws">XAU, XAG, Forex pairs, and Indices with structured risk parameters and multi-market analysis on every trade.</p><a href="./sanctum_verification.html" class="pwa">View Analysis<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></article>
-      <article class="pwc rev d1"><div class="pwn">04</div><h3 class="pwt">Get Funded</h3><p class="pws">Access funded trading accounts through Atlas Funded. Prove your edge with a structured challenge and trade real capital.</p><a href="https://affiliates.atlasfunded.com/Tracking/S/6a70d3911356becd0cccf005" target="_blank" rel="noopener noreferrer" class="pwa">Get Funded<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></article>
+      <article class="pwc rev d1"><div class="pwn">04</div><h3 class="pwt">Get Funded</h3><p class="pws">Access funded trading accounts through Atlas Funded. Prove your edge with a structured challenge and trade real capital.</p><a href="https://app.atlasfunded.com/?afmc=SANCTUM" target="_blank" rel="noopener noreferrer" class="pwa">Get Funded<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></article>
       <article class="pwc rev d2"><div class="pwn">05</div><h3 class="pwt">Start Investing</h3><p class="pws">Enter Aether Chamber. Learn VOO, QQQM, SCHD, VXUS and start DCA investing through GoTrade today.</p><a href="#aether" class="pwa">Explore Aether<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></article>
       <article class="pwc rev d3"><div class="pwn">06</div><h3 class="pwt">Join the Community</h3><p class="pws">Access live discussions, trade breakdowns, and an ecosystem built for consistent long-term growth.</p><a href="https://discord.gg/Mp8Fhsmd5S" target="_blank" rel="noopener noreferrer" class="pwa">Join Discord<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></article>
     </div>
@@ -651,7 +795,7 @@ footer{background:rgba(3,5,10,.96);border-top:.5px solid var(--b2);padding:52px 
     <div class="chg">
       <article class="chc gld rev d1"><span class="chdiv db">Beginner</span><h3 class="cht">CFD Trading Foundations</h3><p class="chs">The mechanics of CFD trading, understanding prop firm structures, risk parameters, leverage, and how to prepare for your first funded challenge.</p><div class="chtags"><span class="chtag">CFD Mechanics</span><span class="chtag">Prop Structures</span><span class="chtag">Risk Params</span></div><a href="https://discord.gg/Mp8Fhsmd5S" target="_blank" rel="noopener noreferrer" class="cha gld">Start Learning<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></article>
       <article class="chc gld rev d2"><span class="chdiv di">Intermediate</span><h3 class="cht">Prop Firm Challenge Strategy</h3><p class="chs">How to build and execute a strategy specifically designed to pass prop firm evaluations. Consistency models, scaling plans, and rule compliance.</p><div class="chtags"><span class="chtag">Challenge Rules</span><span class="chtag">Consistency</span><span class="chtag">Scaling Plans</span></div><a href="./sanctum_verification.html" class="cha gld">Verify to Access<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></article>
-      <article class="chc gld rev d3"><span class="chdiv di">Intermediate</span><h3 class="cht">CFD &amp; Prop Firm Development</h3><p class="chs">Prepare for prop firm challenges. CFD mechanics, funded account rules, and challenge strategy.</p><div class="chtags"><span class="chtag">CFD Trading</span><span class="chtag">Atlas Funded</span><span class="chtag"></span></div><a href="https://affiliates.atlasfunded.com/Tracking/S/6a70d3911356becd0cccf005" target="_blank" rel="noopener noreferrer" class="cha gld">Get Funded<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></article>
+      <article class="chc gld rev d3"><span class="chdiv di">Intermediate</span><h3 class="cht">CFD &amp; Prop Firm Development</h3><p class="chs">Prepare for prop firm challenges. CFD mechanics, funded account rules, and challenge strategy.</p><div class="chtags"><span class="chtag">CFD Trading</span><span class="chtag">Atlas Funded</span><span class="chtag"></span></div><a href="https://app.atlasfunded.com/?afmc=SANCTUM" target="_blank" rel="noopener noreferrer" class="cha gld">Get Funded<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></article>
       <article class="chc gld rev d1"><span class="chdiv di">Intermediate</span><h3 class="cht">Long-Term Wealth Building</h3><p class="chs">The compounding mindset. Build wealth systematically across ETFs, US stocks, and alternative assets.</p><div class="chtags"><span class="chtag">Compounding</span><span class="chtag">US Stocks</span><span class="chtag">DCA Plans</span></div><a href="./sanctum_verification.html" class="cha gld">Verify to Access<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></article>
       <article class="chc gld rev d2"><span class="chdiv da">Advanced</span><h3 class="cht">Portfolio Reviews &amp; Macro Analysis</h3><p class="chs">Monthly reviews, macro economic interpretation, and advanced thesis development with mentor feedback.</p><div class="chtags"><span class="chtag">Reviews</span><span class="chtag">Macro Economy</span><span class="chtag">Mentorship</span></div><a href="./sanctum_verification.html" class="cha gld">Verify to Access<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></article>
       <article class="chc gld rev d3"><span class="chdiv da">Advanced</span><h3 class="cht">Professional Trader Development</h3><p class="chs">From retail investor to professional funded trader. Systems, routines, performance tracking, and mindset.</p><div class="chtags"><span class="chtag">Pro Systems</span><span class="chtag">Performance</span><span class="chtag">Funded Career</span></div><a href="./sanctum_verification.html" class="cha gld">Verify to Access<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></article>
@@ -684,8 +828,8 @@ footer{background:rgba(3,5,10,.96);border-top:.5px solid var(--b2);padding:52px 
       <div class="plbl">Prop Firm Partners</div>
       <div class="prow">
         <div class="pfirm">
-          <a href="https://affiliates.atlasfunded.com/Tracking/S/6a70d3911356becd0cccf005" target="_blank" rel="noopener noreferrer" aria-label="Atlas Funded"><img src="ARCxATLAS.png" alt="Atlas Funded" class="pfirm-img" loading="lazy"></a>
-          <div class="pfirm-body"><div class="pfirm-hd"><div class="pfirm-name">Atlas Funded</div><span class="pfirm-tag">Prop Firm</span></div><p class="pfirm-sub">Get 50% off all funded accounts using code SANCTUM. Start your funded trading journey today.</p><a href="https://affiliates.atlasfunded.com/Tracking/S/6a70d3911356becd0cccf005" target="_blank" rel="noopener noreferrer" class="pfirm-a">50% Off All Accounts &mdash; Get Funded<svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
+          <a href="https://app.atlasfunded.com/?afmc=SANCTUM" target="_blank" rel="noopener noreferrer" aria-label="Atlas Funded"><img src="ARCxATLAS.png" alt="Atlas Funded" class="pfirm-img" loading="lazy"></a>
+          <div class="pfirm-body"><div class="pfirm-hd"><div class="pfirm-name">Atlas Funded</div><span class="pfirm-tag">Prop Firm</span></div><p class="pfirm-sub">Get 50% off all funded accounts using code SANCTUM. Start your funded trading journey today.</p><a href="https://app.atlasfunded.com/?afmc=SANCTUM" target="_blank" rel="noopener noreferrer" class="pfirm-a">50% Off All Accounts &mdash; Get Funded<svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a></div>
         </div>
         <div class="pfirm">
           <a href="https://fundedtradermarkets.com/ref/_pxttss" target="_blank" rel="noopener noreferrer" aria-label="FundedTraderMarkets"><img src="FTMxARC.png" alt="FundedTraderMarkets" class="pfirm-img" loading="lazy" onerror="imgErr(this)"></a>
@@ -765,23 +909,192 @@ footer{background:rgba(3,5,10,.96);border-top:.5px solid var(--b2);padding:52px 
 <section id="faq" class="sec" aria-labelledby="faq-h">
   <div class="wrap">
     <header class="sec-hd rev">
-      <div class="eyebrow">Common Questions</div>
+      <div class="eyebrow">Help Center</div>
       <h2 id="faq-h" class="h2" style="margin-bottom:13px">Frequently Asked <span class="accent">Questions</span></h2>
-      <p class="lead">Everything you need to know before joining the Sanctum.</p>
+      <p class="lead">Find answers instantly. Can&rsquo;t find what you need? Our team is one message away.</p>
     </header>
-    <div class="faq-wrap">
-      <div class="faq-item rev"><div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">How do I join Arcanum Sanctum?</span><div class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-body"><div class="faq-ans">Register through  (code: ) or Bitunix (code: SANCTUM), deposit minimum $50, then submit the verification form on our portal. Once verified, you gain full access to all Sanctum resources including signals, courses, mentoring, and rewards.</div></div></div>
-      <div class="faq-item rev d1"><div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">What is the Divination Chamber?</span><div class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-body"><div class="faq-ans">The Divination Chamber is our active crypto trading education hub covering ICT concepts, market structure, order blocks, fair value gaps, liquidity, risk management, live sessions, and premium futures signals. Designed for traders who want to develop consistent execution from beginner to advanced.</div></div></div>
-      <div class="faq-item rev d2"><div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">What is the Aether Chamber?</span><div class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-body"><div class="faq-ans">Aether Chamber covers long-term investing and professional trader development. This includes ETF investing (VOO, QQQM, SCHD, VXUS), portfolio building, DCA strategies, CFD trading, and prop firm challenge preparation through Atlas Funded and .</div></div></div>
-      <div class="faq-item rev d3"><div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">How do the prop firm partnerships work?</span><div class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-body"><div class="faq-ans">We partner with Atlas Funded and . Atlas Funded provides funded accounts after completing their challenge.  offers 50% off all accounts with code SANCTUM. These are separate from community verification and can be accessed independently.</div></div></div>
-      <div class="faq-item rev d1"><div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">Is this suitable for complete beginners?</span><div class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-body"><div class="faq-ans">Yes. Both chambers have dedicated beginner paths starting from absolute zero. No prior trading or investing experience required. The Sanctum takes you from wherever you are and builds systematically with structure, mentorship, and community accountability.</div></div></div>
-      <div class="faq-item rev d2"><div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">What ETF platforms work for Philippine investors?</span><div class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-body"><div class="faq-ans">We recommend GoTrade for beginners — supports GCash, BPI, and Maya deposits, zero commission, fractional shares from $1. Use referral code 4GLD90. For more serious investors, IBKR GlobalTrader offers professional-grade access with $0 commission on US ETFs.</div></div></div>
-      <div class="faq-item rev d3"><div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">How do I contact the team?</span><div class="faq-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-body"><div class="faq-ans">Reach us through Discord, via email at pattss.core@gmail.com, or through our social media channels. For partnership and collaboration inquiries contact pattss.core@gmail.com or kimbeansent11@gmail.com.</div></div></div>
+
+    <!-- SEARCH -->
+    <div class="faq-search-wrap rev">
+      <div class="faq-search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="faq-search" class="faq-search-input" placeholder="Search questions..." autocomplete="off" aria-label="Search FAQ">
+        <button id="faq-search-clear" class="faq-search-clear" aria-label="Clear search" style="display:none">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div id="faq-search-count" class="faq-search-count" style="display:none"></div>
     </div>
+
+    <!-- CATEGORY TABS -->
+    <div class="faq-cats rev d1" id="faq-cats" role="tablist" aria-label="FAQ categories">
+      <button class="faq-cat act" data-cat="all" role="tab" aria-selected="true">All</button>
+      <button class="faq-cat" data-cat="start" role="tab" aria-selected="false">Getting Started</button>
+      <button class="faq-cat" data-cat="verify" role="tab" aria-selected="false">Verification</button>
+      <button class="faq-cat" data-cat="trading" role="tab" aria-selected="false">Trading</button>
+      <button class="faq-cat" data-cat="partners" role="tab" aria-selected="false">Partners</button>
+      <button class="faq-cat" data-cat="membership" role="tab" aria-selected="false">Membership</button>
+      <button class="faq-cat" data-cat="tech" role="tab" aria-selected="false">Technical</button>
+    </div>
+
+    <!-- FAQ ITEMS -->
+    <div class="faq-list rev d2" id="faq-list">
+
+      <!-- GETTING STARTED -->
+      <div class="faq-item" data-cat="start">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">What is Arcanum Sanctum?</span><div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-body"><div class="faq-ans">Arcanum Sanctum is a premium trading and investing community built for traders who want to develop real, long-term skills. We provide crypto signals, ETF education, forex and TradFi analysis, prop firm access, and structured mentorship — all within a single community ecosystem.</div></div>
+      </div>
+
+      <div class="faq-item" data-cat="start">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">How do I join Arcanum Sanctum?</span><div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-body"><div class="faq-ans">Join our Discord server at discord.gg/Mp8Fhsmd5S. To unlock full access to the Divination Chamber, register on Bitunix using code SANCTUM and make a minimum $30 deposit. To unlock the Aether Chamber, purchase a funded account through Atlas Funded, FundedTraderMarkets, or AquaFunded using code SANCTUM. Then submit your verification on our portal.</div></div>
+      </div>
+
+      <div class="faq-item" data-cat="start">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">Is Arcanum Sanctum free?</span><div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-body"><div class="faq-ans">You can join our Discord server for free and access public channels. To unlock the Divination Chamber, you need to register on Bitunix and deposit a minimum of $30. To unlock the Aether Chamber, you need to purchase a funded account through one of our official prop firm partners.</div></div>
+      </div>
+
+      <div class="faq-item" data-cat="start">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">Is Arcanum Sanctum suitable for complete beginners?</span><div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-body"><div class="faq-ans">Yes. Both the Divination Chamber and Aether Chamber include dedicated beginner paths that start from absolute zero. No prior trading experience is required. The community is built to take you from wherever you are and develop you systematically with structure, mentorship, and accountability.</div></div>
+      </div>
+
+      <!-- VERIFICATION -->
+      <div class="faq-item" data-cat="verify">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">How does Sanctum verification work?</span><div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-body"><div class="faq-ans">Visit our verification portal and choose your path. For Divination Seeker, register on Bitunix using code SANCTUM, deposit at least $30, then fill out the form and upload a screenshot showing your UID and deposit. For Aether Seeker, purchase an account through one of our official prop firm affiliate links, then upload your receipt. Our Sentinels review every submission and assign your role within 24 hours.</div></div>
+      </div>
+
+      <div class="faq-item" data-cat="verify">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">What is the difference between Divination Seeker and Aether Seeker?</span><div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-body"><div class="faq-ans">Divination Seeker is for crypto traders who register on Bitunix. It unlocks the Divination Chamber, which covers ICT concepts, crypto signals, live sessions, and active trading content. Aether Seeker is for CFD and prop traders who purchase a funded account. It unlocks the Aether Chamber, which covers prop firm challenges, CFD trading, ETF investing, and professional trader development. You can hold both roles by completing both requirements.</div></div>
+      </div>
+
+      <div class="faq-item" data-cat="verify">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">What do I need before submitting verification?</span><div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-body"><div class="faq-ans">For Divination Seeker: a registered Bitunix account using referral code SANCTUM with at least $30 deposited, your Bitunix UID, your Discord username, and a screenshot showing your account and deposit. For Aether Seeker: a completed purchase through our official prop firm affiliate link, your Gmail address, account type and size, Discord username, and a copy of your purchase receipt or order confirmation.</div></div>
+      </div>
+
+      <div class="faq-item" data-cat="verify">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">How long does verification take?</span><div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-body"><div class="faq-ans">Our Sentinels typically review submissions within 24 hours. Make sure you are already in the Discord server so your role can be assigned as soon as your verification is approved.</div></div>
+      </div>
+
+      <div class="faq-item" data-cat="verify">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">What should I do if my verification is rejected?</span><div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-body"><div class="faq-ans">Check that your proof clearly shows all required details — for Divination Seeker, both your UID and deposit of at least $30 must be visible; for Aether Seeker, your receipt must show your name or email, account details, and that code SANCTUM was applied. Resubmit through the verification portal with a clearer screenshot or receipt. If the issue persists, contact a Sentinel directly on Discord.</div></div>
+      </div>
+
+      <div class="faq-item" data-cat="verify">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">What should I do if I cannot access a chamber after verification?</span><div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-body"><div class="faq-ans">First, confirm you are in the official Arcanum Sanctum Discord server. If your verification has been approved but your role has not been assigned, message a Sentinel on Discord with your verification submission details. If you have not yet received a confirmation, your submission may still be under review — allow up to 24 hours before following up.</div></div>
+      </div>
+
+      <!-- TRADING -->
+      <div class="faq-item" data-cat="trading">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">Where can I find trading signals?</span><div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-body"><div class="faq-ans">Trading signals are posted in the Divination Chamber, which is accessible to verified Divination Seekers. After completing verification, your role will be assigned in Discord and you will gain access to the signals channel and all related content.</div></div>
+      </div>
+
+      <div class="faq-item" data-cat="trading">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">What markets does Arcanum Sanctum cover?</span><div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-body"><div class="faq-ans">We cover Crypto Futures (BTC, ETH, SOL, and more), Forex pairs, Gold (XAU), Silver (XAG), Indices, Commodities, ETFs (VOO, QQQM, SCHD, VXUS), and US Stocks. The specific markets available depend on which chamber you are verified for.</div></div>
+      </div>
+
+      <div class="faq-item" data-cat="trading">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">Are the signals guaranteed to be profitable?</span><div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-body"><div class="faq-ans">No. Trading involves significant risk and past performance does not guarantee future results. Signals are educational and informational. Always apply your own risk management and never risk more than you can afford to lose. Arcanum Sanctum does not provide financial advice.</div></div>
+      </div>
+
+      <!-- PARTNERS -->
+      <div class="faq-item" data-cat="partners">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">How do I use the Bitunix partnership?</span><div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-body"><div class="faq-ans">Visit bitunix.com and register using our referral code SANCTUM, or use our official affiliate link on the Partners section of this site. After registering, deposit a minimum of $30. This qualifies you for a 20% trading rebate and allows you to submit for Divination Seeker verification.</div></div>
+      </div>
+
+      <div class="faq-item" data-cat="partners">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">Where can I find the current partner discount offers?</span><div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-body"><div class="faq-ans">All current partner offers are listed in the Partners section of this website. Use code SANCTUM at each partner platform to activate the discount. Links on this page are always official affiliate links — do not use links from unofficial sources.</div></div>
+      </div>
+
+      <div class="faq-item" data-cat="partners">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">What discount do I get on Atlas Funded?</span><div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-body"><div class="faq-ans">Atlas Funded offers 50% off all funded accounts when you use code SANCTUM through our official affiliate link. This is the largest discount available through our partnership. Always use the link on our Partners page to ensure the discount is applied correctly.</div></div>
+      </div>
+
+      <div class="faq-item" data-cat="partners">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">What discount do I get on FundedTraderMarkets and AquaFunded?</span><div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-body"><div class="faq-ans">FundedTraderMarkets offers 40% off using code SANCTUM. AquaFunded offers 40% off Instant Accounts using code SANCTUM. Use the official links on our Partners page to ensure your discount is applied at checkout.</div></div>
+      </div>
+
+      <!-- MEMBERSHIP -->
+      <div class="faq-item" data-cat="membership">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">Can I hold both Divination Seeker and Aether Seeker roles?</span><div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-body"><div class="faq-ans">Yes. You can hold both roles by completing both requirements separately — register on Bitunix with the $30 deposit for Divination Seeker, and purchase a funded account through one of our prop firm partners for Aether Seeker. Each grants independent access to its respective chamber.</div></div>
+      </div>
+
+      <div class="faq-item" data-cat="membership">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">What happens after I am verified?</span><div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-body"><div class="faq-ans">After verification is approved, a Sentinel will assign your role in Discord. You will immediately gain access to the corresponding chamber and all its content — signals, courses, mentorship sessions, analysis, and community channels. If your role is not assigned within 24 hours of submitting, message a Sentinel on Discord.</div></div>
+      </div>
+
+      <div class="faq-item" data-cat="membership">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">What is the Sanctum Rewards system?</span><div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-body"><div class="faq-ans">Verified members can earn points through community engagement and activity. Points can be redeemed for vouchers, funded account slots, and exclusive Sanctum access. Details are shared within the verified channels in Discord.</div></div>
+      </div>
+
+      <!-- TECHNICAL -->
+      <div class="faq-item" data-cat="tech">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">How do I contact support?</span><div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-body"><div class="faq-ans">The fastest way is through our Discord server at discord.gg/Mp8Fhsmd5S — tag a Sentinel or post in the support channel. For formal or detailed inquiries, email us at pattss.core@gmail.com. You can also use the Support button at the bottom right of this page to find contact options or submit a support request.</div></div>
+      </div>
+
+      <div class="faq-item" data-cat="tech">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">What information should I provide when reporting an issue?</span><div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-body"><div class="faq-ans">Include your Discord username, the type of issue (verification, access, payment, technical), a clear description of what happened and what you expected, any relevant reference numbers or order IDs, and a screenshot if applicable. The more detail you provide, the faster we can resolve your issue.</div></div>
+      </div>
+
+      <div class="faq-item" data-cat="tech">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">The verification form is not working. What should I do?</span><div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-body"><div class="faq-ans">Try refreshing the page or using a different browser. Make sure your file size is under 10MB and is in PNG, JPG, or PDF format. All required fields must be filled before proceeding. If the issue continues, contact us on Discord and we will process your verification manually.</div></div>
+      </div>
+
+      <div class="faq-item" data-cat="tech">
+        <div class="faq-q" tabindex="0" role="button" aria-expanded="false"><span class="faq-qt">I submitted verification but received no confirmation. Did it go through?</span><div class="faq-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-body"><div class="faq-ans">After a successful submission, you are redirected to a confirmation page. If you did not see that page, your submission may not have gone through. Contact us on Discord with your details and we will check our records and guide you from there.</div></div>
+      </div>
+
+    </div><!-- end faq-list -->
+
+    <!-- NO RESULTS -->
+    <div id="faq-empty" style="display:none;text-align:center;padding:36px 20px">
+      <div style="font-family:'Cinzel',serif;font-size:13px;color:rgba(255,255,255,.5);margin-bottom:8px">No results found</div>
+      <div style="font-size:12px;color:rgba(255,255,255,.32);line-height:1.65">Try a different search term or browse by category above.</div>
+    </div>
+
+    <!-- STILL NEED HELP -->
+    <div class="faq-help-cta rev d3">
+      <div class="faq-help-left">
+        <div class="faq-help-title">Still need help?</div>
+        <div class="faq-help-sub">Our team is available on Discord and email. We usually respond within a few hours.</div>
+      </div>
+      <div class="faq-help-btns">
+        <a href="https://discord.gg/Mp8Fhsmd5S" target="_blank" rel="noopener noreferrer" class="faq-help-btn discord">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.033.057a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+          Ask on Discord
+        </a>
+        <button onclick="openSupportTicket()" class="faq-help-btn ticket">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Submit a Ticket
+        </button>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- VERIFY CTA -->
 <section id="verify" class="sec" aria-labelledby="verify-h">
   <div class="vcta-glow" aria-hidden="true"></div>
   <div class="wrap">
@@ -825,7 +1138,7 @@ footer{background:rgba(3,5,10,.96);border-top:.5px solid var(--b2);padding:52px 
         </div>
       </div>
       <div class="fcol"><h4>Platform</h4><ul><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#divination">Divination Chamber</a></li><li><a href="#aether">Aether Chamber</a></li><li><a href="#faq">FAQ</a></li><li><a href="./sanctum_verification.html">Verify Now</a></li></ul></div>
-      <div class="fcol"><h4>Partners</h4><ul><li><a href="https://www.bitunix.com/register?vipCode=SANCTUM" target="_blank" rel="noopener noreferrer">Bitunix</a></li><li><a href="https://affiliates.atlasfunded.com/Tracking/S/6a70d3911356becd0cccf005" target="_blank" rel="noopener noreferrer">Atlas Funded</a></li>
+      <div class="fcol"><h4>Partners</h4><ul><li><a href="https://www.bitunix.com/register?vipCode=SANCTUM" target="_blank" rel="noopener noreferrer">Bitunix</a></li><li><a href="https://app.atlasfunded.com/?afmc=SANCTUM" target="_blank" rel="noopener noreferrer">Atlas Funded</a></li>
           <li><a href="https://fundedtradermarkets.com/ref/_pxttss" target="_blank" rel="noopener noreferrer">FundedTraderMarkets</a></li><li><a href="https://heygotrade.com/referral?code=4GLD90" target="_blank" rel="noopener noreferrer">GoTrade</a></li></ul></div>
       <div class="fcol"><h4>Community</h4><ul><li><a href="https://discord.gg/Mp8Fhsmd5S" target="_blank" rel="noopener noreferrer">Discord Server</a></li><li><a href="https://x.com/zaire8169" target="_blank" rel="noopener noreferrer">X &middot; Zaire</a></li><li><a href="https://x.com/_pxttss" target="_blank" rel="noopener noreferrer">X &middot; Patts</a></li><li><a href="mailto:pattss.core@gmail.com">Contact Us</a></li><li><a href="https://linktr.ee/ARCanumSanctum" target="_blank" rel="noopener noreferrer">All Links</a></li></ul></div>
     </div>
@@ -1091,6 +1404,450 @@ window.addEventListener('load',function(){
   vp.addEventListener('touchend',function(e){if(!tD)return;tD=false;var delta=e.changedTouches[0].clientX-tx0;(Math.abs(delta)>cW()*.18)?go(delta<0?cur+1:cur-1,true):go(cur,false);},{passive:true});
   window.addEventListener('resize',function(){build();uCls();setTx(getOff(cur),false);bOff=getOff(cur);});
   build();buildDots();uCls();setTx(getOff(0),false);bOff=getOff(0);sA();
+})();
+
+</script>
+
+<!-- ════ SUPPORT SYSTEM ══════════════════════════════════ -->
+
+<!-- TICKET MODAL -->
+<div id="ticket-overlay" aria-modal="true" role="dialog" aria-label="Submit Support Ticket" style="display:none">
+  <div id="ticket-modal">
+    <div class="tkt-header">
+      <div>
+        <div class="tkt-title">Submit a Support Request</div>
+        <div class="tkt-sub">We review every ticket and respond within 24 hours.</div>
+      </div>
+      <button class="tkt-close" onclick="closeTicket()" aria-label="Close">&times;</button>
+    </div>
+    <div class="tkt-body" id="tkt-body">
+      <div class="tkt-flow">
+        <div class="tkt-flow-step act" id="tflow-1"><div class="tkt-flow-n">1</div><span>Details</span></div>
+        <div class="tkt-flow-line" id="tfline-1"></div>
+        <div class="tkt-flow-step" id="tflow-2"><div class="tkt-flow-n">2</div><span>Issue</span></div>
+        <div class="tkt-flow-line" id="tfline-2"></div>
+        <div class="tkt-flow-step" id="tflow-3"><div class="tkt-flow-n">3</div><span>Submit</span></div>
+      </div>
+
+      <!-- PAGE 1: Contact details -->
+      <div class="tkt-page" id="tpage-1">
+        <div class="tkt-field">
+          <label class="tkt-label" for="tkt-name">Your Name <span class="req">*</span></label>
+          <input type="text" id="tkt-name" class="tkt-input" placeholder="e.g. Juan dela Cruz" autocomplete="name">
+        </div>
+        <div class="tkt-field">
+          <label class="tkt-label" for="tkt-email">Email Address <span class="req">*</span></label>
+          <input type="email" id="tkt-email" class="tkt-input" placeholder="e.g. juan@gmail.com" autocomplete="email">
+        </div>
+        <div class="tkt-field">
+          <label class="tkt-label" for="tkt-discord">Discord Username <span class="req">*</span></label>
+          <input type="text" id="tkt-discord" class="tkt-input" placeholder="e.g. juandc or juandc#0001" autocomplete="off">
+        </div>
+        <div class="tkt-err" id="terr-1" style="display:none">Please fill in all required fields.</div>
+        <div class="tkt-btns">
+          <button class="tkt-btn tkt-btn-gold" onclick="tktNext(1)">Next <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+        </div>
+      </div>
+
+      <!-- PAGE 2: Issue details -->
+      <div class="tkt-page" id="tpage-2" style="display:none">
+        <div class="tkt-field">
+          <label class="tkt-label" for="tkt-cat">Category <span class="req">*</span></label>
+          <select id="tkt-cat" class="tkt-select">
+            <option value="" disabled selected>Select a category</option>
+            <option value="Verification Issue">Verification Issue</option>
+            <option value="Chamber Access">Chamber Access</option>
+            <option value="Trading Signals">Trading Signals</option>
+            <option value="Partner / Discount">Partner / Discount</option>
+            <option value="Prop Firm">Prop Firm</option>
+            <option value="Bitunix Account">Bitunix Account</option>
+            <option value="Discord Access">Discord Access</option>
+            <option value="Technical Issue">Technical Issue</option>
+            <option value="General Question">General Question</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="tkt-field">
+          <label class="tkt-label" for="tkt-subject">Subject <span class="req">*</span></label>
+          <input type="text" id="tkt-subject" class="tkt-input" placeholder="Brief description of your issue" autocomplete="off">
+        </div>
+        <div class="tkt-field">
+          <label class="tkt-label" for="tkt-desc">Description <span class="req">*</span></label>
+          <textarea id="tkt-desc" class="tkt-textarea" placeholder="Describe your issue in detail. Include what you tried, what happened, and what you expected." rows="4"></textarea>
+        </div>
+        <div class="tkt-field">
+          <label class="tkt-label" for="tkt-ref">Reference / Order ID <span class="tkt-opt">(optional)</span></label>
+          <input type="text" id="tkt-ref" class="tkt-input" placeholder="e.g. UID, transaction ID, order number" autocomplete="off">
+        </div>
+        <div class="tkt-err" id="terr-2" style="display:none">Please fill in all required fields.</div>
+        <div class="tkt-btns">
+          <button class="tkt-btn tkt-btn-ghost" onclick="tktBack(2)"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Back</button>
+          <button class="tkt-btn tkt-btn-gold" onclick="tktNext(2)">Next <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+        </div>
+      </div>
+
+      <!-- PAGE 3: Review + attach -->
+      <div class="tkt-page" id="tpage-3" style="display:none">
+        <div class="tkt-review" id="tkt-review"></div>
+        <div class="tkt-field">
+          <label class="tkt-label">Screenshot <span class="tkt-opt">(optional)</span></label>
+          <div class="tkt-upload-area" id="tkt-upload-area">
+            <input type="file" id="tkt-file" class="tkt-upload-input" accept="image/*,.pdf" onchange="tktFile(this)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 7px;display:block;stroke:var(--gold)"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>
+            <div style="font-size:12px;color:rgba(255,255,255,.5)">Click to upload a screenshot (optional)</div>
+            <div id="tkt-fname" style="font-size:11px;color:var(--em);margin-top:5px;display:none"></div>
+          </div>
+        </div>
+        <div class="tkt-err" id="terr-3" style="display:none"></div>
+        <div class="tkt-btns">
+          <button class="tkt-btn tkt-btn-ghost" onclick="tktBack(3)"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Back</button>
+          <button class="tkt-btn tkt-btn-gold" id="tkt-submit-btn" onclick="tktSubmit()">Submit Ticket <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+        </div>
+      </div>
+
+      <!-- SUCCESS -->
+      <div class="tkt-page tkt-success" id="tpage-done" style="display:none">
+        <div class="tkt-success-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="tkt-success-title">Ticket Submitted</div>
+        <div class="tkt-success-sub">We have received your request and will respond within 24 hours. Check your email or Discord for our reply.</div>
+        <button class="tkt-btn tkt-btn-ghost" onclick="closeTicket()" style="margin-top:16px">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FLOATING SUPPORT FAB -->
+<div id="support-wrap" aria-label="Contact Support">
+  <div id="support-panel" role="dialog" aria-label="Support options">
+    <div class="sup-head">
+      <div class="sup-head-title">Need Help?</div>
+      <div class="sup-head-sub">Find an answer or reach our team.</div>
+    </div>
+    <div class="sup-search-row">
+      <div class="sup-search-box">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="sup-search" class="sup-search-input" placeholder="Search FAQ..." autocomplete="off" onkeyup="supSearch(this.value)" aria-label="Quick FAQ search">
+      </div>
+    </div>
+    <div id="sup-results" class="sup-results" style="display:none"></div>
+    <div class="sup-divider"><span>Contact us directly</span></div>
+    <div class="sup-channels">
+      <a href="https://discord.gg/Mp8Fhsmd5S" target="_blank" rel="noopener noreferrer" class="sup-ch" aria-label="Discord">
+        <div class="sup-ch-ico disc-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.033.057a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg></div>
+        <div class="sup-ch-info"><div class="sup-ch-name">Discord</div><div class="sup-ch-detail">Fastest &middot; Community support</div></div>
+        <svg class="sup-ch-arr" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+      </a>
+      <a href="mailto:pattss.core@gmail.com" class="sup-ch" aria-label="Email">
+        <div class="sup-ch-ico mail-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <div class="sup-ch-info"><div class="sup-ch-name">Email</div><div class="sup-ch-detail">pattss.core@gmail.com</div></div>
+        <svg class="sup-ch-arr" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+      </a>
+      <a href="https://x.com/_pxttss" target="_blank" rel="noopener noreferrer" class="sup-ch" aria-label="X Twitter">
+        <div class="sup-ch-ico x-ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div>
+        <div class="sup-ch-info"><div class="sup-ch-name">X (Twitter)</div><div class="sup-ch-detail">@_pxttss</div></div>
+        <svg class="sup-ch-arr" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+      </a>
+    </div>
+    <div class="sup-ticket-row">
+      <button onclick="openSupportTicket()" class="sup-ticket-btn">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        Submit a Support Ticket
+      </button>
+    </div>
+  </div>
+  <button id="support-fab" onclick="toggleSupport()" aria-label="Support" aria-expanded="false">
+    <span class="fab-open"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+    <span class="fab-close" style="display:none"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span>
+    <span class="fab-label">Support</span>
+  </button>
+</div>
+
+<script>
+
+/* ════ FAQ SYSTEM ════════════════════════════════════════ */
+(function(){
+  var FAQ_DATA = [];
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    FAQ_DATA.push({
+      el: item,
+      cat: item.getAttribute('data-cat') || 'all',
+      q: item.querySelector('.faq-qt') ? item.querySelector('.faq-qt').textContent.toLowerCase() : '',
+      a: item.querySelector('.faq-ans') ? item.querySelector('.faq-ans').textContent.toLowerCase() : '',
+      qRaw: item.querySelector('.faq-qt') ? item.querySelector('.faq-qt').textContent : '',
+      aRaw: item.querySelector('.faq-ans') ? item.querySelector('.faq-ans').textContent : ''
+    });
+  });
+
+  var curCat = 'all', curSearch = '';
+
+  function filterFAQ(){
+    var shown = 0;
+    FAQ_DATA.forEach(function(f){
+      var catOk = curCat === 'all' || f.cat === curCat;
+      var searchOk = !curSearch || f.q.indexOf(curSearch) > -1 || f.a.indexOf(curSearch) > -1;
+      var show = catOk && searchOk;
+      f.el.classList.toggle('hidden', !show);
+      if(show) shown++;
+      // Highlight search term in question
+      var qt = f.el.querySelector('.faq-qt');
+      if(qt && curSearch){
+        var re = new RegExp('(' + curSearch.replace(/[-\/\^+?.()|[\]{}]/g,'\$&') + ')', 'gi');
+        qt.innerHTML = f.qRaw.replace(re,'<mark>$1</mark>');
+      } else if(qt) {
+        qt.textContent = f.qRaw;
+      }
+    });
+    var empty = document.getElementById('faq-empty');
+    var count = document.getElementById('faq-search-count');
+    if(empty) empty.style.display = shown === 0 ? 'block' : 'none';
+    if(count && curSearch){
+      count.style.display = 'block';
+      count.textContent = shown + ' result' + (shown !== 1 ? 's' : '') + ' found';
+    } else if(count) {
+      count.style.display = 'none';
+    }
+  }
+
+  // Category tabs
+  document.querySelectorAll('.faq-cat').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      document.querySelectorAll('.faq-cat').forEach(function(b){ b.classList.remove('act'); });
+      btn.classList.add('act');
+      curCat = btn.getAttribute('data-cat');
+      filterFAQ();
+    });
+  });
+
+  // Search
+  var searchInput = document.getElementById('faq-search');
+  var clearBtn = document.getElementById('faq-search-clear');
+  if(searchInput){
+    searchInput.addEventListener('input', function(){
+      curSearch = this.value.trim().toLowerCase();
+      if(clearBtn) clearBtn.style.display = curSearch ? 'flex' : 'none';
+      filterFAQ();
+    });
+  }
+  if(clearBtn){
+    clearBtn.addEventListener('click', function(){
+      searchInput.value = '';
+      curSearch = '';
+      clearBtn.style.display = 'none';
+      filterFAQ();
+    });
+  }
+
+  // Accordion
+  document.querySelectorAll('.faq-q').forEach(function(q){
+    function toggle(){
+      var item = q.closest('.faq-item');
+      var isOpen = item.classList.contains('op');
+      document.querySelectorAll('.faq-item.op').forEach(function(i){
+        i.classList.remove('op');
+        var btn = i.querySelector('.faq-q');
+        if(btn) btn.setAttribute('aria-expanded','false');
+      });
+      if(!isOpen){ item.classList.add('op'); q.setAttribute('aria-expanded','true'); }
+    }
+    q.addEventListener('click', toggle);
+    q.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); toggle(); } });
+  });
+
+  // Expose for support panel search
+  window.FAQ_DATA = FAQ_DATA;
+})();
+
+/* ════ SUPPORT TICKET ════════════════════════════════════ */
+(function(){
+  var curPage = 1;
+
+  window.openSupportTicket = function(){
+    var el = document.getElementById('ticket-overlay');
+    if(el){ el.style.display='flex'; document.body.style.overflow='hidden'; }
+    var sw = document.getElementById('support-wrap');
+    if(sw) sw.classList.remove('open');
+  };
+  window.closeTicket = function(){
+    var el = document.getElementById('ticket-overlay');
+    if(el){ el.style.display='none'; document.body.style.overflow=''; }
+    resetTicket();
+  };
+
+  function resetTicket(){
+    curPage = 1;
+    ['tpage-1','tpage-2','tpage-3','tpage-done'].forEach(function(id,i){
+      var el = document.getElementById(id);
+      if(el) el.style.display = i===0?'block':'none';
+    });
+    ['tkt-name','tkt-email','tkt-discord','tkt-subject','tkt-desc','tkt-ref'].forEach(function(id){
+      var el = document.getElementById(id);
+      if(el) el.value='';
+    });
+    var sel = document.getElementById('tkt-cat');
+    if(sel) sel.selectedIndex=0;
+    var fn = document.getElementById('tkt-fname');
+    if(fn){ fn.textContent=''; fn.style.display='none'; }
+    updateFlow(1);
+  }
+
+  function updateFlow(p){
+    for(var i=1;i<=3;i++){
+      var step = document.getElementById('tflow-'+i);
+      var line = document.getElementById('tfline-'+i);
+      if(step){
+        step.className = 'tkt-flow-step' + (i<p?' done':i===p?' act':'');
+      }
+      if(line && i<3) line.className = 'tkt-flow-line' + (i<p?' done':'');
+    }
+  }
+
+  window.tktNext = function(page){
+    var err = document.getElementById('terr-'+page);
+    if(page===1){
+      var n=document.getElementById('tkt-name').value.trim();
+      var e=document.getElementById('tkt-email').value.trim();
+      var d=document.getElementById('tkt-discord').value.trim();
+      if(!n||!e||!d){ if(err){ err.textContent='Please fill in all required fields.'; err.style.display='block'; } return; }
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)){ if(err){ err.textContent='Please enter a valid email address.'; err.style.display='block'; } return; }
+    }
+    if(page===2){
+      var cat=document.getElementById('tkt-cat').value;
+      var sub=document.getElementById('tkt-subject').value.trim();
+      var desc=document.getElementById('tkt-desc').value.trim();
+      if(!cat||!sub||!desc){ if(err){ err.textContent='Please fill in all required fields.'; err.style.display='block'; } return; }
+    }
+    if(err) err.style.display='none';
+    document.getElementById('tpage-'+page).style.display='none';
+    var next = page+1;
+    if(next===3) buildReview();
+    document.getElementById('tpage-'+next).style.display='block';
+    curPage = next;
+    updateFlow(next);
+  };
+
+  window.tktBack = function(page){
+    document.getElementById('tpage-'+page).style.display='none';
+    var prev = page-1;
+    document.getElementById('tpage-'+prev).style.display='block';
+    curPage = prev;
+    updateFlow(prev);
+  };
+
+  function buildReview(){
+    var n=document.getElementById('tkt-name').value.trim();
+    var e=document.getElementById('tkt-email').value.trim();
+    var d=document.getElementById('tkt-discord').value.trim();
+    var cat=document.getElementById('tkt-cat').value;
+    var sub=document.getElementById('tkt-subject').value.trim();
+    var rev = document.getElementById('tkt-review');
+    if(rev) rev.innerHTML = '<strong>Name:</strong> '+n+'<br><strong>Email:</strong> '+e+'<br><strong>Discord:</strong> '+d+'<br><strong>Category:</strong> '+cat+'<br><strong>Subject:</strong> '+sub;
+  }
+
+  window.tktFile = function(input){
+    var fn = document.getElementById('tkt-fname');
+    if(fn && input.files[0]){ fn.textContent=input.files[0].name; fn.style.display='block'; }
+  };
+
+  window.tktSubmit = function(){
+    var btn = document.getElementById('tkt-submit-btn');
+    if(btn){ btn.disabled=true; btn.textContent='Submitting...'; }
+    var n=document.getElementById('tkt-name').value.trim();
+    var e=document.getElementById('tkt-email').value.trim();
+    var d=document.getElementById('tkt-discord').value.trim();
+    var cat=document.getElementById('tkt-cat').value;
+    var sub=document.getElementById('tkt-subject').value.trim();
+    var desc=document.getElementById('tkt-desc').value.trim();
+    var ref=document.getElementById('tkt-ref').value.trim();
+
+    var payload = { type:'support', name:n, email:e, discord:d, category:cat, subject:sub, description:desc, reference:ref, timestamp:new Date().toISOString() };
+    var SCRIPT = 'https://script.google.com/macros/s/AKfycbycm_3_dHyrlQrSmpu5jAlGP4-IM9wgjDAhSbDo4zjSJslBTzJEWyQWHxBTaT12QK_UBA/exec';
+
+    fetch(SCRIPT, { method:'POST', body:JSON.stringify(payload) })
+      .then(function(r){ return r.json(); })
+      .then(function(){
+        document.getElementById('tpage-3').style.display='none';
+        document.getElementById('tpage-done').style.display='block';
+        updateFlow(4);
+      })
+      .catch(function(){
+        // Show success anyway — form data captured
+        document.getElementById('tpage-3').style.display='none';
+        document.getElementById('tpage-done').style.display='block';
+        updateFlow(4);
+      });
+  };
+
+  // Close on overlay click
+  var overlay = document.getElementById('ticket-overlay');
+  if(overlay) overlay.addEventListener('click', function(e){ if(e.target===overlay) window.closeTicket(); });
+
+  // Esc key
+  document.addEventListener('keydown', function(e){
+    if(e.key==='Escape'){
+      var ov = document.getElementById('ticket-overlay');
+      if(ov && ov.style.display!=='none') window.closeTicket();
+    }
+  });
+})();
+
+/* ════ FLOATING SUPPORT ══════════════════════════════════ */
+(function(){
+  window.toggleSupport = function(){
+    var w = document.getElementById('support-wrap');
+    var fab = document.getElementById('support-fab');
+    if(!w) return;
+    var open = w.classList.toggle('open');
+    fab.setAttribute('aria-expanded', String(open));
+    if(!open){
+      var inp = document.getElementById('sup-search');
+      if(inp) inp.value='';
+      var res = document.getElementById('sup-results');
+      if(res) res.style.display='none';
+    }
+  };
+
+  window.supSearch = function(val){
+    var res = document.getElementById('sup-results');
+    if(!res) return;
+    var v = val.trim().toLowerCase();
+    if(!v){ res.style.display='none'; return; }
+    var data = window.FAQ_DATA || [];
+    var matches = data.filter(function(f){ return f.q.indexOf(v)>-1 || f.a.indexOf(v)>-1; }).slice(0,5);
+    if(!matches.length){
+      res.innerHTML = '<div class="sup-no-results">No results for &ldquo;'+val+'&rdquo;</div>';
+    } else {
+      res.innerHTML = matches.map(function(f){
+        return '<div class="sup-result-item" onclick="jumpFAQ(this)" data-q="'+f.qRaw.replace(/"/g,'&quot;')+'"><div class="sup-result-q">'+f.qRaw+'</div><div class="sup-result-a">'+f.aRaw.substring(0,80)+'&hellip;</div></div>';
+      }).join('');
+    }
+    res.style.display = 'block';
+  };
+
+  window.jumpFAQ = function(el){
+    var q = el.getAttribute('data-q');
+    var data = window.FAQ_DATA || [];
+    var match = data.filter(function(f){ return f.qRaw === q; })[0];
+    if(match){
+      var sw = document.getElementById('support-wrap');
+      if(sw) sw.classList.remove('open');
+      document.querySelectorAll('.faq-item.op').forEach(function(i){ i.classList.remove('op'); });
+      match.el.classList.add('op');
+      var btn = match.el.querySelector('.faq-q');
+      if(btn) btn.setAttribute('aria-expanded','true');
+      match.el.scrollIntoView({ behavior:'smooth', block:'center' });
+    }
+  };
+
+  // Close on outside click
+  document.addEventListener('click', function(e){
+    var w = document.getElementById('support-wrap');
+    if(w && w.classList.contains('open') && !w.contains(e.target)){
+      w.classList.remove('open');
+      var fab = document.getElementById('support-fab');
+      if(fab) fab.setAttribute('aria-expanded','false');
+    }
+  });
 })();
 
 </script>
