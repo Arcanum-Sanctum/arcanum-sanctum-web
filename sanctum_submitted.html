@@ -195,28 +195,6 @@ body{background:#050816;color:rgba(255,255,255,.88);font-family:'Inter',sans-ser
 </div>
 
 
-/* ══ DYNAMIC SEEKER TYPE ═══════════════════════════════ */
-(function() {
-  var params = new URLSearchParams(window.location.search);
-  var type = params.get('type');
-  var badge = document.getElementById('seeker-badge');
-  var roleDesc = document.getElementById('role-step-desc');
-  var subTxt = document.getElementById('s-sub-txt');
-
-  if (type === 'div') {
-    badge.innerHTML = '<span class="role-chip chip-div" style="font-size:12px;padding:6px 18px">&#x1F52E; Divination Seeker</span>';
-    roleDesc.textContent = 'Once approved, your Divination Seeker role will be assigned and you will unlock full access to the Divination Chamber.';
-    subTxt.textContent = 'Your Divination Seeker verification has been submitted. Our team will review it and assign your role within 24 hours.';
-  } else if (type === 'aeth') {
-    badge.innerHTML = '<span class="role-chip chip-aeth" style="font-size:12px;padding:6px 18px">&#x2694;&#xFE0F; Aether Seeker</span>';
-    roleDesc.textContent = 'Once approved, your Aether Seeker role will be assigned and you will unlock full access to the Aether Chamber.';
-    subTxt.textContent = 'Your Aether Seeker verification has been submitted. Our team will review it and assign your role within 24 hours.';
-  } else {
-    // Fallback if no param
-    badge.innerHTML = '<span class="role-chip chip-div" style="font-size:12px;padding:6px 18px;margin-right:8px">&#x1F52E; Divination Seeker</span><span class="role-chip chip-aeth" style="font-size:12px;padding:6px 18px">&#x2694;&#xFE0F; Aether Seeker</span>';
-  }
-})();
-
 <script>
 (function() {
   var cv = document.getElementById('bgcvs');
@@ -242,5 +220,29 @@ body{background:#050816;color:rgba(255,255,255,.88);font-family:'Inter',sans-ser
 })();
 </script>
 
+<script>
+/* ══ DYNAMIC SEEKER TYPE ═══════════════════════════════ */
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  var type = params.get('type');
+  var badge = document.getElementById('seeker-badge');
+  var roleDesc = document.getElementById('role-step-desc');
+  var subTxt = document.getElementById('s-sub-txt');
+
+  if (type === 'div') {
+    badge.innerHTML = '<span class="role-chip chip-div" style="font-size:12px;padding:6px 18px">&#x1F52E; Divination Seeker</span>';
+    roleDesc.textContent = 'Once approved, your Divination Seeker role will be assigned and you will unlock full access to the Divination Chamber.';
+    subTxt.textContent = 'Your Divination Seeker verification has been submitted. Our team will review it and assign your role within 24 hours.';
+  } else if (type === 'aeth') {
+    badge.innerHTML = '<span class="role-chip chip-aeth" style="font-size:12px;padding:6px 18px">&#x2694;&#xFE0F; Aether Seeker</span>';
+    roleDesc.textContent = 'Once approved, your Aether Seeker role will be assigned and you will unlock full access to the Aether Chamber.';
+    subTxt.textContent = 'Your Aether Seeker verification has been submitted. Our team will review it and assign your role within 24 hours.';
+  } else {
+    // Fallback if no param
+    badge.innerHTML = '<span class="role-chip chip-div" style="font-size:12px;padding:6px 18px;margin-right:8px">&#x1F52E; Divination Seeker</span><span class="role-chip chip-aeth" style="font-size:12px;padding:6px 18px">&#x2694;&#xFE0F; Aether Seeker</span>';
+  }
+})();
+
+</script>
 </body>
 </html>
