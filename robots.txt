@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# robots.txt is not access control. Private pages use a noindex tag instead.
+# Sitemap line is added once the production domain is confirmed.
