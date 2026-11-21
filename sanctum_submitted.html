@@ -1,276 +1,87 @@
 <!DOCTYPE html>
-
-<html lang="en">
-<head>
-<meta charset="utf-8"/><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://t.whop.tw; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https://*.google-analytics.com https://www.googletagmanager.com https://*.whop.tw; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.whop.tw https://*.whop.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'; upgrade-insecure-requests">
-<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
-<title>Verification Submitted — Arcanum Sanctum</title>
-<meta content="noindex,nofollow" name="robots"/><meta content="strict-origin-when-cross-origin" name="referrer"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=Rajdhani:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<html lang="en"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-igyau8emfWMhNirMEpt9iaA2ZbuOyhvOEljXLSmJS6Y=' 'sha256-/bE48I+BrM+5yhA7ugcl1AvVW3cRNp/6tcYeM+hfyos=' https://www.googletagmanager.com https://t.whop.tw; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https://*.google-analytics.com https://www.googletagmanager.com https://*.whop.tw; connect-src 'self' https://script.google.com https://script.googleusercontent.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://*.whop.tw https://*.whop.com; object-src 'none'; base-uri 'self'; form-action 'none'; frame-src 'none'; upgrade-insecure-requests"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thank You for Joining the Sanctum | Arcanum Sanctum</title>
+<meta name="description" content="Your Arcanum Sanctum application has been received.">
+<meta name="robots" content="noindex,nofollow"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="theme-color" content="#0d0805">
+<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"><link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html,body{min-height:100vh}
-body{background:#0d0805;color:rgba(255,255,255,.88);font-family:'Inter',sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px;position:relative;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-:root{
-  --gold:#C9A84C;--goldl:#E8C468;--goldd:#9A7828;
-  --ga:rgba(201,168,76,.1);--gb:rgba(201,168,76,.22);
-  --em:#2AA478;--ema:rgba(42,164,120,.12);--emb:rgba(42,164,120,.28);
-  --purple:#e6d3a6;
-  --bg0:#0d0805;--bg2:#0C1020;
-  --s1:rgba(255,255,255,.04);--s2:rgba(255,255,255,.07);
-  --t1:rgba(255,255,255,.88);--t2:rgba(255,255,255,.55);--t3:rgba(255,255,255,.3);
-  --b1:rgba(201,168,76,.18);--b2:rgba(255,255,255,.07);
-  --ease:cubic-bezier(.22,1,.36,1);
-}
-::selection{background:rgba(201,168,76,.2);color:#fff}
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:3px}
-
-/* BG CANVAS */
-#bgcvs{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.55}
-
-/* NAV */
-.vnav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 0;background:rgba(13,8,5,.92);backdrop-filter:blur(20px);border-bottom:.5px solid var(--b2)}
-.vnav-i{max-width:900px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between}
-.vnav-brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-.vnav-logo{width:33px;height:33px;border-radius:50%;border:1px solid var(--gb);background:var(--ga);overflow:hidden}
-.vnav-logo img{width:100%;height:100%;object-fit:cover;border-radius:50%}
-.vnav-name{font-family:'Cinzel',serif;font-size:12px;font-weight:700;color:var(--gold);letter-spacing:.06em}
-.vnav-back{font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--t3);text-decoration:none;display:flex;align-items:center;gap:6px;transition:color .2s}
-.vnav-back:hover{color:var(--gold)}
-.vnav-back svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-
-/* MAIN CARD */
-.scard{width:100%;max-width:560px;background:rgba(28,19,13,.82);backdrop-filter:blur(16px);border:.5px solid var(--b2);border-radius:16px;overflow:hidden;position:relative;z-index:2;animation:cin .9s var(--ease) both}
-@keyframes cin{from{opacity:0;transform:translateY(28px) scale(.97)}to{opacity:1;transform:none}}
-
-/* TOP ACCENT LINE */
-.scard::before{content:'';position:absolute;top:0;left:0;right:0;height:1.5px;background:linear-gradient(90deg,transparent,var(--em),transparent)}
-
-/* EMBLEM */
-.s-emblem{display:flex;justify-content:center;padding:40px 32px 28px}
-.s-emblem-wrap{position:relative;width:90px;height:90px}
-.s-ring{position:absolute;inset:0;border-radius:50%;border:1px solid var(--emb);animation:spin 20s linear infinite}
-.s-ring::before{content:'';position:absolute;width:7px;height:7px;border-radius:50%;background:var(--em);box-shadow:0 0 10px var(--em);top:-3.5px;left:50%;transform:translateX(-50%)}
-.s-ring-i{position:absolute;inset:14px;border-radius:50%;border:.5px solid rgba(42,164,120,.18);animation:spin 30s linear infinite reverse}
-.s-icon-wrap{position:absolute;inset:22px;border-radius:50%;background:var(--ema);border:.5px solid var(--emb);display:flex;align-items:center;justify-content:center;animation:icp 3.5s ease-in-out infinite}
-.s-icon-wrap svg{width:26px;height:26px;stroke:var(--em);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes icp{0%,100%{box-shadow:0 0 14px rgba(42,164,120,.15)}50%{box-shadow:0 0 30px rgba(42,164,120,.35)}}
-
-/* CONTENT */
-.s-body{padding:0 36px 36px;text-align:center}
-@media(max-width:480px){.s-body{padding:0 20px 28px}}
-.s-eyebrow{font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:700;letter-spacing:.36em;text-transform:uppercase;color:var(--em);margin-bottom:8px}
-.s-title{font-family:'Cinzel',serif;font-size:clamp(20px,4vw,28px);font-weight:700;color:#fff;letter-spacing:.04em;margin-bottom:10px}
-.s-sub{font-size:13px;color:var(--t2);line-height:1.75;margin-bottom:28px;max-width:420px;margin-left:auto;margin-right:auto}
-
-/* STATUS STEPS */
-.s-steps{display:flex;flex-direction:column;gap:10px;margin-bottom:28px;text-align:left}
-.s-step{display:flex;align-items:flex-start;gap:12px;padding:13px 16px;background:var(--s1);border:.5px solid var(--b2);border-radius:8px}
-.s-step-icon{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
-.s-step-icon.done{background:var(--ema);border:.5px solid var(--emb)}
-.s-step-icon.pending{background:var(--ga);border:.5px solid var(--gb)}
-.s-step-icon svg{width:13px;height:13px;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.s-step-icon.done svg{stroke:var(--em)}
-.s-step-icon.pending svg{stroke:var(--gold)}
-.s-step-t{font-family:'Cinzel',serif;font-size:12px;font-weight:600;color:#fff;letter-spacing:.03em;margin-bottom:2px}
-.s-step-d{font-size:11.5px;color:var(--t2);line-height:1.6}
-
-/* DIVIDER */
-.s-divider{display:flex;align-items:center;gap:12px;margin:6px 0 24px}
-.s-divider::before,.s-divider::after{content:'';flex:1;height:.5px;background:var(--b2)}
-.s-divider-gem{width:6px;height:6px;background:var(--gold);transform:rotate(45deg);box-shadow:0 0 10px rgba(201,168,76,.5)}
-
-/* BUTTONS */
-.s-btns{display:flex;flex-direction:column;gap:10px}
-.sbtn{display:flex;align-items:center;justify-content:center;gap:9px;padding:13px 24px;border-radius:4px;font-family:'Rajdhani',sans-serif;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;transition:all .35s var(--ease);border:none;cursor:pointer;width:100%}
-.sbtn svg{width:15px;height:15px;fill:currentColor;flex-shrink:0}
-.sbtn-discord{background:rgba(88,101,242,.18);color:#7289da;border:.5px solid rgba(88,101,242,.3)}
-.sbtn-discord:hover{background:rgba(88,101,242,.28);transform:translateY(-2px);box-shadow:0 10px 30px rgba(88,101,242,.2)}
-.sbtn-home{background:var(--s1);color:var(--t2);border:.5px solid var(--b2)}
-.sbtn-home:hover{background:var(--s2);color:var(--t1);border-color:var(--b1);transform:translateY(-2px)}
-
-/* REVIEW TIME */
-.s-review{font-size:11px;color:var(--t3);text-align:center;margin-top:16px;line-height:1.65}
-.s-review strong{color:var(--gold)}
-
-/* ROLE CHIPS */
-.role-chips{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:22px}
-.role-chip{display:inline-flex;align-items:center;gap:6px;padding:4px 14px;border-radius:20px;font-family:'Rajdhani',sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
-.chip-div{background:rgba(230,211,166,.12);color:var(--purple);border:.5px solid rgba(230,211,166,.25)}
-.chip-aeth{background:var(--ga);color:var(--gold);border:.5px solid var(--gb)}
-</style>
-<style id="as-shared-editorial-theme">
-/* ARCANUM SANCTUM — shared verification flow theme */
-:root{--as-bg:#090a09;--as-gold:#c8aa72;--as-ivory:#f0eee7;--as-line:rgba(211,190,145,.18)}
-html{background:var(--as-bg);scroll-behavior:smooth}body{background:radial-gradient(ellipse at 75% 0%,rgba(174,132,66,.12),transparent 42%),#090a09!important;color:var(--as-ivory)!important;font-family:Inter,ui-sans-serif,system-ui,sans-serif!important}
-header,nav,.topbar{background:rgba(9,10,9,.84)!important;border-color:var(--as-line)!important;backdrop-filter:blur(18px)}
-h1,h2,h3{letter-spacing:-.035em}h1,h2{font-family:Georgia,'Times New Roman',serif!important;font-weight:400!important}
-.card,.panel,.step-card,.form-card,.success-card{background:linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.015))!important;border:1px solid var(--as-line)!important;border-radius:3px!important;box-shadow:0 24px 80px rgba(0,0,0,.22)!important}
-button,.btn,a.button{border-radius:2px!important;letter-spacing:.07em}button[type=submit],.btn-primary{background:#c6a66b!important;color:#11120f!important}
-input,select,textarea{background:#11130f!important;color:#f0ede5!important;border:1px solid rgba(221,196,142,.22)!important;border-radius:2px!important}
-input:focus,select:focus,textarea:focus{outline:1px solid rgba(200,168,107,.65)!important;box-shadow:0 0 0 3px rgba(200,168,107,.08)!important}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
-</style><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
-<style id="as-brand-v2">
-:root{--gold:#f2b84b;--goldl:#f6cd7a;--goldd:#b98a2a;--ga:rgba(242,184,75,.10);--gb:rgba(242,184,75,.26);--purple:#e6d3a6;--purplea:rgba(230,211,166,.10);--purpleb:rgba(230,211,166,.26);--bg0:#0d0805;--bg1:#150e09;--bg2:#1c130d;--b1:rgba(230,211,166,.2);--ease:cubic-bezier(.22,1,.36,1);--as-bg:#0d0805;--as-gold:#f2b84b;--as-ivory:#f4ebdb;--as-line:rgba(230,211,166,.2)}
-html,body{background:#0d0805!important}
-body{background:radial-gradient(ellipse at 70% 0%,rgba(242,184,75,.09),transparent 45%),#0d0805!important;font-family:Inter,system-ui,sans-serif!important}
-h1,h2{font-family:"Cormorant Garamond",Georgia,serif!important;font-weight:500!important;letter-spacing:-.01em!important}
-.vnav,nav{background:rgba(13,8,5,.8)!important;border-color:rgba(58,42,28,.7)!important}
-.vcard,.pcard,.platbtn,.codebox,.proof-note{border-radius:18px!important}
-.finput,input,select,textarea{border-radius:12px!important;background:#150e09!important}
-.vbtn,button,.discord-btn,.codebox-link{border-radius:99px!important;letter-spacing:.02em}
-.vbtn-gold,.discord-btn{background:var(--gold)!important;color:#1a0f05!important;box-shadow:0 0 28px -6px rgba(242,184,75,.55)}
-.vbtn,.platbtn,.pcard,.sizebtn,.codebox-link,.discord-btn{transition:transform .35s var(--ease),border-color .3s,background .3s,box-shadow .3s}
-.vbtn:active,.discord-btn:active{transform:scale(.97)}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
-</style><link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><style id="as-prod">
-:focus-visible{outline:2px solid #f2b84b!important;outline-offset:2px}
-h1.vtitle,h1.s-title{margin-top:0}
-.skip{position:absolute;left:12px;top:-60px;z-index:90;background:#f2b84b;color:#1a0f05;padding:10px 16px;border-radius:10px;font:600 14px Inter,system-ui,sans-serif;text-decoration:none}.skip:focus{top:12px}
-.uploadarea:focus-within{outline:2px solid #f2b84b;outline-offset:3px}
-.pnote{font:400 12px/1.6 Inter,system-ui,sans-serif;color:#b3a28a;margin:14px 0 0}.pnote a{color:#e6d3a6}
-.lgl{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;padding:22px 12px 30px;font:400 .82rem Inter,system-ui,sans-serif;position:relative;z-index:2}
-.lgl a,.lgl .cs{color:#b3a28a;text-decoration:none;background:none;border:0;cursor:pointer;font:inherit;padding:0}.lgl a:hover,.lgl .cs:hover{color:#e6d3a6}
+:root{--bg:#0d0805;--bg2:#150e09;--card:#1c130d;--field:#120c08;--line:#3a2a1c;--line2:#5a4630;--pale:#e6d3a6;--gold:#f2b84b;--txt:#f4ebdb;--mut:#b3a28a;--ok:#7ee0a8;--err:#ff9a8f;
+--animation-easing:cubic-bezier(0.22,1,0.36,1);--d-fast:180ms;--d-base:300ms;--d-slow:560ms;--d-reveal:560ms;--d-fade:380ms;--d-page:420ms}
+*{box-sizing:border-box;margin:0}[hidden]{display:none!important}html{scroll-behavior:smooth}
+body{background:radial-gradient(ellipse at 50% -10%,rgba(242,184,75,.1),transparent 50%),var(--bg);color:var(--txt);font:400 16px/1.7 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;min-height:100vh}
+a{color:var(--pale)}button{font:inherit;color:inherit}:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.skip{position:absolute;left:12px;top:-60px;z-index:90;background:var(--gold);color:#1a0f05;padding:10px 16px;border-radius:10px;font-weight:600;text-decoration:none}.skip:focus{top:12px}
+header{position:sticky;top:0;z-index:30;background:rgba(13,8,5,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(58,42,28,.7)}
+.nv{width:min(1120px,92%);margin:auto;display:flex;align-items:center;justify-content:space-between;height:68px}
+.lg{display:flex;align-items:center;gap:10px;font:600 1.1rem "Cormorant Garamond",serif;letter-spacing:.08em;color:var(--txt);text-decoration:none}.lg img{width:34px;height:34px;border-radius:50%}
+nav ul{display:flex;gap:28px;list-style:none;padding:0;align-items:center}nav a:not(.btn){font-size:.92rem;color:var(--mut);text-decoration:none;padding:10px 2px;transition:color var(--d-fast)}nav a:not(.btn):hover,nav a[aria-current=page]{color:var(--pale)}nav a[aria-current=page]{border-bottom:2px solid var(--gold)}
+.mb{display:none;background:none;border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-height:44px;cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 30px;border-radius:99px;font-weight:600;font-size:1rem;border:1.5px solid var(--line2);background:transparent;cursor:pointer;text-decoration:none;color:var(--txt);transition:transform var(--d-base) var(--animation-easing),border-color var(--d-base),box-shadow var(--d-base)}
+.btn:hover{border-color:var(--pale);transform:translateY(-2px)}.btn:active{transform:scale(.97)}.btn.p{background:var(--gold);color:#1a0f05;border-color:var(--gold);box-shadow:0 0 30px -8px rgba(242,184,75,.6)}.btn.p:hover{box-shadow:0 0 38px -4px rgba(242,184,75,.75)}.btn.sm{min-height:44px;padding:0 18px;font-size:.88rem}
+main{animation:pg var(--d-page) var(--animation-easing) both;width:min(720px,92%);margin:0 auto;padding:64px 0 48px;text-align:center}
+#ok>*{animation:rise var(--d-reveal,560ms) var(--animation-easing) both}#ok>.seal{animation:none}#ok>.eb{animation-delay:120ms}#ok>h1{animation-delay:200ms}#ok>.msg{animation-delay:300ms}#ok>.card{animation-delay:420ms}#ok>.cta{animation-delay:540ms}#ok>.rem{animation-delay:640ms}@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.seal{width:76px;height:76px;margin:0 auto 22px;border-radius:50%;border:2px solid var(--gold);display:grid;place-items:center;color:var(--gold);background:rgba(242,184,75,.08)}.seal path{stroke-dasharray:30;stroke-dashoffset:30;animation:draw .7s var(--animation-easing) .2s forwards}@keyframes pg{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}@keyframes draw{to{stroke-dashoffset:0}}
+.eb{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h1{font:500 clamp(2.2rem,6vw,3.4rem)/1.08 "Cormorant Garamond",serif;margin:10px 0 22px}h2{font:500 1.7rem/1.2 "Cormorant Garamond",serif;color:var(--pale);margin-bottom:10px}
+.msg p{color:var(--txt);font-size:1.05rem}.msg p+p{margin-top:12px;color:var(--mut)}
+.card{margin:34px 0 28px;text-align:left;background:linear-gradient(170deg,var(--card),var(--bg2));border:1px solid var(--line);border-radius:20px;padding:26px 28px}.card p{color:var(--mut)}
+.ref{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}.ref small{display:block;color:var(--mut);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}.ref code{font:600 1.1rem ui-monospace,Menlo,monospace;color:var(--txt);letter-spacing:.05em}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;list-style:none;padding:0}.chips li{padding:6px 14px;border:1.5px solid var(--line2);border-radius:99px;font-size:.86rem;font-weight:600;color:var(--pale)}
+.cta{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:8px}.rem{color:var(--mut);font-size:.9rem;margin-top:22px}
+.empty{margin-top:30px;text-align:center}.empty p{color:var(--mut);max-width:520px;margin:0 auto 24px}
+.toasts{position:fixed;z-index:80;top:84px;right:20px;display:grid;gap:10px;width:min(380px,calc(100% - 24px));pointer-events:none}
+.toast{pointer-events:auto;display:flex;gap:12px;align-items:flex-start;padding:14px 14px 14px 16px;border-radius:14px;background:var(--card);border:1.5px solid var(--line2);border-left:5px solid var(--ok);box-shadow:0 16px 40px rgba(0,0,0,.55);transform:translateX(24px);opacity:0;transition:transform var(--d-base) var(--animation-easing),opacity var(--d-base);text-align:left}.toast.in{transform:none;opacity:1}.toast.out{transform:translateX(24px);opacity:0}.toast b{display:block;font-size:.92rem}.toast span{font-size:.86rem;color:var(--mut)}.toast .x{margin:-10px -6px -10px auto;background:none;border:0;min-width:44px;min-height:44px;cursor:pointer;color:var(--mut)}
+.lgl{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;padding:10px 12px 34px;font-size:.84rem}.lgl a,.lgl .cs{color:var(--mut);text-decoration:none;background:none;border:0;cursor:pointer;font:inherit;padding:8px 2px}.lgl a:hover,.lgl .cs:hover{color:var(--pale)}
+@media(max-width:700px){.mb{display:block}nav ul{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;gap:4px;background:var(--bg);padding:14px 4% 20px;border-bottom:1px solid var(--line)}nav ul.o{display:flex}nav ul li a{display:flex;min-height:48px;align-items:center}.toasts{top:76px;right:12px}main{padding-top:44px}.card{padding:22px}.cta .btn{width:100%}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.seal path{stroke-dashoffset:0}}
 #ck{position:fixed;z-index:60;right:20px;bottom:20px;width:min(380px,calc(100% - 24px));background:#1c130d;border:1px solid #3a2a1c;border-radius:18px;padding:20px;font:400 .88rem/1.55 Inter,system-ui,sans-serif;color:#b3a28a;box-shadow:0 20px 50px rgba(0,0,0,.6);opacity:0;visibility:hidden;transform:translateY(16px);transition:opacity .5s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1),visibility 0s .6s}
-#ck.s{opacity:1;visibility:visible;transform:none;transition-delay:0s}#ck b{color:#f4ebdb}#ck p{margin:6px 0 0}#ck a{color:#e6d3a6;text-decoration:underline}
+#ck.s{opacity:1;visibility:visible;transform:none;transition-delay:0s}#ck b{color:#f4ebdb}#ck p{margin:6px 0 0}#ck .ckst{color:#e6d3a6;font-weight:600}#ck a{color:#e6d3a6;text-decoration:underline}
 #ck div{display:flex;gap:10px;margin-top:14px}#ck button{font:600 .85rem Inter,system-ui,sans-serif;padding:9px 18px;border-radius:99px;border:1px solid #3a2a1c;background:none;color:#f4ebdb;cursor:pointer}#ck button.p{background:#f2b84b;color:#1a0f05;border-color:#f2b84b}
-@media(max-width:520px){#ck{right:12px;bottom:12px}}@media(prefers-reduced-motion:reduce){#ck{transition:none}}</style></head>
-<body><a class="skip" href="#vmain">Skip to main content</a>
-<canvas aria-hidden="true" id="bgcvs"></canvas>
-<!-- NAV -->
-<nav aria-label="Navigation" class="vnav">
-<div class="vnav-i">
-<a aria-label="Arcanum Sanctum" class="vnav-brand" href="./index.html">
-<div class="vnav-logo"><img alt="Arcanum Sanctum" height="33" src="data:image/webp;base64,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" width="33"/></div>
-<span class="vnav-name">Arcanum Sanctum</span>
-</a>
-<a class="vnav-back" href="./index.html">
-<svg viewbox="0 0 24 24"><line x1="19" x2="5" y1="12" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-      Back to Site
-    </a>
-</div>
-</nav>
-<!-- CARD -->
-<div class="scard" role="main" id="vmain">
-<div class="s-emblem">
-<div class="s-emblem-wrap">
-<div class="s-ring"></div>
-<div class="s-ring-i"></div>
-<div class="s-icon-wrap">
-<svg viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-</div>
-</div>
-</div>
-<div class="s-body">
-<div class="s-eyebrow">Verification Received</div>
-<h1 class="s-title">You're In the Queue</h1>
-<p class="s-sub" id="s-sub-txt">Your verification has been submitted successfully. Our team will review it and assign your role within 24 hours.</p>
-<div id="seeker-badge" style="display:flex;justify-content:center;margin-bottom:22px"></div>
-<div aria-label="Verification steps" class="s-steps" role="list">
-<div class="s-step" role="listitem">
-<div aria-label="Completed" class="s-step-icon done">
-<svg viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-</div>
-<div>
-<div class="s-step-t">Verification Submitted</div>
-<div class="s-step-d">Your details and proof of registration have been received by our system.</div>
-</div>
-</div>
-<div class="s-step" role="listitem">
-<div aria-label="Pending" class="s-step-icon pending">
-<svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-</div>
-<div>
-<div class="s-step-t">Under Review</div>
-<div class="s-step-d">A Keeper will review your submission and verify your eligibility within 24 hours.</div>
-</div>
-</div>
-<div class="s-step" role="listitem">
-<div aria-label="Pending" class="s-step-icon pending">
-<svg viewbox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-</div>
-<div>
-<div class="s-step-t">Role Assignment</div>
-<div class="s-step-d" id="role-step-desc">Once approved, your role will be assigned in Discord.</div>
-</div>
-</div>
-</div>
-<div class="s-divider"><div class="s-divider-gem"></div></div>
-<div class="s-btns">
-<a aria-label="Join Discord server" class="sbtn sbtn-discord" href="https://discord.gg/Mp8Fhsmd5S" rel="noopener noreferrer" target="_blank">
-<svg viewbox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.033.057a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"></path></svg>
-        Join Discord Server
-      </a>
-<a aria-label="Return to main site" class="sbtn sbtn-home" href="./index.html">
-<svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="15"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-        Return to Website
-      </a>
-</div>
-<div class="s-review">
-      Expected review time: <strong>within 24 hours</strong><br/>
-      Make sure you are in the Discord server so we can assign your role.
-    </div>
-</div>
-</div>
+@media(max-width:520px){#ck{right:12px;bottom:12px}}@media(prefers-reduced-motion:reduce){#ck{transition:none}}
+</style></head><body>
+<a class="skip" href="#main">Skip to main content</a>
+<header><div class="nv"><a class="lg" href="index.html"><img src="data:image/webp;base64,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" alt="" width="34" height="34">ARCANUM SANCTUM</a>
+<nav aria-label="Main"><button class="mb" id="mb" type="button" aria-expanded="false" aria-controls="ml">Menu</button><ul id="ml"><li><a href="index.html#offers">Offers</a></li><li><a href="index.html#official">Partners</a></li><li><a href="index.html#keepers">Keepers</a></li><li><a href="index.html#voices">Voices</a></li><li><a href="sanctum_verification.html" aria-current="page">Verify</a></li><li><a class="btn p sm" href="https://discord.gg/Mp8Fhsmd5S" target="_blank" rel="noopener noreferrer">Join Discord</a></li></ul></nav></div></header>
+<main id="main" tabindex="-1">
+<section id="ok" hidden aria-labelledby="t">
+<div class="seal" aria-hidden="true"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+<div class="eb">Application received</div><h1 id="t">Thank You for Joining the Sanctum.</h1>
+<div class="msg"><p>Every journey begins with a decision to take the next step.</p><p>By submitting your application, you’ve taken yours. The Sanctum is built for those who seek knowledge, sharpen their discipline, and grow alongside others who share the same pursuit.</p><p>We welcome your interest in becoming part of this community. Your next chapter begins here.</p></div>
+<div class="card"><h2>What Happens Next?</h2><p>Your application has been received. Our Keepers will carefully review the information and proof you’ve submitted. Once your application has been reviewed, you’ll receive the appropriate update through the contact details you provided.</p>
+<ul class="chips" id="chips" aria-label="Access you applied for"></ul>
+<div class="ref"><div><small>Application reference</small><code id="ref"></code></div><button class="btn sm" type="button" id="cp">Copy reference</button></div></div>
+<div class="cta"><a class="btn p" href="https://discord.gg/Mp8Fhsmd5S" target="_blank" rel="noopener noreferrer">Enter the Sanctum on Discord</a><a class="btn" href="index.html">Back to main website</a></div>
+<p class="rem">Please keep an eye on Discord and the email address you provided for updates.</p>
+</section>
+<section id="none" class="empty" hidden aria-labelledby="t2"><div class="eb">Nothing to show</div><h1 id="t2">No Application Found</h1>
+<p>We could not find a submission in this browser session. If you have just submitted, please check Discord and your email for updates. Otherwise, you can start a new application.</p>
+<div class="cta"><a class="btn p" href="sanctum_verification.html">Start verification</a><a class="btn" href="index.html">Back to main website</a></div></section>
+</main>
+<nav class="lgl" aria-label="Legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="cookies.html">Cookie Policy</a><a href="refund.html">Refund Policy</a><button type="button" class="cs">Cookie settings</button></nav>
+<div class="toasts" id="toasts" role="region" aria-label="Notifications"></div>
+<div id="ck" role="region" aria-label="Cookie preferences"><b>Cookie settings</b><p>We store your choice on this device. With your consent we also use Google Analytics and Whop analytics on the verification pages to understand how the site is used. Nothing analytical loads unless you accept. <a href="cookies.html">Cookie Policy</a></p><p class="ckst" id="ckst" aria-live="polite"></p><div><button type="button" class="p" id="ok">Accept analytics</button><button type="button" id="no">Essential only</button></div></div>
 <script>
-(function() {
-  var cv = document.getElementById('bgcvs');
-  if (!cv) return;
-  var ctx = cv.getContext('2d');
-  var W, H, stars = [], t = 0;
-  function resize() { W = cv.width = innerWidth; H = cv.height = innerHeight; }
-  function mkS() { return { x:Math.random()*W, y:Math.random()*H, r:Math.random()*1.1+.1, o:Math.random()*.45+.06, sp:Math.random()*.004+.001, ph:Math.random()*Math.PI*2, gold:Math.random()<.07, em:Math.random()<.04 }; }
-  function init() { resize(); stars = []; for (var i = 0; i < 110; i++) stars.push(mkS()); }
-  function draw() {
-    ctx.clearRect(0,0,W,H); t += .003;
-    for (var i = 0; i < stars.length; i++) {
-      var s = stars[i];
-      var op = s.o * (.55 + .45 * Math.sin(t * s.sp * 8 + s.ph));
-      ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI*2);
-      ctx.fillStyle = s.gold ? 'rgba(201,168,76,' + op + ')' : s.em ? 'rgba(42,164,120,' + op + ')' : 'rgba(220,216,210,' + op + ')';
-      ctx.fill();
-    }
-    requestAnimationFrame(draw);
-  }
-  window.addEventListener('resize', resize);
-  init(); draw();
+(function(){'use strict';var $=function(i){return document.getElementById(i)},RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+var NAMES={divination:'Divination Seeker',aether:'Aether Seeker',aureum:'Aureum Seeker'},d=null;
+try{d=JSON.parse(sessionStorage.getItem('as_submitted')||'null')}catch(e){}
+var valid=d&&typeof d.ref=='string'&&/^AS-[A-Z0-9-]{6,24}$/.test(d.ref)&&Array.isArray(d.offers)&&d.offers.length>0&&d.offers.every(function(o){return NAMES[o]})&&typeof d.at=='number'&&Date.now()-d.at<864e5&&d.at<=Date.now()+6e4;
+if(valid){$('ok').hidden=false;$('ref').textContent=d.ref;d.offers.forEach(function(o){var li=document.createElement('li');li.textContent=NAMES[o];$('chips').appendChild(li)});document.title='Thank You for Joining the Sanctum | Arcanum Sanctum'}else{$('none').hidden=false;document.title='No Application Found | Arcanum Sanctum'}
+$('mb').onclick=function(){var o=$('ml').classList.toggle('o');this.setAttribute('aria-expanded',o)};document.addEventListener('keydown',function(e){if(e.key=='Escape'&&$('ml').classList.contains('o')){$('ml').classList.remove('o');$('mb').setAttribute('aria-expanded','false');$('mb').focus()}});
+function toast(t,m){var el=document.createElement('div');el.className='toast';el.setAttribute('role','status');el.innerHTML='<div><b></b><span></span></div><button type="button" class="x" aria-label="Dismiss notification">&times;</button>';el.querySelector('b').textContent=t;el.querySelector('span').textContent=m;$('toasts').appendChild(el);requestAnimationFrame(function(){el.classList.add('in')});function c(){el.classList.remove('in');el.classList.add('out');setTimeout(function(){el.remove()},RM?0:360)}el.querySelector('.x').onclick=c;setTimeout(c,4500)}
+if($('cp'))$('cp').onclick=function(){var t=d&&d.ref;if(!t)return;if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){toast('Reference copied',t)},function(){toast('Could not copy','Please select the reference and copy it manually.')})}else toast('Could not copy','Please select the reference and copy it manually.')};
+(valid?$('t'):$('t2')).setAttribute('tabindex','-1');
+window.asToast=toast;
 })();
 </script>
-<script>
-/* ══ DYNAMIC SEEKER TYPE ═══════════════════════════════ */
-(function() {
-  var params = new URLSearchParams(window.location.search);
-  var type = params.get('type');
-  var badge = document.getElementById('seeker-badge');
-  var roleDesc = document.getElementById('role-step-desc');
-  var subTxt = document.getElementById('s-sub-txt');
-
-  if (type === 'div') {
-    badge.innerHTML = '<span class="role-chip chip-div" style="font-size:12px;padding:6px 18px">&#x1F52E; Divination Seeker</span>';
-    roleDesc.textContent = 'Once approved, your Divination Seeker role will be assigned and you will unlock full access to the Divination Chamber.';
-    subTxt.textContent = 'Your Divination Seeker verification has been submitted. Our team will review it and assign your role within 24 hours.';
-  } else if (type === 'aeth') {
-    badge.innerHTML = '<span class="role-chip chip-aeth" style="font-size:12px;padding:6px 18px">&#x2694;&#xFE0F; Aether Seeker</span>';
-    roleDesc.textContent = 'Once approved, your Aether Seeker role will be assigned and you will unlock full access to the Aether Chamber.';
-    subTxt.textContent = 'Your Aether Seeker verification has been submitted. Our team will review it and assign your role within 24 hours.';
-  } else {
-    // Fallback if no param
-    badge.innerHTML = '<span class="role-chip chip-div" style="font-size:12px;padding:6px 18px;margin-right:8px">&#x1F52E; Divination Seeker</span><span class="role-chip chip-aeth" style="font-size:12px;padding:6px 18px">&#x2694;&#xFE0F; Aether Seeker</span>';
-  }
-})();
-
-</script>
-<nav class="lgl" aria-label="Legal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="cookies.html">Cookie Policy</a><a href="refund.html">Refund Policy</a><button type="button" class="cs">Cookie settings</button></nav><div id="ck" role="region" aria-label="Cookie preferences"><b>Cookie settings</b><p>We store your choice on this device. With your consent we also use Google Analytics and Whop analytics on the verification pages to understand how the site is used. Nothing analytical loads unless you accept. <a href="cookies.html">Cookie Policy</a></p><p class="ckst" id="ckst" aria-live="polite"></p><div><button type="button" class="p" id="ok">Accept analytics</button><button type="button" id="no">Essential only</button></div></div><script>(function(){var K='as_consent',GA='G-NKSGQ11H05',b=document.getElementById('ck');
+<script>(function(){var K='as_consent',GA='G-NKSGQ11H05',b=document.getElementById('ck');
 function g(){try{return localStorage.getItem(K)}catch(e){return null}}
 function st(v){try{localStorage.setItem(K,v)}catch(e){}}
 function load(){if(window.__asa)return;window.__asa=1;var x=document.createElement('script');x.async=1;x.src='https://www.googletagmanager.com/gtag/js?id='+GA;document.head.appendChild(x);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config',GA);!function(w,d,s,u,n,a,b){if(w[n])return;a=w[n]={q:[],t:+new Date,s:[],o:u,track:function(){a.q.push([+new Date].concat([].slice.call(arguments)))},setScope:function(){a.s=[].slice.call(arguments).filter(function(x){return typeof x==="string"});a.q.push([+new Date,"setScope"].concat(a.s))},scope:function(){var c=[].slice.call(arguments);return{track:function(){a.q.push([+new Date].concat([].slice.call(arguments)).concat([{__scope:c}]))}}}};b=d.createElement(s);b.async=1;b.src=u+"/s.js";d.getElementsByTagName(s)[0].parentNode.insertBefore(b,d.getElementsByTagName(s)[0])}(window,document,"script","https://t.whop.tw","whop");whop.setScope("biz_qaPXQG0yg879sI");whop.track("page");}
 function wipe(){document.cookie.split(';').forEach(function(c){var n=c.split('=')[0].trim();if(/^_ga/.test(n)||n=='_gid'){var h=location.hostname.split('.');for(var i=0;i<h.length-1;i++)document.cookie=n+'=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=.'+h.slice(i).join('.');document.cookie=n+'=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/'}})}
 function show(){var c=g(),t=document.getElementById('ckst');if(t)t.textContent=c=='yes'?'Your current choice: analytics are on.':c=='no'?'Your current choice: essential only, analytics are off.':'You have not made a choice yet. Analytics are off.';b.classList.add('s');var f=document.getElementById('ok');if(f)setTimeout(function(){f.focus()},50)}
-function choose(v){st(v);b.classList.remove('s');if(v=='yes')load();else{var was=window.__asa;wipe();if(was)location.reload()}}
+function choose(v){st(v);b.classList.remove('s');if(window.asToast)asToast('Cookie preferences saved',v=='yes'?'Analytics are on.':'Analytics are off.');if(v=='yes')load();else{var was=window.__asa;wipe();if(was)location.reload()}}
 document.getElementById('ok').onclick=function(){choose('yes')};document.getElementById('no').onclick=function(){choose('no')};
-window.asConsent={open:show};document.querySelectorAll('.cs').forEach(function(e){e.addEventListener('click',show)});var c=g();if(c=='yes')load();else if(!c)setTimeout(function(){b.classList.add('s')},900)})();</script></body>
-</html>
+window.asConsent={open:show};document.querySelectorAll('.cs').forEach(function(e){e.addEventListener('click',show)});var c=g();if(c=='yes')load();else if(!c)setTimeout(function(){b.classList.add('s')},900)})();</script>
+</body></html>
